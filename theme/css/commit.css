@@ -1,19 +1,33 @@
 .commit {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  flex-direction: column-reverse;
   position: relative;
-  width: 600px;
+  width: 80%
+  max-width: 600px;
   margin: 50px auto;
 }
 
 .commit > .title {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  justify-content: center;
   white-space: nowrap;
   width: 100%;
-  padding:0;
+  padding: 0;
   position: relative;
   overflow: hidden;
 }
 
 .commit li {
   width: 300px;
+  flex: 1;
   float: left;
   text-align: center;
   background: #ddd;
@@ -31,8 +45,6 @@
 }
 
 .commit > div {
-  position: absolute;
-  top: 36px;
   padding: 10px;
   display: none;
   width: 100%;
