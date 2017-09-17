@@ -5,10 +5,8 @@
   display: -webkit-flex;
   display: flex;
   flex-direction: column-reverse;
-  position: relative;
-  width: 80%;
-  max-width: 600px;
   margin: 0px auto;
+  align-items: center;
 }
 
 .commit > .title {
