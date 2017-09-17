@@ -1,12 +1,12 @@
 .commit {
   position: relative;
-  width: 900px;
+  width: 600px;
   margin: 50px auto;
 }
 
 .commit > .title {
   white-space: nowrap;
-  width: auto;
+  width: 100%;
   padding:0;
   position: relative;
   overflow: hidden;
@@ -22,7 +22,7 @@
 
 .commit li a {
   display: block;
-  width: auto;
+  width: 100%;
   line-height: 36px;
   font-size: 18px;
   cursor: pointer;
@@ -46,11 +46,6 @@
 .commit > .title > li {
   background: #ddd;
   color: #000;
-}
-
-.commit > #uyan_frame:target ~ .title > .uyan_frame {
-  background: #ff7300;
-  color: #fff;
 }
 
 .commit > #disqus_thread:target ~ .title > .disqus_thread {
