@@ -1,0 +1,64 @@
+.commit {
+  position: relative;
+  width: 900px;
+  margin: 50px auto;
+}
+
+.commit > .title {
+  white-space: nowrap;
+  width: auto;
+  padding:0;
+  position: relative;
+  overflow: hidden;
+}
+
+.commit li {
+  width: 300px;
+  float: left;
+  text-align: center;
+  background: #ddd;
+  display: inline;
+}
+
+.commit li a {
+  display: block;
+  width: auto;
+  line-height: 36px;
+  font-size: 18px;
+  cursor: pointer;
+  text-decoration: none;
+  color: #000;
+}
+
+.commit > div {
+  position: absolute;
+  top: 36px;
+  padding: 10px;
+  display: none;
+  width: 100%;
+  background: #fff;
+}
+
+.commit > *:target {
+  display: inline;
+}
+
+.commit > .title > li {
+  background: #ddd;
+  color: #000;
+}
+
+.commit > #uyan_frame:target ~ .title > .uyan_frame {
+  background: #ff7300;
+  color: #fff;
+}
+
+.commit > #disqus_thread:target ~ .title > .disqus_thread {
+  background: #ff7300;
+  color: #fff;
+}
+
+.commit > #gitment:target ~ .title > .gitment {
+  background: #ff7300;
+  color: #fff;
+}
