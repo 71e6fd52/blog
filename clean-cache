@@ -1,0 +1,27 @@
+#!/usr/bin/env ruby
+
+unless File.size? 'cloudflare-api'
+  puts 'Cannot found api-key'
+  return 1
+end
+ID = '0ec32156a083bf1471de76e71011aace'.freeze
+Email = 'DAStudio.71e6fd52@gmail.com'.freeze
+key = File.open('cloudflare-api', &:gets).chomp
+
+file =
+  `git diff --name-status HEAD~ -z` \
+  .split("\0") \
+  .each_slice(2) \
+  .each_with_object([]) do |x, changed|
+    if x[0] == 'M' && x[1] =~ /^content/
+      changed << "http://71e6fd52.ml/#{x[1]}"
+      changed << "https://71e6fd52.ml/#{x[1]}"
+    end
+  end
+
+puts `curl -X DELETE \
+  "https://api.cloudflare.com/client/v4/zones/#{ID}/purge_cache" \
+  -H "Content-Type:application/json" \
+  -H "X-Auth-Email:#{Email}" \
+  -H "X-Auth-Key:#{key}" \
+  --data '{"files":#{file.to_s}}'`
