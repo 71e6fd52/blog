@@ -38,7 +38,7 @@ DEFAULT_PAGINATION = 20
 
 THEME = 'theme'
 
-PLUGIN_PATHS = ['plugins']
+PLUGIN_PATHS = ['pelican-plugins']
 PLUGINS = ['summary']
 
 DISPLAY_PAGES_ON_MENU = True
