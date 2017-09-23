@@ -18,8 +18,6 @@ CATEGORY_FEED_ATOM = 'feeds/%s.atom.xml'
 
 DELETE_OUTPUT_DIRECTORY = True
 
-MENUITEMS = (('Blog', SITEURL),)
-
 DISQUS_SITENAME = '71e6fd52s-blog'
 GITMENT_OWNER = '71e6fd52'
 GITMENT_REPO = 'blog'
