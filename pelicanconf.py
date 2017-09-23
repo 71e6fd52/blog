@@ -31,10 +31,6 @@ SOCIAL = (
         ('mail-s', 'DAStudio.71e6fd52@gmail.com')
           )
 
-EXTRA_PATH_METADATA = {
-    'extra/favicon.ico': {'path': 'favicon.ico'}
-    }
-
 DEFAULT_PAGINATION = 20
 
 # Uncomment following line if you want document-relative URLs when developing
