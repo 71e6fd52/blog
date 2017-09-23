@@ -56,12 +56,13 @@ h1, h2 {
 .change-page
 {
   color: #fff;
-  background-color: #26a69a;
+  background-color: #1DAEDF !important;
   text-align: center;
   height: 54px;
   line-height: 54px;
   padding: 0 2rem;
-  text-decoration: none;
+  text-decoration: none !important;
+  font-size: 15pt;
 }
 
 article section .about
