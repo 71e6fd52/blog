@@ -55,8 +55,8 @@ h1, h2 {
 
 .change-page
 {
-  color: #fff;
-  background-color: #1DAEDF !important;
+  color: #fff !important;
+  background-color: #1DAEDF;
   text-align: center;
   height: 54px;
   line-height: 54px;
