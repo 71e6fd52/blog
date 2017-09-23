@@ -19,16 +19,20 @@ file =
     break 'all' if x[1] == 'publishconf.py' || x[1] == 'theme'
 
     if x[1] =~ /^content/
-      changed << "http://71e6fd52.ml/#{x[1]}"
-      changed << "https://71e6fd52.ml/#{x[1]}"
+      changed << "http://blog.71e6fd52.ml/#{x[1]}"
+      changed << "https://blog.71e6fd52.ml/#{x[1]}"
     end
   end
 
 data =
   if file == 'all'
     { purge_everything: true }
-  else
+  elsif file
+    file << 'http://blog.71e6fd52.ml/'
+    file << 'https://blog.71e6fd52.ml/'
     { files: file }
+  else
+    exit
   end
 
 puts data.to_json
