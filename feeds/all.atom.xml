@@ -1,7 +1,24 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>71e6fd52's blog</title><link href="https://blog.71e6fd52.ml/" rel="alternate"></link><link href="https://blog.71e6fd52.ml/feeds/all.atom.xml" rel="self"></link><id>https://blog.71e6fd52.ml/</id><updated>2017-09-18T21:10:20+08:00</updated><entry><title>test</title><link href="https://blog.71e6fd52.ml/test.html" rel="alternate"></link><published>2017-09-17T15:11:41+08:00</published><updated>2017-09-18T21:10:20+08:00</updated><author><name>71e6fd52</name></author><id>tag:blog.71e6fd52.ml,2017-09-17:/test.html</id><summary type="html">第一篇博客就测试用吧？</summary><content type="html">&lt;p&gt;第一篇博客就测试用吧？&lt;/p&gt;
+<feed xmlns="http://www.w3.org/2005/Atom"><title>71e6fd52's blog</title><link href="https://blog.71e6fd52.ml/" rel="alternate"></link><link href="https://blog.71e6fd52.ml/feeds/all.atom.xml" rel="self"></link><id>https://blog.71e6fd52.ml/</id><updated>2017-09-23T14:16:48+08:00</updated><entry><title>Sony Vegas pro 13.0 用 DebugMode FrameServer 搭桥</title><link href="https://blog.71e6fd52.ml/sony-vegas-pro-130-yong-debugmode-frameserver-da-qiao.html" rel="alternate"></link><published>2017-09-23T14:16:48+08:00</published><updated>2017-09-23T14:16:48+08:00</updated><author><name>71e6fd52</name></author><id>tag:blog.71e6fd52.ml,2017-09-23:/sony-vegas-pro-130-yong-debugmode-frameserver-da-qiao.html</id><summary type="html">之前为了让 Sony Vegas pro 13.0 用 DebugMode FrameServer 搭桥，研究了很久最后发现了一个很简单的办法</summary><content type="html">&lt;p&gt;之前为了让 Sony Vegas pro 13.0 用 DebugMode FrameServer 搭桥，研究了很久最后发现了一个很简单的办法&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;安装 &lt;a href="http://vegasbar.lofter.com/post/1d4450de_74cd602"&gt;Vegas&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;安装 &lt;a href="http://pan.baidu.com/s/1pLRarub"&gt;DebugMode FrameServer 的 Vegas 13 版&lt;/a&gt; 密码：6qf3&lt;/li&gt;
+&lt;li&gt;打开安装程序&lt;/li&gt;
+&lt;li&gt;点击 I Agree&lt;/li&gt;
+&lt;li&gt;确定 Sony?Vegas…… 勾着&lt;/li&gt;
+&lt;li&gt;点击 Next&lt;/li&gt;
+&lt;li&gt;选择 DebugMode FrameServer 的安装路径&lt;/li&gt;
+&lt;li&gt;点击 Next&lt;/li&gt;
+&lt;li&gt;确定 Vegas 13 的安装路径（默认是 C:\Program Files\Sony\Vegas Pro 13.0 ）&lt;/li&gt;
+&lt;li&gt;点击 Install&lt;/li&gt;
+&lt;li&gt;安装时会弹出来一个对话框问你是否要创建开始菜单项，没什么用，建议点否&lt;/li&gt;
+&lt;li&gt;打开 Vegas ，在要渲染的工程里点击渲染为&lt;/li&gt;
+&lt;li&gt;使用 DebugMode FrameServer (*.avi) 中的 Project Default&lt;/li&gt;
+&lt;li&gt;打上第一个勾&lt;/li&gt;
+&lt;li&gt;已经导出了临时文件（桥）了。&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;所以，为什么不用 FFmpeg 呢&lt;/p&gt;</content><category term="Vegas"></category></entry><entry><title>test</title><link href="https://blog.71e6fd52.ml/test.html" rel="alternate"></link><published>2017-09-17T15:11:41+08:00</published><updated>2017-09-23T14:12:06+08:00</updated><author><name>71e6fd52</name></author><id>tag:blog.71e6fd52.ml,2017-09-17:/test.html</id><summary type="html">第一篇博客就测试用吧？</summary><content type="html">&lt;p&gt;第一篇博客就测试用吧？&lt;/p&gt;
 &lt;p&gt;还是想写点什么呢。&lt;/p&gt;
 &lt;p&gt;我原来用的是 &lt;a href="https://github.com/isnowfy/simple"&gt;&lt;code&gt;simple&lt;/code&gt;&lt;/a&gt;,
 可以把 Markdown 自动发布在 github 上，后来我自己 fork 了一份，改了一些内容。
-后来有时候直接用 HTML，总之很难受，之后慢慢把之前的搬过来吧。&lt;/p&gt;
-&lt;p&gt;有空在写一下我的搭建过程吧，本来不想写什么的，还是写了一些。&lt;/p&gt;</content><category term="Pelican"></category><category term="blog"></category></entry></feed>
+后来有时候直接用 HTML，总之很难受，之后慢慢把之前的搬过来吧。&lt;/p&gt;</content><category term="Pelican"></category><category term="Blog"></category></entry></feed>

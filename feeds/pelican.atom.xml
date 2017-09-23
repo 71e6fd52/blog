@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>71e6fd52's blog - Pelican</title><link href="https://blog.71e6fd52.ml/" rel="alternate"></link><link href="https://blog.71e6fd52.ml/feeds/pelican.atom.xml" rel="self"></link><id>https://blog.71e6fd52.ml/</id><updated>2017-09-18T21:10:20+08:00</updated><entry><title>test</title><link href="https://blog.71e6fd52.ml/test.html" rel="alternate"></link><published>2017-09-17T15:11:41+08:00</published><updated>2017-09-18T21:10:20+08:00</updated><author><name>71e6fd52</name></author><id>tag:blog.71e6fd52.ml,2017-09-17:/test.html</id><summary type="html">第一篇博客就测试用吧？</summary><content type="html">&lt;p&gt;第一篇博客就测试用吧？&lt;/p&gt;
+<feed xmlns="http://www.w3.org/2005/Atom"><title>71e6fd52's blog - Pelican</title><link href="https://blog.71e6fd52.ml/" rel="alternate"></link><link href="https://blog.71e6fd52.ml/feeds/pelican.atom.xml" rel="self"></link><id>https://blog.71e6fd52.ml/</id><updated>2017-09-23T14:12:06+08:00</updated><entry><title>test</title><link href="https://blog.71e6fd52.ml/test.html" rel="alternate"></link><published>2017-09-17T15:11:41+08:00</published><updated>2017-09-23T14:12:06+08:00</updated><author><name>71e6fd52</name></author><id>tag:blog.71e6fd52.ml,2017-09-17:/test.html</id><summary type="html">第一篇博客就测试用吧？</summary><content type="html">&lt;p&gt;第一篇博客就测试用吧？&lt;/p&gt;
 &lt;p&gt;还是想写点什么呢。&lt;/p&gt;
 &lt;p&gt;我原来用的是 &lt;a href="https://github.com/isnowfy/simple"&gt;&lt;code&gt;simple&lt;/code&gt;&lt;/a&gt;,
 可以把 Markdown 自动发布在 github 上，后来我自己 fork 了一份，改了一些内容。
-后来有时候直接用 HTML，总之很难受，之后慢慢把之前的搬过来吧。&lt;/p&gt;
-&lt;p&gt;有空在写一下我的搭建过程吧，本来不想写什么的，还是写了一些。&lt;/p&gt;</content><category term="Pelican"></category><category term="blog"></category></entry></feed>
+后来有时候直接用 HTML，总之很难受，之后慢慢把之前的搬过来吧。&lt;/p&gt;</content><category term="Pelican"></category><category term="Blog"></category></entry></feed>
