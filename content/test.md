@@ -3,7 +3,7 @@ Date: 2017-09-17 15:11:41
 Modified: 2017-09-23 14:12:06
 Author: 71e6fd52
 Category: Pelican
-Tags: Pelican, blog
+Tags: Pelican, Blog
 
 第一篇博客就测试用吧？
 
