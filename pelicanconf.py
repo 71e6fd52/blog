@@ -32,6 +32,7 @@ SOCIAL = (
           )
 
 DEFAULT_PAGINATION = 20
+FAVICON = '/favicon.ico'
 
 # Uncomment following line if you want document-relative URLs when developing
 #RELATIVE_URLS = True
