@@ -44,6 +44,26 @@ h1, h2 {
   color: #333;
 }
 
+.right
+{
+  float: right !important;
+}
+
+.left {
+  float: left !important;
+}
+
+.change-page
+{
+  color: #fff;
+  background-color: #26a69a;
+  text-align: center;
+  height: 54px;
+  line-height: 54px;
+  padding: 0 2rem;
+  text-decoration: none;
+}
+
 article section .about
 {
   font-size: 18px;
