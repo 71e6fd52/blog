@@ -18,17 +18,13 @@ file =
     next unless x[0] == 'M'
     break 'all' if x[1] == 'publishconf.py' || x[1] == 'theme'
 
-    if x[1] =~ /^content/
-      changed << "http://blog.71e6fd52.ml/#{x[1]}"
-      changed << "https://blog.71e6fd52.ml/#{x[1]}"
-    end
+    changed << "https://blog.71e6fd52.ml/#{x[1]}" if x[1] =~ /^content/
   end
 
 data =
   if file == 'all'
     { purge_everything: true }
   elsif file
-    file << 'http://blog.71e6fd52.ml/'
     file << 'https://blog.71e6fd52.ml/'
     { files: file }
   else
