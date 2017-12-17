@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom"><title>71e6fd52's blog - PEOKEEMEI</title><link href="https://blog.71e6fd52.ml/" rel="alternate"></link><link href="https://blog.71e6fd52.ml/feeds/peokeemei.atom.xml" rel="self"></link><id>https://blog.71e6fd52.ml/</id><updated>2017-12-17T22:08:03+08:00</updated><entry><title>温度单位</title><link href="https://blog.71e6fd52.ml/wen-du-dan-wei.html" rel="alternate"></link><published>2017-12-17T22:08:03+08:00</published><updated>2017-12-17T22:08:03+08:00</updated><author><name>71e6fd52</name></author><id>tag:blog.71e6fd52.ml,2017-12-17:/wen-du-dan-wei.html</id><summary type="html">为什么不在温度单位后加常数表示实际温度</summary><content type="html">&lt;p&gt;为什么不在温度单位后加常数表示实际温度&lt;/p&gt;
+&lt;p&gt;如用地球的温度单位
+(20°C - 10°C) = 2(15°C - 10°C)
+而 10°C 却不等于 2 * 5°C&lt;/p&gt;
+&lt;p&gt;加上常数后
+((20°C + Tc) - (10°C + Tc)) = 2((15°C + Tc) - (10°C + Tc))
+10°C + Tc 自然不等于 2(5°C + Tc)&lt;/p&gt;
+&lt;p&gt;单位换算也很清楚了
+1K = 1°C
+Tc = Tk + 273.15°C
+1°F = 1.8°C
+Tc = Tf + 33°Ca&lt;/p&gt;
+&lt;p&gt;顺便一提，今天正好是博客建成 3 个月&lt;/p&gt;</content><category term="PEIKEEMEI"></category></entry></feed>

@@ -3,7 +3,7 @@
 <head>
         <meta charset="utf-8">
         <!-- Site Meta Data -->
-        <title>Vegas 用 FrameServer 搭桥</title>
+        <title>温度单位</title>
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <meta name="description" content="">
         <meta name="author" content="71e6fd52">
@@ -30,9 +30,9 @@
         <meta name="twitter:image" content="">
 
   <meta name="twitter:creator" content="">
-  <meta name="twitter:url" content="https://blog.71e6fd52.ml/vegas-yong-frameserver-da-qiao.html">
-  <meta name="twitter:title" content="71e6fd52's blog ~ Vegas 用 FrameServer 搭桥">
-  <meta name="twitter:description" content="之前为了让 Sony Vegas pro 13.0 用 DebugMode FrameServer 搭桥，研究了很久最后发现了一个很简单的办法">
+  <meta name="twitter:url" content="https://blog.71e6fd52.ml/wen-du-dan-wei.html">
+  <meta name="twitter:title" content="71e6fd52's blog ~ 温度单位">
+  <meta name="twitter:description" content="为什么不在温度单位后加常数表示实际温度">
 
   <!-- simpread Meta Data -->
   <meta name="simpread:name" content="https://blog.71e6fd52.ml">
@@ -41,8 +41,8 @@
   <meta name="simpread:include" content="<div class='entry-content'>">
 
   <!-- Facebook Meta Data -->
-  <meta property="og:title" content="71e6fd52's blog ~ Vegas 用 FrameServer 搭桥"/>
-  <meta property="og:description" content="之前为了让 Sony Vegas pro 13.0 用 DebugMode FrameServer 搭桥，研究了很久最后发现了一个很简单的办法"/>
+  <meta property="og:title" content="71e6fd52's blog ~ 温度单位"/>
+  <meta property="og:description" content="为什么不在温度单位后加常数表示实际温度"/>
   <meta property="og:image" content=""/>
   <link rel="stylesheet" href="https://blog.71e6fd52.ml/theme/css/commit.css" type="text/css"/>
 </head>
@@ -76,9 +76,9 @@
         <ul class="navbar">
                 <li><a
                         href="https://blog.71e6fd52.ml/category/pelican.html">Pelican</a></li>
-                <li><a
-                        href="https://blog.71e6fd52.ml/category/peokeemei.html">PEOKEEMEI</a></li>
                 <li class="active"><a
+                        href="https://blog.71e6fd52.ml/category/peokeemei.html">PEOKEEMEI</a></li>
+                <li><a
                         href="https://blog.71e6fd52.ml/category/windows.html">Windows</a></li>
         </ul>
 
@@ -90,33 +90,23 @@
 <section id="content">
   <article>
     <h2 class="post_title post_detail">
-      <a href="https://blog.71e6fd52.ml/vegas-yong-frameserver-da-qiao.html" rel="bookmark" title="Permalink to Vegas 用 FrameServer 搭桥">Vegas 用 FrameServer 搭桥</a>
+      <a href="https://blog.71e6fd52.ml/wen-du-dan-wei.html" rel="bookmark" title="Permalink to 温度单位">温度单位</a>
     </h2>
 
     <div class="entry-content blog-post">
-      <p>之前为了让 Sony Vegas pro 13.0 用 DebugMode FrameServer 搭桥，研究了很久最后发现了一个很简单的办法</p>
-<ol>
-<li>安装 <a href="http://vegasbar.lofter.com/post/1d4450de_74cd602">Vegas</a></li>
-<li>安装 <a href="http://pan.baidu.com/s/1pLRarub">DebugMode FrameServer 的 Vegas 13 版</a> 密码：6qf3<ol>
-<li>打开安装程序</li>
-<li>点击 I Agree</li>
-<li>确定 Sony?Vegas…… 勾着</li>
-<li>点击 Next</li>
-<li>选择 DebugMode FrameServer 的安装路径</li>
-<li>点击 Next</li>
-<li>确定 Vegas 13 的安装路径（默认是 C:\Program Files\Sony\Vegas Pro 13.0 ）</li>
-<li>点击 Install</li>
-<li>安装时会弹出来一个对话框问你是否要创建开始菜单项，没什么用，建议点否</li>
-</ol>
-</li>
-<li>打开 Vegas ，在要渲染的工程里点击渲染为</li>
-<li>使用 DebugMode FrameServer (*.avi) 中的 Project Default<ul>
-<li>打上第一个勾</li>
-</ul>
-</li>
-<li>已经导出了临时文件（桥）了。</li>
-</ol>
-<p>所以，为什么不用 FFmpeg 呢</p>
+      <p>为什么不在温度单位后加常数表示实际温度</p>
+<p>如用地球的温度单位
+(20°C - 10°C) = 2(15°C - 10°C)
+而 10°C 却不等于 2 * 5°C</p>
+<p>加上常数后
+((20°C + Tc) - (10°C + Tc)) = 2((15°C + Tc) - (10°C + Tc))
+10°C + Tc 自然不等于 2(5°C + Tc)</p>
+<p>单位换算也很清楚了
+1K = 1°C
+Tc = Tk + 273.15°C
+1°F = 1.8°C
+Tc = Tf + 33°Ca</p>
+<p>顺便一提，今天正好是博客建成 3 个月</p>
     </div>
 
     <div class="post_list">
@@ -124,55 +114,51 @@
       <a href="https://blog.71e6fd52.ml/author/71e6fd52.html">@71e6fd52</a>
       <span> in </span>
       <span class="post_category">
-        <a href="https://blog.71e6fd52.ml/category/windows.html" rel="bookmark" title="Permalink to Windows">
-          [ Windows ]
+        <a href="https://blog.71e6fd52.ml/category/peokeemei.html" rel="bookmark" title="Permalink to PEOKEEMEI">
+          [ PEOKEEMEI ]
         </a>
       </span>
 
-      <span class="post_date">六 23 九月 2017</span>
+      <span class="post_date">日 17 十二月 2017</span>
       <div><span>Tags : </span>
-        <span><a href="https://blog.71e6fd52.ml/tag/vegas.html">#Vegas, </a></span>
+        <span><a href="https://blog.71e6fd52.ml/tag/peikeemei.html">#PEIKEEMEI, </a></span>
       </div>
 
       <br>
 
       <div class="entry-social">
         <span class="twitter">
-          <a target="_blank" rel="nofollow" onclick="javascript:window.open(this.href, '', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=400,width=700');return false;" title="Twitter" href="https://twitter.com/share?url=https://blog.71e6fd52.ml/vegas-yong-frameserver-da-qiao.html&text=Vegas 用 FrameServer 搭桥&via=">
+          <a target="_blank" rel="nofollow" onclick="javascript:window.open(this.href, '', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=400,width=700');return false;" title="Twitter" href="https://twitter.com/share?url=https://blog.71e6fd52.ml/wen-du-dan-wei.html&text=温度单位&via=">
             <img src="https://blog.71e6fd52.ml/theme/images/icons/twitter-s.png">
           </a>
         </span>
 
         <span class="gplus">
-          <a target="_blank" title="Google +" href="https://plus.google.com/share?url=https://blog.71e6fd52.ml/vegas-yong-frameserver-da-qiao.html&hl=fr" rel="nofollow" onclick="javascript:window.open(this.href, '', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=450,width=650');return false;">
+          <a target="_blank" title="Google +" href="https://plus.google.com/share?url=https://blog.71e6fd52.ml/wen-du-dan-wei.html&hl=fr" rel="nofollow" onclick="javascript:window.open(this.href, '', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=450,width=650');return false;">
             <img src="https://blog.71e6fd52.ml/theme/images/icons/google-s.png">
           </a>
         </span>
 
         <span class="facebook">
-          <a target="_blank" title="Facebook" rel="nofollow" onclick="javascript:window.open(this.href, '', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=500,width=700');return false;" href="https://www.facebook.com/sharer.php?u=https://blog.71e6fd52.ml/vegas-yong-frameserver-da-qiao.html&t=Vegas 用 FrameServer 搭桥">
+          <a target="_blank" title="Facebook" rel="nofollow" onclick="javascript:window.open(this.href, '', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=500,width=700');return false;" href="https://www.facebook.com/sharer.php?u=https://blog.71e6fd52.ml/wen-du-dan-wei.html&t=温度单位">
             <img src="https://blog.71e6fd52.ml/theme/images/icons/facebook-s.png">
           </a>
         </span>
 
-        <a target="_blank" title="Linkedin" href="https://www.linkedin.com/shareArticle?mini=true&url=https://blog.71e6fd52.ml/vegas-yong-frameserver-da-qiao.html&title=Vegas 用 FrameServer 搭桥" rel="nofollow" onclick="javascript:window.open(this.href, '', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=450,width=650');return false;">
+        <a target="_blank" title="Linkedin" href="https://www.linkedin.com/shareArticle?mini=true&url=https://blog.71e6fd52.ml/wen-du-dan-wei.html&title=温度单位" rel="nofollow" onclick="javascript:window.open(this.href, '', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=450,width=650');return false;">
           <img src="https://blog.71e6fd52.ml/theme/images/icons/linkedin-s.png">
         </a>
 
         <span class="mail">
-          <a href="mailto:?subject=Vegas 用 FrameServer 搭桥&amp;body=在 71e6fd52 的网站上发现有关 [Vegas 用 FrameServer 搭桥] 的文章。 https://blog.71e6fd52.ml/vegas-yong-frameserver-da-qiao.html" title="Share by Email" target="_blank"><img src="https://blog.71e6fd52.ml/theme/images/icons/mail-s.png">
+          <a href="mailto:?subject=温度单位&amp;body=在 71e6fd52 的网站上发现有关 [温度单位] 的文章。 https://blog.71e6fd52.ml/wen-du-dan-wei.html" title="Share by Email" target="_blank"><img src="https://blog.71e6fd52.ml/theme/images/icons/mail-s.png">
           </a>
         </span>
       </div>
     </div>
 
-      <a href="https://blog.71e6fd52.ml/test.html"
+      <a href="https://blog.71e6fd52.ml/vegas-yong-frameserver-da-qiao.html"
       class="change-page left">
-        &lt;  test
-      </a>
-      <a href="https://blog.71e6fd52.ml/wen-du-dan-wei.html"
-        class="change-page right">
-        温度单位  &gt;
+        &lt;  Vegas 用 FrameServer 搭桥
       </a>
     <hr style="width: 100%; visibility: hidden;">
 
@@ -182,7 +168,7 @@
       <!-- DISQUS BEGIN -->
         <div id="disqus_thread"></div>
         <script type="text/javascript">
-          var disqus_identifier = "vegas-yong-frameserver-da-qiao.html";
+          var disqus_identifier = "wen-du-dan-wei.html";
           (function () {
             var dsq = document.createElement('script');
             dsq.type = 'text/javascript';
@@ -199,7 +185,7 @@
         <script src="https://imsun.github.io/gitment/dist/gitment.browser.js"></script>
         <script>
           var gitment = new Gitment({
-            id: 'vegas-yong-frameserver-da-qiao.html',
+            id: 'wen-du-dan-wei.html',
             owner: '71e6fd52',
             repo: 'blog',
             oauth: {
