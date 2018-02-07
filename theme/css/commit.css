@@ -48,21 +48,17 @@
   background: #fff;
 }
 
-.commit > *:target {
-  display: inline;
-}
-
 .commit > .title > li {
   background: #ddd;
   color: #000;
 }
 
-.commit > #disqus_thread:target ~ .title > .disqus_thread {
-  background: #ff7300;
-  color: #fff;
-}
+/*.commit > #disqus_thread:target ~ .title > .disqus_thread {*/
+  /*background: #ff7300;*/
+  /*color: #fff;*/
+/*}*/
 
-.commit > #gitment:target ~ .title > .gitment {
-  background: #ff7300;
-  color: #fff;
-}
+/*.commit > #gitment:target ~ .title > .gitment {*/
+  /*background: #ff7300;*/
+  /*color: #fff;*/
+/*}*/
