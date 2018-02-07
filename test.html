@@ -189,12 +189,31 @@
           gitment.render('gitment')
         </script>
       <!-- GITMENT END -->
+      <script>
+        function switch_commit(name) {
+          if (name === 'disqus') {
+            document.getElementById('disqus_thread').style.display="block"
+            document.getElementById('gitment').style.display="none"
+            document.getElementById('disqus_commit').style.background="#ff7300"
+            document.getElementById('disqus_commit').style.color="#fff"
+            document.getElementById('gitment_commit').style.background="#ddd"
+            document.getElementById('gitment_commit').style.color="#000"
+          } else if (name === 'gitment') {
+            document.getElementById('disqus_thread').style.display="none"
+            document.getElementById('gitment').style.display="block"
+            document.getElementById('disqus_commit').style.background="#ddd"
+            document.getElementById('disqus_commit').style.color="#000"
+            document.getElementById('gitment_commit').style.background="#ff7300"
+            document.getElementById('gitment_commit').style.color="#fff"
+          }
+        }
+      </script>
       <ul class='title'>
-        <li class="disqus_thread">
-          <a href="#disqus_thread">Disqus</a>
+        <li id="disqus_commit">
+          <button onclick="switch_commit('disqus')">Disqus</button>
         </li>
-        <li class="gitment">
-          <a href="#gitment">Gitment</a>
+        <li id="gitment_commit">
+          <button onclick="switch_commit('gitment')">Gitment</button>
         </li>
       </ul>
     </div>
