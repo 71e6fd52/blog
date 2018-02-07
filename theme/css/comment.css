@@ -1,19 +1,11 @@
-.comment {
-  margin: 0px auto;
-  align-items: center;
-}
-
 .comment > .title {
-  justify-content: center;
-  white-space: nowrap;
   width: 100%;
   margin: 10px auto;
   padding: 0;
 }
 
 .comment li {
-  width: 300px;
-  flex: 1;
+  width: 50%;
   float: left;
   text-align: center;
   background: #ddd;
@@ -21,7 +13,6 @@
 }
 
 .comment > div {
-  padding: 0px 10px;
   display: none;
   width: 100%;
   background: #fff;
