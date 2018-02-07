@@ -1,10 +1,10 @@
-.comment > .title {
+.comment > .comment_switch_head {
   width: 100%;
   margin: 10px auto;
   padding: 0;
 }
 
-.comment li {
+.comment > ul > li {
   width: 50%;
   float: left;
   text-align: center;
@@ -23,7 +23,7 @@
   color: #000;
 }
 
-.comment .switch {
+.comment .comment_switch {
   height: 60px;
   width: 100%;
   font-weight: 700;
