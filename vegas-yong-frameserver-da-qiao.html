@@ -180,7 +180,7 @@
     <h2 style="text-align: center; margin: 15px 0 0 0;">选一个评论框评论？</h2>
     <div class="commit">
       <!-- DISQUS BEGIN -->
-        <div id="disqus_thread" style="display: block"></div>
+        <div id="disqus_thread"></div>
         <script type="text/javascript">
           var disqus_identifier = "vegas-yong-frameserver-da-qiao.html";
           (function () {
@@ -227,6 +227,9 @@
             document.getElementById('gitment_commit').style.background="#ff7300"
             document.getElementById('gitment_commit').style.color="#fff"
           }
+        }
+        window.onload = function {
+          switch_commit('disqus')
         }
       </script>
       <ul class='title'>
