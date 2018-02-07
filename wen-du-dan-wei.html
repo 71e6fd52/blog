@@ -44,7 +44,7 @@
   <meta property="og:title" content="71e6fd52's blog ~ 温度单位"/>
   <meta property="og:description" content="为什么不在温度单位后加常数表示实际温度"/>
   <meta property="og:image" content=""/>
-  <link rel="stylesheet" href="https://blog.71e6fd52.ml/theme/css/commit.css" type="text/css"/>
+  <link rel="stylesheet" href="https://blog.71e6fd52.ml/theme/css/comment.css" type="text/css"/>
 </head>
 
 <body>
@@ -173,7 +173,34 @@ Tc = Tf + 33°C
 
     <hr>
     <h2 style="text-align: center; margin: 15px 0 0 0;">选一个评论框评论？</h2>
-    <div class="commit">
+    <div class="comment">
+      <script>
+        var switch_comment = function (name) {
+          if (name === 'disqus') {
+            document.getElementById('disqus_thread').style.display="block";
+            document.getElementById('gitment').style.display="none";
+            document.getElementById('disqus_comment').style.background="#ff7300";
+            document.getElementById('disqus_comment').style.color="#fff";
+            document.getElementById('gitment_comment').style.background="#ddd";
+            document.getElementById('gitment_comment').style.color="#000";
+          } else if (name === 'gitment') {
+            document.getElementById('disqus_thread').style.display="none";
+            document.getElementById('gitment').style.display="block";
+            document.getElementById('disqus_comment').style.background="#ddd";
+            document.getElementById('disqus_comment').style.color="#000";
+            document.getElementById('gitment_comment').style.background="#ff7300";
+            document.getElementById('gitment_comment').style.color="#fff";
+          }
+        };
+      </script>
+      <ul class='title'>
+        <li id="disqus_comment">
+          <button onclick="switch_comment('disqus')">Disqus</button>
+        </li>
+        <li id="gitment_comment">
+          <button onclick="switch_comment('gitment')">Gitment</button>
+        </li>
+      </ul>
       <!-- DISQUS BEGIN -->
         <div id="disqus_thread"></div>
         <script type="text/javascript">
@@ -205,38 +232,6 @@ Tc = Tf + 33°C
           gitment.render('gitment')
         </script>
       <!-- GITMENT END -->
-      <script>
-        var switch_commit = function (name) {
-          if (name === 'disqus') {
-            document.getElementById('disqus_thread').style.display="block";
-            document.getElementById('gitment').style.display="none";
-            document.getElementById('disqus_commit').style.background="#ff7300";
-            document.getElementById('disqus_commit').style.color="#fff";
-            document.getElementById('gitment_commit').style.background="#ddd";
-            document.getElementById('gitment_commit').style.color="#000";
-          } else if (name === 'gitment') {
-            document.getElementById('disqus_thread').style.display="none";
-            document.getElementById('gitment').style.display="block";
-            document.getElementById('disqus_commit').style.background="#ddd";
-            document.getElementById('disqus_commit').style.color="#000";
-            document.getElementById('gitment_commit').style.background="#ff7300";
-            document.getElementById('gitment_commit').style.color="#fff";
-          }
-        };
-      </script>
-      <script>
-        window.onload = function {
-          switch_commit('disqus');
-        };
-      </script>
-      <ul class='title'>
-        <li id="disqus_commit">
-          <button onclick="switch_commit('disqus')">Disqus</button>
-        </li>
-        <li id="gitment_commit">
-          <button onclick="switch_commit('gitment')">Gitment</button>
-        </li>
-      </ul>
     </div>
 
   </article>
