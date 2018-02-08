@@ -28,7 +28,7 @@ $ ./Foldit
 之后点击 `Play Online` 你将进入教程，
 教程的介绍在 http://foldit.wikia.com/wiki/Tutorial_Puzzles
 
-要了解更多信息，请务必查看 [Foldit 维基](http://foldit.wikia.com/wiki/foldit_wiki)，
+要了解更多信息，请务必查看 [Foldit 维基](http://foldit.wikia.com/wiki/Foldit_Wiki),
 那里有很多很棒的信息，提示，技巧，关于结构的信息等。
 
 现在，你可以和你的蛋白质玩耍了。
