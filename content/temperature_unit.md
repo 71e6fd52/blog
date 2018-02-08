@@ -1,6 +1,6 @@
 Title: 温度单位
 Date: 2017-12-17 22:08:03
-Modified: 2018-02-07 16:31:13
+Modified: 2018-02-08 10:59:51
 Author: 71e6fd52
 Category: PEOKEEMEI
 Tags: PEIKEEMEI
@@ -23,8 +23,8 @@ Tags: PEIKEEMEI
 ```
 1K = 1°C
 Tc = Tk + 273.15°C
-1°F = 1.8°C
-Tc = Tf + 33°C
+1°C = 1.8°F
+Tf = Tc + 32°F
 ```
 
 顺便一提，今天正好是博客建成 3 个月
