@@ -4,7 +4,6 @@ from __future__ import unicode_literals
 
 AUTHOR = '71e6fd52'
 SITENAME = "71e6fd52's blog"
-SITEURL = ''
 
 PATH = 'content'
 
@@ -28,15 +27,18 @@ AUTHOR_FEED_RSS = None
 # Social widget
 SOCIAL = (
         ('github', 'https://github.com/71e6fd52'),
+        ('twitter', 'https://twitter.com/71e6fd52'),
         ('mail-s', 'DAStudio.71e6fd52@gmail.com')
           )
+
+TWITTER_USERNAME = '71e6fd52'
 
 DEFAULT_PAGINATION = 20
 
 FAVICON = 'favicon.ico'
 
 # Uncomment following line if you want document-relative URLs when developing
-#RELATIVE_URLS = True
+RELATIVE_URLS = True
 
 THEME = 'theme'
 
