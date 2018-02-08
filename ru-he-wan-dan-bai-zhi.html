@@ -3,7 +3,7 @@
 <head>
         <meta charset="utf-8">
         <!-- Site Meta Data -->
-        <title>Vegas 用 FrameServer 搭桥</title>
+        <title>如何玩蛋白质</title>
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <meta name="description" content="">
         <meta name="author" content="71e6fd52">
@@ -30,9 +30,9 @@
         <meta name="twitter:image" content="">
 
   <meta name="twitter:creator" content="71e6fd52">
-  <meta name="twitter:url" content="https://blog.71e6fd52.ml/vegas-yong-frameserver-da-qiao.html">
-  <meta name="twitter:title" content="71e6fd52's blog ~ Vegas 用 FrameServer 搭桥">
-  <meta name="twitter:description" content="之前为了让 Sony Vegas pro 13.0 用 DebugMode FrameServer 搭桥，研究了很久最后发现了一个很简单的办法">
+  <meta name="twitter:url" content="https://blog.71e6fd52.ml/ru-he-wan-dan-bai-zhi.html">
+  <meta name="twitter:title" content="71e6fd52's blog ~ 如何玩蛋白质">
+  <meta name="twitter:description" content="Foldit 是一个折叠蛋白质的游戏，折叠的结果将会用于科学研究。">
 
   <!-- simpread Meta Data -->
   <meta name="simpread:name" content="https://blog.71e6fd52.ml">
@@ -41,8 +41,8 @@
   <meta name="simpread:include" content="<div class='entry-content'>">
 
   <!-- Facebook Meta Data -->
-  <meta property="og:title" content="71e6fd52's blog ~ Vegas 用 FrameServer 搭桥"/>
-  <meta property="og:description" content="之前为了让 Sony Vegas pro 13.0 用 DebugMode FrameServer 搭桥，研究了很久最后发现了一个很简单的办法"/>
+  <meta property="og:title" content="71e6fd52's blog ~ 如何玩蛋白质"/>
+  <meta property="og:description" content="Foldit 是一个折叠蛋白质的游戏，折叠的结果将会用于科学研究。"/>
   <meta property="og:image" content=""/>
   <link rel="stylesheet" href="https://blog.71e6fd52.ml/theme/css/comment.css" type="text/css"/>
 </head>
@@ -97,13 +97,13 @@
 
         <h2>Categories</h2>
         <ul class="navbar">
-                <li><a
+                <li class="active"><a
                         href="https://blog.71e6fd52.ml/category/foldit.html">foldit</a></li>
                 <li><a
                         href="https://blog.71e6fd52.ml/category/pelican.html">Pelican</a></li>
                 <li><a
                         href="https://blog.71e6fd52.ml/category/peokeemei.html">PEOKEEMEI</a></li>
-                <li class="active"><a
+                <li><a
                         href="https://blog.71e6fd52.ml/category/windows.html">Windows</a></li>
         </ul>
 
@@ -115,33 +115,28 @@
 <section id="content">
   <article>
     <h2 class="post_title post_detail">
-      <a href="https://blog.71e6fd52.ml/vegas-yong-frameserver-da-qiao.html" rel="bookmark" title="Permalink to Vegas 用 FrameServer 搭桥">Vegas 用 FrameServer 搭桥</a>
+      <a href="https://blog.71e6fd52.ml/ru-he-wan-dan-bai-zhi.html" rel="bookmark" title="Permalink to 如何玩蛋白质">如何玩蛋白质</a>
     </h2>
 
     <div class="entry-content blog-post">
-      <p>之前为了让 Sony Vegas pro 13.0 用 DebugMode FrameServer 搭桥，研究了很久最后发现了一个很简单的办法</p>
-<ol>
-<li>安装 <a href="http://vegasbar.lofter.com/post/1d4450de_74cd602">Vegas</a></li>
-<li>安装 <a href="http://pan.baidu.com/s/1pLRarub">DebugMode FrameServer 的 Vegas 13 版</a> 密码：6qf3<ol>
-<li>打开安装程序</li>
-<li>点击 I Agree</li>
-<li>确定 Sony?Vegas…… 勾着</li>
-<li>点击 Next</li>
-<li>选择 DebugMode FrameServer 的安装路径</li>
-<li>点击 Next</li>
-<li>确定 Vegas 13 的安装路径（默认是 C:\Program Files\Sony\Vegas Pro 13.0 ）</li>
-<li>点击 Install</li>
-<li>安装时会弹出来一个对话框问你是否要创建开始菜单项，没什么用，建议点否</li>
-</ol>
-</li>
-<li>打开 Vegas ，在要渲染的工程里点击渲染为</li>
-<li>使用 DebugMode FrameServer (*.avi) 中的 Project Default<ul>
-<li>打上第一个勾</li>
-</ul>
-</li>
-<li>已经导出了临时文件（桥）了。</li>
-</ol>
-<p>所以，为什么不用 FFmpeg 呢</p>
+      <p>以 Linux 系统为例</p>
+<p>首先，<a href="http://fold.it/portal/download/linux">下载 foldit</a></p>
+<p>下载完成以后，解压，并运行 <code>Foldit</code></p>
+<div class="highlight"><pre><span></span>$ ./Foldit
+</pre></div>
+
+
+<p>它会启动，并说 “Contacting Server to Check for Updates...”，之后会进入自动更新</p>
+<p>在下载和自动更新的过程中，可以看看<a href="http://fold.it/portal/guidelines">社区规则</a></p>
+<p>自动更新可能会崩溃，多试几次，直到它不再自动更新并显示绿色的开始按钮。
+（不过有可能没检测到更新，还是再多启动几次吧）</p>
+<p>点击 <code>PLAY!</code>，接下来可能会有新闻，如果有的话，点击 <code>Ok</code></p>
+<p>之后输入你的用户名、密码，如果你没有的话去<a href="https://fold.it/portal/user/register">注册一个</a>吧。</p>
+<p>之后点击 <code>Play Online</code> 你将进入教程，
+教程的介绍在 http://foldit.wikia.com/wiki/Tutorial_Puzzles</p>
+<p>要了解更多信息，请务必查看 <a href="http://foldit.wikia.com/wiki/foldit_wiki">Foldit 维基</a>，
+那里有很多很棒的信息，提示，技巧，关于结构的信息等。</p>
+<p>现在，你可以和你的蛋白质玩耍了。</p>
     </div>
 
     <div class="post_list">
@@ -149,55 +144,51 @@
       <a href="https://blog.71e6fd52.ml/author/71e6fd52.html">@71e6fd52</a>
       <span> in </span>
       <span class="post_category">
-        <a href="https://blog.71e6fd52.ml/category/windows.html" rel="bookmark" title="Permalink to Windows">
-          [ Windows ]
+        <a href="https://blog.71e6fd52.ml/category/foldit.html" rel="bookmark" title="Permalink to foldit">
+          [ foldit ]
         </a>
       </span>
 
-      <span class="post_date">六 23 九月 2017</span>
+      <span class="post_date">四 08 二月 2018</span>
       <div><span>Tags : </span>
-        <span><a href="https://blog.71e6fd52.ml/tag/vegas.html">#Vegas, </a></span>
+        <span><a href="https://blog.71e6fd52.ml/tag/foldit-distributed_computing.html">#foldit distributed_computing, </a></span>
       </div>
 
       <br>
 
       <div class="entry-social">
         <span class="twitter">
-          <a target="_blank" rel="nofollow" onclick="javascript:window.open(this.href, '', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=400,width=700');return false;" title="Twitter" href="https://twitter.com/share?url=https://blog.71e6fd52.ml/vegas-yong-frameserver-da-qiao.html&text=Vegas 用 FrameServer 搭桥&via=71e6fd52">
+          <a target="_blank" rel="nofollow" onclick="javascript:window.open(this.href, '', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=400,width=700');return false;" title="Twitter" href="https://twitter.com/share?url=https://blog.71e6fd52.ml/ru-he-wan-dan-bai-zhi.html&text=如何玩蛋白质&via=71e6fd52">
             <img src="https://blog.71e6fd52.ml/theme/images/icons/twitter-s.png">
           </a>
         </span>
 
         <span class="gplus">
-          <a target="_blank" title="Google +" href="https://plus.google.com/share?url=https://blog.71e6fd52.ml/vegas-yong-frameserver-da-qiao.html&hl=fr" rel="nofollow" onclick="javascript:window.open(this.href, '', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=450,width=650');return false;">
+          <a target="_blank" title="Google +" href="https://plus.google.com/share?url=https://blog.71e6fd52.ml/ru-he-wan-dan-bai-zhi.html&hl=fr" rel="nofollow" onclick="javascript:window.open(this.href, '', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=450,width=650');return false;">
             <img src="https://blog.71e6fd52.ml/theme/images/icons/google-s.png">
           </a>
         </span>
 
         <span class="facebook">
-          <a target="_blank" title="Facebook" rel="nofollow" onclick="javascript:window.open(this.href, '', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=500,width=700');return false;" href="https://www.facebook.com/sharer.php?u=https://blog.71e6fd52.ml/vegas-yong-frameserver-da-qiao.html&t=Vegas 用 FrameServer 搭桥">
+          <a target="_blank" title="Facebook" rel="nofollow" onclick="javascript:window.open(this.href, '', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=500,width=700');return false;" href="https://www.facebook.com/sharer.php?u=https://blog.71e6fd52.ml/ru-he-wan-dan-bai-zhi.html&t=如何玩蛋白质">
             <img src="https://blog.71e6fd52.ml/theme/images/icons/facebook-s.png">
           </a>
         </span>
 
-        <a target="_blank" title="Linkedin" href="https://www.linkedin.com/shareArticle?mini=true&url=https://blog.71e6fd52.ml/vegas-yong-frameserver-da-qiao.html&title=Vegas 用 FrameServer 搭桥" rel="nofollow" onclick="javascript:window.open(this.href, '', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=450,width=650');return false;">
+        <a target="_blank" title="Linkedin" href="https://www.linkedin.com/shareArticle?mini=true&url=https://blog.71e6fd52.ml/ru-he-wan-dan-bai-zhi.html&title=如何玩蛋白质" rel="nofollow" onclick="javascript:window.open(this.href, '', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=450,width=650');return false;">
           <img src="https://blog.71e6fd52.ml/theme/images/icons/linkedin-s.png">
         </a>
 
         <span class="mail">
-          <a href="mailto:?subject=Vegas 用 FrameServer 搭桥&amp;body=在 71e6fd52 的网站上发现有关 [Vegas 用 FrameServer 搭桥] 的文章。 https://blog.71e6fd52.ml/vegas-yong-frameserver-da-qiao.html" title="Share by Email" target="_blank"><img src="https://blog.71e6fd52.ml/theme/images/icons/mail-s.png">
+          <a href="mailto:?subject=如何玩蛋白质&amp;body=在 71e6fd52 的网站上发现有关 [如何玩蛋白质] 的文章。 https://blog.71e6fd52.ml/ru-he-wan-dan-bai-zhi.html" title="Share by Email" target="_blank"><img src="https://blog.71e6fd52.ml/theme/images/icons/mail-s.png">
           </a>
         </span>
       </div>
     </div>
 
-      <a href="https://blog.71e6fd52.ml/test.html"
-      class="change-page left">
-        &lt;  test
-      </a>
       <a href="https://blog.71e6fd52.ml/wen-du-dan-wei.html"
-        class="change-page right">
-        温度单位  &gt;
+      class="change-page left">
+        &lt;  温度单位
       </a>
     <hr style="width: 100%; visibility: hidden;">
 
@@ -235,7 +226,7 @@
         <div id="disqus_thread"></div>
         <script data-cfasync="false" type="text/javascript">
           var disqus_config = function () {
-            this.page.identifier = "vegas-yong-frameserver-da-qiao.html";
+            this.page.identifier = "ru-he-wan-dan-bai-zhi.html";
           };
           (function () {
             var dsq = document.createElement('script');
@@ -253,7 +244,7 @@
         <script src="https://imsun.github.io/gitment/dist/gitment.browser.js"></script>
         <script>
           var gitment = new Gitment({
-            id: 'vegas-yong-frameserver-da-qiao.html',
+            id: 'ru-he-wan-dan-bai-zhi.html',
             owner: '71e6fd52',
             repo: 'blog',
             oauth: {
