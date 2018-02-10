@@ -1,17 +1,24 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>71e6fd52's blog - Pelican</title><link href="https://blog.71e6fd52.ml/" rel="alternate"></link><link href="https://blog.71e6fd52.ml/feeds/pelican.atom.xml" rel="self"></link><id>https://blog.71e6fd52.ml/</id><updated>2018-02-10T10:25:40+08:00</updated><entry><title>pelican highlight test</title><link href="https://blog.71e6fd52.ml/pelican-highlight-test.html" rel="alternate"></link><published>2018-02-10T10:25:40+08:00</published><updated>2018-02-10T10:25:40+08:00</updated><author><name>71e6fd52</name></author><id>tag:blog.71e6fd52.ml,2018-02-10:/pelican-highlight-test.html</id><summary type="html">&lt;p&gt;Test pelican highlight&lt;/p&gt;</summary><content type="html">&lt;p&gt;Python test:&lt;/p&gt;
+<feed xmlns="http://www.w3.org/2005/Atom"><title>71e6fd52's blog - Pelican</title><link href="https://blog.71e6fd52.ml/" rel="alternate"></link><link href="https://blog.71e6fd52.ml/feeds/pelican.atom.xml" rel="self"></link><id>https://blog.71e6fd52.ml/</id><updated>2018-02-10T10:25:40+08:00</updated><entry><title>pelican highlight test</title><link href="https://blog.71e6fd52.ml/pelican-highlight-test.html" rel="alternate"></link><published>2018-02-10T10:25:40+08:00</published><updated>2018-02-10T10:25:40+08:00</updated><author><name>71e6fd52</name></author><id>tag:blog.71e6fd52.ml,2018-02-10:/pelican-highlight-test.html</id><summary type="html">&lt;p&gt;Test pelican highlight&lt;/p&gt;</summary><content type="html">&lt;p&gt;Outside a list:&lt;/p&gt;
+&lt;p&gt;::: version:&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="k"&gt;print&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;foo&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
 
 
+&lt;p&gt;``` version:&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="k"&gt;print&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;foo&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
 
+
+&lt;p&gt;#! version:&lt;/p&gt;
+&lt;table class="highlighttable"&gt;&lt;tr&gt;&lt;td class="linenos"&gt;&lt;div class="linenodiv"&gt;&lt;pre&gt;1&lt;/pre&gt;&lt;/div&gt;&lt;/td&gt;&lt;td class="code"&gt;&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="k"&gt;print&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;foo&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
 
 &lt;p&gt;Inside a list:&lt;/p&gt;
 &lt;ol&gt;
 &lt;li&gt;
-&lt;p&gt;Here is some text. Let us try the ::: version of syntax highlighting.&lt;/p&gt;
+&lt;p&gt;::: version:&lt;/p&gt;
 &lt;p&gt;Only four spaces to indent:&lt;/p&gt;
 &lt;p&gt;:::python
 print("foo")&lt;/p&gt;
@@ -22,7 +29,7 @@ print("foo")&lt;/p&gt;
 
 &lt;/li&gt;
 &lt;li&gt;
-&lt;p&gt;Now let us try the ``` version of syntax highlighting.&lt;/p&gt;
+&lt;p&gt;``` version:&lt;/p&gt;
 &lt;p&gt;Only four spaces to indent:&lt;/p&gt;
 &lt;p&gt;&lt;code&gt;python
 print("foo")&lt;/code&gt;&lt;/p&gt;
@@ -34,8 +41,18 @@ print(&amp;quot;foo&amp;quot;)
 
 
 &lt;/li&gt;
-&lt;/ol&gt;
-&lt;p&gt;End of test.&lt;/p&gt;</content><category term="Pelican"></category></entry><entry><title>test</title><link href="https://blog.71e6fd52.ml/test.html" rel="alternate"></link><published>2017-09-17T15:11:41+08:00</published><updated>2017-09-23T14:12:06+08:00</updated><author><name>71e6fd52</name></author><id>tag:blog.71e6fd52.ml,2017-09-17:/test.html</id><summary type="html">第一篇博客就测试用吧？</summary><content type="html">&lt;p&gt;第一篇博客就测试用吧？&lt;/p&gt;
+&lt;li&gt;
+&lt;h1&gt;! version:&lt;/h1&gt;
+&lt;p&gt;Only four spaces to indent:&lt;/p&gt;
+&lt;h1&gt;!python&lt;/h1&gt;
+&lt;p&gt;print("foo")&lt;/p&gt;
+&lt;p&gt;Using eight spaces to indent:&lt;/p&gt;
+&lt;table class="highlighttable"&gt;&lt;tr&gt;&lt;td class="linenos"&gt;&lt;div class="linenodiv"&gt;&lt;pre&gt;1&lt;/pre&gt;&lt;/div&gt;&lt;/td&gt;&lt;td class="code"&gt;&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="k"&gt;print&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;foo&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+
+&lt;/li&gt;
+&lt;/ol&gt;</content><category term="Pelican"></category></entry><entry><title>test</title><link href="https://blog.71e6fd52.ml/test.html" rel="alternate"></link><published>2017-09-17T15:11:41+08:00</published><updated>2017-09-23T14:12:06+08:00</updated><author><name>71e6fd52</name></author><id>tag:blog.71e6fd52.ml,2017-09-17:/test.html</id><summary type="html">第一篇博客就测试用吧？</summary><content type="html">&lt;p&gt;第一篇博客就测试用吧？&lt;/p&gt;
 &lt;p&gt;还是想写点什么呢。&lt;/p&gt;
 &lt;p&gt;我原来用的是 &lt;a href="https://github.com/isnowfy/simple"&gt;&lt;code&gt;simple&lt;/code&gt;&lt;/a&gt;,
 可以把 Markdown 自动发布在 github 上，后来我自己 fork 了一份，改了一些内容。

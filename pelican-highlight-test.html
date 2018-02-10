@@ -119,19 +119,26 @@
     </h2>
 
     <div class="entry-content blog-post">
-      <p>Python test:</p>
+      <p>Outside a list:</p>
+<p>::: version:</p>
 <div class="highlight"><pre><span></span><span class="k">print</span><span class="p">(</span><span class="s2">&quot;foo&quot;</span><span class="p">)</span>
 </pre></div>
 
 
+<p>``` version:</p>
 <div class="highlight"><pre><span></span><span class="k">print</span><span class="p">(</span><span class="s2">&quot;foo&quot;</span><span class="p">)</span>
 </pre></div>
 
+
+<p>#! version:</p>
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="highlight"><pre><span></span><span class="k">print</span><span class="p">(</span><span class="s2">&quot;foo&quot;</span><span class="p">)</span>
+</pre></div>
+</td></tr></table>
 
 <p>Inside a list:</p>
 <ol>
 <li>
-<p>Here is some text. Let us try the ::: version of syntax highlighting.</p>
+<p>::: version:</p>
 <p>Only four spaces to indent:</p>
 <p>:::python
 print("foo")</p>
@@ -142,7 +149,7 @@ print("foo")</p>
 
 </li>
 <li>
-<p>Now let us try the ``` version of syntax highlighting.</p>
+<p>``` version:</p>
 <p>Only four spaces to indent:</p>
 <p><code>python
 print("foo")</code></p>
@@ -154,8 +161,18 @@ print(&quot;foo&quot;)
 
 
 </li>
+<li>
+<h1>! version:</h1>
+<p>Only four spaces to indent:</p>
+<h1>!python</h1>
+<p>print("foo")</p>
+<p>Using eight spaces to indent:</p>
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="highlight"><pre><span></span><span class="k">print</span><span class="p">(</span><span class="s2">&quot;foo&quot;</span><span class="p">)</span>
+</pre></div>
+</td></tr></table>
+
+</li>
 </ol>
-<p>End of test.</p>
     </div>
 
     <div class="post_list">
