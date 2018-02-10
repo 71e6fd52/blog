@@ -5,18 +5,28 @@ Category: Pelican
 Tags: Pelican
 Summary: Test pelican highlight
 
-Python test:
+Outside a list:
+
+::: version:
 
     :::python
     print("foo")
-    
+
+\`\`\` version:
+
 ```python
 print("foo")
 ```
 
+\#\! version:
+
+    #!python
+    print("foo")
+
+
 Inside a list:
 
-1. Here is some text. Let us try the ::: version of syntax highlighting.
+1. ::: version:
 
     Only four spaces to indent:
 
@@ -24,11 +34,11 @@ Inside a list:
     print("foo")
 
     Using eight spaces to indent:
-    
+
         :::python
         print("foo")
 
-2. Now let us try the \`\`\` version of syntax highlighting.
+2. \`\`\` version:
 
     Only four spaces to indent:
 
@@ -41,5 +51,15 @@ Inside a list:
         ```python
         print("foo")
         ```
-    
-End of test.
+
+3. #! version:
+
+    Only four spaces to indent:
+
+    #!python
+    print("foo")
+
+    Using eight spaces to indent:
+
+        #!python
+        print("foo")
