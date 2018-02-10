@@ -2,7 +2,7 @@ Title: 如何玩蛋白质
 Date: 2018-02-08 11:16:13
 Author: 71e6fd52
 Category: foldit
-Tags: foldit distributed_computing
+Tags: foldit, distributed computing
 Summary: Foldit 是一个折叠蛋白质的游戏，折叠的结果将会用于科学研究。
 
 以 Linux 系统为例
