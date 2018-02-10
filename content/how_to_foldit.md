@@ -3,13 +3,15 @@ Date: 2018-02-08 11:16:13
 Author: 71e6fd52
 Category: foldit
 Tags: foldit, distributed computing
-Summary: Foldit 是一个折叠蛋白质的游戏，折叠的结果将会用于科学研究。
+
+Foldit 是一个折叠蛋白质的游戏，折叠的结果将会用于科学研究。
 
 以 Linux 系统为例
 
 首先，[下载 foldit](http://fold.it/portal/download/linux)
 
 下载完成以后，解压，并运行 `Foldit`
+
 ```
 $ ./Foldit
 ```
@@ -26,7 +28,7 @@ $ ./Foldit
 之后输入你的用户名、密码，如果你没有的话去[注册一个](https://fold.it/portal/user/register)吧。
 
 之后点击 `Play Online` 你将进入教程，
-教程的介绍在 http://foldit.wikia.com/wiki/Tutorial_Puzzles
+教程的介绍在 [http://foldit.wikia.com/wiki/Tutorial_Puzzles](http://foldit.wikia.com/wiki/Tutorial_Puzzles)
 
 要了解更多信息，请务必查看 [Foldit 维基](http://foldit.wikia.com/wiki/Foldit_Wiki),
 那里有很多很棒的信息，提示，技巧，关于结构的信息等。
