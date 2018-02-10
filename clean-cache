@@ -7,18 +7,16 @@ unless File.size? 'cloudflare-api'
   return 1
 end
 ID = '0ec32156a083bf1471de76e71011aace'.freeze
-Email = 'DAStudio.71e6fd52@gmail.com'.freeze
+EMAIL = 'DAStudio.71e6fd52@gmail.com'.freeze
 key = File.open('cloudflare-api', &:gets).chomp
 
 file =
-  `git diff --name-status HEAD~ -z` \
+  `git diff --name-status -z gh-pages gh-pages~` \
   .split("\0") \
   .each_slice(2) \
   .each_with_object([]) do |x, changed|
     next unless x[0] == 'M'
-    break 'all' if x[1] == 'publishconf.py' || x[1] == 'theme'
-
-    changed << "https://blog.71e6fd52.ml/#{x[1]}" if x[1] =~ /^content/
+    changed << "https://blog.71e6fd52.ml/#{x[1]}"
   end
 
 data =
@@ -36,6 +34,6 @@ puts data.to_json
 puts `curl -X DELETE \
   "https://api.cloudflare.com/client/v4/zones/#{ID}/purge_cache" \
   -H "Content-Type:application/json" \
-  -H "X-Auth-Email:#{Email}" \
+  -H "X-Auth-Email:#{EMAIL}" \
   -H "X-Auth-Key:#{key}" \
   --data '#{data.to_json}'`
