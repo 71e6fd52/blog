@@ -52,7 +52,11 @@ print(&amp;quot;foo&amp;quot;)
 &lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
 
 &lt;/li&gt;
-&lt;/ol&gt;</content><category term="Pelican"></category></entry><entry><title>test</title><link href="https://blog.71e6fd52.ml/test.html" rel="alternate"></link><published>2017-09-17T15:11:41+08:00</published><updated>2017-09-23T14:12:06+08:00</updated><author><name>71e6fd52</name></author><id>tag:blog.71e6fd52.ml,2017-09-17:/test.html</id><summary type="html">第一篇博客就测试用吧？</summary><content type="html">&lt;p&gt;第一篇博客就测试用吧？&lt;/p&gt;
+&lt;/ol&gt;</content><category term="Pelican"></category></entry><entry><title>test</title><link href="https://blog.71e6fd52.ml/test.html" rel="alternate"></link><published>2017-09-17T15:11:41+08:00</published><updated>2017-09-23T14:12:06+08:00</updated><author><name>71e6fd52</name></author><id>tag:blog.71e6fd52.ml,2017-09-17:/test.html</id><summary type="html">&lt;p&gt;第一篇博客就测试用吧？&lt;/p&gt;
+&lt;p&gt;还是想写点什么呢。&lt;/p&gt;
+&lt;p&gt;我原来用的是 &lt;a href="https://github.com/isnowfy/simple"&gt;&lt;code&gt;simple&lt;/code&gt;&lt;/a&gt;,
+可以把 Markdown 自动发布在 github 上，后来我自己 fork 了一份，改了一些内容。
+后来有时候直接用 HTML，总之很难受，之后慢慢把之前的搬过来吧。&lt;/p&gt;</summary><content type="html">&lt;p&gt;第一篇博客就测试用吧？&lt;/p&gt;
 &lt;p&gt;还是想写点什么呢。&lt;/p&gt;
 &lt;p&gt;我原来用的是 &lt;a href="https://github.com/isnowfy/simple"&gt;&lt;code&gt;simple&lt;/code&gt;&lt;/a&gt;,
 可以把 Markdown 自动发布在 github 上，后来我自己 fork 了一份，改了一些内容。

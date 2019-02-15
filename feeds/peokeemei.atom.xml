@@ -1,5 +1,21 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>71e6fd52's blog - PEOKEEMEI</title><link href="https://blog.71e6fd52.ml/" rel="alternate"></link><link href="https://blog.71e6fd52.ml/feeds/peokeemei.atom.xml" rel="self"></link><id>https://blog.71e6fd52.ml/</id><updated>2018-02-08T10:59:51+08:00</updated><entry><title>温度单位</title><link href="https://blog.71e6fd52.ml/wen-du-dan-wei.html" rel="alternate"></link><published>2017-12-17T22:08:03+08:00</published><updated>2018-02-08T10:59:51+08:00</updated><author><name>71e6fd52</name></author><id>tag:blog.71e6fd52.ml,2017-12-17:/wen-du-dan-wei.html</id><summary type="html">为什么不在温度单位后加常数表示实际温度</summary><content type="html">&lt;p&gt;为什么不在温度单位后加常数表示实际温度&lt;/p&gt;
+<feed xmlns="http://www.w3.org/2005/Atom"><title>71e6fd52's blog - PEOKEEMEI</title><link href="https://blog.71e6fd52.ml/" rel="alternate"></link><link href="https://blog.71e6fd52.ml/feeds/peokeemei.atom.xml" rel="self"></link><id>https://blog.71e6fd52.ml/</id><updated>2018-02-08T10:59:51+08:00</updated><entry><title>温度单位</title><link href="https://blog.71e6fd52.ml/wen-du-dan-wei.html" rel="alternate"></link><published>2017-12-17T22:08:03+08:00</published><updated>2018-02-08T10:59:51+08:00</updated><author><name>71e6fd52</name></author><id>tag:blog.71e6fd52.ml,2017-12-17:/wen-du-dan-wei.html</id><summary type="html">&lt;p&gt;为什么不在温度单位后加常数表示实际温度&lt;/p&gt;
+&lt;p&gt;如用地球的温度单位&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;(20°C - 10°C) = 2(15°C - 10°C)
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;而 &lt;code&gt;10°C&lt;/code&gt; 却不等于 &lt;code&gt;2 * 5°C&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;加上常数后&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;((20°C + Tc) - (10°C + Tc)) = 2((15°C + Tc) - (10°C + Tc))
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;&lt;code&gt;10°C + Tc&lt;/code&gt; 自然不等于 &lt;code&gt;2(5°C + Tc)&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;单位换算也很清楚了&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;1K = 1°C
+Tc = Tk + 273.15°C
+1 …&lt;/pre&gt;&lt;/div&gt;</summary><content type="html">&lt;p&gt;为什么不在温度单位后加常数表示实际温度&lt;/p&gt;
 &lt;p&gt;如用地球的温度单位&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;(20°C - 10°C) = 2(15°C - 10°C)
 &lt;/pre&gt;&lt;/div&gt;

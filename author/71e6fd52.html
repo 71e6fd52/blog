@@ -107,6 +107,8 @@
                 <li><a
                         href="https://blog.71e6fd52.ml/category/peokeemei.html">PEOKEEMEI</a></li>
                 <li><a
+                        href="https://blog.71e6fd52.ml/category/program.html">program</a></li>
+                <li><a
                         href="https://blog.71e6fd52.ml/category/windows.html">Windows</a></li>
         </ul>
 
@@ -118,6 +120,17 @@
     <h1 class="title">Hi, I'm 71e6fd52</h1>
         <ol>
     <h2 class="latest">Author: 71e6fd52</h2>
+                <li class="post_list"><p class="post_entry">
+                    <h2 class="post_title"><a href="https://blog.71e6fd52.ml/bian-cheng-ji-chu-0-mu-lu.html" rel="bookmark"
+                                              title="Permalink to 编程基础（0）——目录">编程基础（0）——目录</a>
+                    </h2>
+                        <p><p>开个新坑，教一些不特定于任何编程语言的基本的编程知识。</p></p>
+                    <a href="https://blog.71e6fd52.ml/author/71e6fd52.html">@71e6fd52</a>
+                    <span> in </span>
+                    <span class="post_category"><a href="https://blog.71e6fd52.ml/category/program.html" rel="bookmark"
+                                                   title="Permalink to program">[ program ]</a></span>
+                    <span class="post_date">五 15 二月 2019</span>
+                </li>
                 <li class="post_list"><p class="post_entry">
                     <h2 class="post_title"><a href="https://blog.71e6fd52.ml/pelican-highlight-test.html" rel="bookmark"
                                               title="Permalink to pelican highlight test">pelican highlight test</a>
@@ -133,7 +146,22 @@
                     <h2 class="post_title"><a href="https://blog.71e6fd52.ml/ru-he-wan-dan-bai-zhi.html" rel="bookmark"
                                               title="Permalink to 如何玩蛋白质">如何玩蛋白质</a>
                     </h2>
-                        <p>Foldit 是一个折叠蛋白质的游戏，折叠的结果将会用于科学研究。</p>
+                        <p><p>Foldit 是一个折叠蛋白质的游戏，折叠的结果将会用于科学研究。</p>
+<p>以 Linux 系统为例</p>
+<p>首先，<a href="http://fold.it/portal/download/linux">下载 foldit</a></p>
+<p>下载完成以后，解压，并运行 <code>Foldit</code></p>
+<div class="highlight"><pre><span></span>$ ./Foldit
+</pre></div>
+
+
+<p>它会启动，并说 “Contacting Server to Check for Updates...”，之后会进入自动更新</p>
+<p>在下载和自动更新的过程中，可以看看<a href="http://fold.it/portal/guidelines">社区规则</a></p>
+<p>自动更新可能会崩溃，多试几次，直到它不再自动更新并显示绿色的开始按钮。
+（不过有可能没检测到更新，还是再多启动几次吧）</p>
+<p>点击 <code>PLAY!</code>，接下来可能会有新闻，如果有的话，点击 <code>Ok</code></p>
+<p>之后输入你的用户名、密码，如果你没有的话去<a href="https://fold.it/portal/user/register">注册一个</a>吧。</p>
+<p>之后点击 <code>Play Online</code> 你将进入教程，
+教程的介绍在 <a href="http://foldit.wikia.com/wiki/Tutorial_Puzzles">http://foldit.wikia …</a></p></p>
                     <a href="https://blog.71e6fd52.ml/author/71e6fd52.html">@71e6fd52</a>
                     <span> in </span>
                     <span class="post_category"><a href="https://blog.71e6fd52.ml/category/foldit.html" rel="bookmark"
@@ -144,7 +172,23 @@
                     <h2 class="post_title"><a href="https://blog.71e6fd52.ml/wen-du-dan-wei.html" rel="bookmark"
                                               title="Permalink to 温度单位">温度单位</a>
                     </h2>
-                        <p>为什么不在温度单位后加常数表示实际温度</p>
+                        <p><p>为什么不在温度单位后加常数表示实际温度</p>
+<p>如用地球的温度单位</p>
+<div class="highlight"><pre><span></span>(20°C - 10°C) = 2(15°C - 10°C)
+</pre></div>
+
+
+<p>而 <code>10°C</code> 却不等于 <code>2 * 5°C</code></p>
+<p>加上常数后</p>
+<div class="highlight"><pre><span></span>((20°C + Tc) - (10°C + Tc)) = 2((15°C + Tc) - (10°C + Tc))
+</pre></div>
+
+
+<p><code>10°C + Tc</code> 自然不等于 <code>2(5°C + Tc)</code></p>
+<p>单位换算也很清楚了</p>
+<div class="highlight"><pre><span></span>1K = 1°C
+Tc = Tk + 273.15°C
+1 …</pre></div></p>
                     <a href="https://blog.71e6fd52.ml/author/71e6fd52.html">@71e6fd52</a>
                     <span> in </span>
                     <span class="post_category"><a href="https://blog.71e6fd52.ml/category/peokeemei.html" rel="bookmark"
@@ -155,7 +199,17 @@
                     <h2 class="post_title"><a href="https://blog.71e6fd52.ml/vegas-yong-frameserver-da-qiao.html" rel="bookmark"
                                               title="Permalink to Vegas 用 FrameServer 搭桥">Vegas 用 FrameServer 搭桥</a>
                     </h2>
-                        <p>之前为了让 Sony Vegas pro 13.0 用 DebugMode FrameServer 搭桥，研究了很久最后发现了一个很简单的办法</p>
+                        <p><p>之前为了让 Sony Vegas pro 13.0 用 DebugMode FrameServer 搭桥，研究了很久最后发现了一个很简单的办法</p>
+<ol>
+<li>安装 <a href="http://vegasbar.lofter.com/post/1d4450de_74cd602">Vegas</a></li>
+<li>安装 <a href="http://pan.baidu.com/s/1pLRarub">DebugMode FrameServer 的 Vegas 13 版</a> 密码：6qf3<ol>
+<li>打开安装程序</li>
+<li>点击 I Agree</li>
+<li>确定 Sony?Vegas…… 勾着</li>
+<li>点击 Next</li>
+<li>选择 DebugMode FrameServer 的安装路径</li>
+<li>点击 Next</li>
+<li>确定 Vegas 13 的安装路径（默认是 C:\Program Files\Sony\Vegas Pro 13 …</li></ol></li></ol></p>
                     <a href="https://blog.71e6fd52.ml/author/71e6fd52.html">@71e6fd52</a>
                     <span> in </span>
                     <span class="post_category"><a href="https://blog.71e6fd52.ml/category/windows.html" rel="bookmark"
@@ -166,7 +220,11 @@
                     <h2 class="post_title"><a href="https://blog.71e6fd52.ml/test.html" rel="bookmark"
                                               title="Permalink to test">test</a>
                     </h2>
-                        <p>第一篇博客就测试用吧？</p>
+                        <p><p>第一篇博客就测试用吧？</p>
+<p>还是想写点什么呢。</p>
+<p>我原来用的是 <a href="https://github.com/isnowfy/simple"><code>simple</code></a>,
+可以把 Markdown 自动发布在 github 上，后来我自己 fork 了一份，改了一些内容。
+后来有时候直接用 HTML，总之很难受，之后慢慢把之前的搬过来吧。</p></p>
                     <a href="https://blog.71e6fd52.ml/author/71e6fd52.html">@71e6fd52</a>
                     <span> in </span>
                     <span class="post_category"><a href="https://blog.71e6fd52.ml/category/pelican.html" rel="bookmark"

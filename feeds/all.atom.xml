@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>71e6fd52's blog</title><link href="https://blog.71e6fd52.ml/" rel="alternate"></link><link href="https://blog.71e6fd52.ml/feeds/all.atom.xml" rel="self"></link><id>https://blog.71e6fd52.ml/</id><updated>2018-02-10T10:25:40+08:00</updated><entry><title>pelican highlight test</title><link href="https://blog.71e6fd52.ml/pelican-highlight-test.html" rel="alternate"></link><published>2018-02-10T10:25:40+08:00</published><updated>2018-02-10T10:25:40+08:00</updated><author><name>71e6fd52</name></author><id>tag:blog.71e6fd52.ml,2018-02-10:/pelican-highlight-test.html</id><summary type="html">&lt;p&gt;Test pelican highlight&lt;/p&gt;</summary><content type="html">&lt;p&gt;Outside a list:&lt;/p&gt;
+<feed xmlns="http://www.w3.org/2005/Atom"><title>71e6fd52's blog</title><link href="https://blog.71e6fd52.ml/" rel="alternate"></link><link href="https://blog.71e6fd52.ml/feeds/all.atom.xml" rel="self"></link><id>https://blog.71e6fd52.ml/</id><updated>2019-02-15T21:24:46+08:00</updated><entry><title>编程基础（0）——目录</title><link href="https://blog.71e6fd52.ml/bian-cheng-ji-chu-0-mu-lu.html" rel="alternate"></link><published>2019-02-15T21:24:46+08:00</published><updated>2019-02-15T21:24:46+08:00</updated><author><name>71e6fd52</name></author><id>tag:blog.71e6fd52.ml,2019-02-15:/bian-cheng-ji-chu-0-mu-lu.html</id><summary type="html">&lt;p&gt;开个新坑，教一些不特定于任何编程语言的基本的编程知识。&lt;/p&gt;</summary><content type="html">&lt;p&gt;开个新坑，教一些不特定于任何编程语言的基本的编程知识。&lt;/p&gt;</content><category term="program"></category></entry><entry><title>pelican highlight test</title><link href="https://blog.71e6fd52.ml/pelican-highlight-test.html" rel="alternate"></link><published>2018-02-10T10:25:40+08:00</published><updated>2018-02-10T10:25:40+08:00</updated><author><name>71e6fd52</name></author><id>tag:blog.71e6fd52.ml,2018-02-10:/pelican-highlight-test.html</id><summary type="html">&lt;p&gt;Test pelican highlight&lt;/p&gt;</summary><content type="html">&lt;p&gt;Outside a list:&lt;/p&gt;
 &lt;p&gt;::: version:&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="k"&gt;print&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;foo&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
@@ -52,7 +52,22 @@ print(&amp;quot;foo&amp;quot;)
 &lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
 
 &lt;/li&gt;
-&lt;/ol&gt;</content><category term="Pelican"></category></entry><entry><title>如何玩蛋白质</title><link href="https://blog.71e6fd52.ml/ru-he-wan-dan-bai-zhi.html" rel="alternate"></link><published>2018-02-08T11:16:13+08:00</published><updated>2018-02-08T11:16:13+08:00</updated><author><name>71e6fd52</name></author><id>tag:blog.71e6fd52.ml,2018-02-08:/ru-he-wan-dan-bai-zhi.html</id><summary type="html">Foldit 是一个折叠蛋白质的游戏，折叠的结果将会用于科学研究。</summary><content type="html">&lt;p&gt;Foldit 是一个折叠蛋白质的游戏，折叠的结果将会用于科学研究。&lt;/p&gt;
+&lt;/ol&gt;</content><category term="Pelican"></category></entry><entry><title>如何玩蛋白质</title><link href="https://blog.71e6fd52.ml/ru-he-wan-dan-bai-zhi.html" rel="alternate"></link><published>2018-02-08T11:16:13+08:00</published><updated>2018-02-08T11:16:13+08:00</updated><author><name>71e6fd52</name></author><id>tag:blog.71e6fd52.ml,2018-02-08:/ru-he-wan-dan-bai-zhi.html</id><summary type="html">&lt;p&gt;Foldit 是一个折叠蛋白质的游戏，折叠的结果将会用于科学研究。&lt;/p&gt;
+&lt;p&gt;以 Linux 系统为例&lt;/p&gt;
+&lt;p&gt;首先，&lt;a href="http://fold.it/portal/download/linux"&gt;下载 foldit&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;下载完成以后，解压，并运行 &lt;code&gt;Foldit&lt;/code&gt;&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;$ ./Foldit
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;它会启动，并说 “Contacting Server to Check for Updates...”，之后会进入自动更新&lt;/p&gt;
+&lt;p&gt;在下载和自动更新的过程中，可以看看&lt;a href="http://fold.it/portal/guidelines"&gt;社区规则&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;自动更新可能会崩溃，多试几次，直到它不再自动更新并显示绿色的开始按钮。
+（不过有可能没检测到更新，还是再多启动几次吧）&lt;/p&gt;
+&lt;p&gt;点击 &lt;code&gt;PLAY!&lt;/code&gt;，接下来可能会有新闻，如果有的话，点击 &lt;code&gt;Ok&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;之后输入你的用户名、密码，如果你没有的话去&lt;a href="https://fold.it/portal/user/register"&gt;注册一个&lt;/a&gt;吧。&lt;/p&gt;
+&lt;p&gt;之后点击 &lt;code&gt;Play Online&lt;/code&gt; 你将进入教程，
+教程的介绍在 &lt;a href="http://foldit.wikia.com/wiki/Tutorial_Puzzles"&gt;http://foldit.wikia …&lt;/a&gt;&lt;/p&gt;</summary><content type="html">&lt;p&gt;Foldit 是一个折叠蛋白质的游戏，折叠的结果将会用于科学研究。&lt;/p&gt;
 &lt;p&gt;以 Linux 系统为例&lt;/p&gt;
 &lt;p&gt;首先，&lt;a href="http://fold.it/portal/download/linux"&gt;下载 foldit&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;下载完成以后，解压，并运行 &lt;code&gt;Foldit&lt;/code&gt;&lt;/p&gt;
@@ -70,7 +85,23 @@ print(&amp;quot;foo&amp;quot;)
 教程的介绍在 &lt;a href="http://foldit.wikia.com/wiki/Tutorial_Puzzles"&gt;http://foldit.wikia.com/wiki/Tutorial_Puzzles&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;要了解更多信息，请务必查看 &lt;a href="http://foldit.wikia.com/wiki/Foldit_Wiki"&gt;Foldit 维基&lt;/a&gt;,
 那里有很多很棒的信息，提示，技巧，关于结构的信息等。&lt;/p&gt;
-&lt;p&gt;现在，你可以和你的蛋白质玩耍了。&lt;/p&gt;</content><category term="foldit"></category><category term="distributed computing"></category></entry><entry><title>温度单位</title><link href="https://blog.71e6fd52.ml/wen-du-dan-wei.html" rel="alternate"></link><published>2017-12-17T22:08:03+08:00</published><updated>2018-02-08T10:59:51+08:00</updated><author><name>71e6fd52</name></author><id>tag:blog.71e6fd52.ml,2017-12-17:/wen-du-dan-wei.html</id><summary type="html">为什么不在温度单位后加常数表示实际温度</summary><content type="html">&lt;p&gt;为什么不在温度单位后加常数表示实际温度&lt;/p&gt;
+&lt;p&gt;现在，你可以和你的蛋白质玩耍了。&lt;/p&gt;</content><category term="foldit"></category><category term="distributed computing"></category></entry><entry><title>温度单位</title><link href="https://blog.71e6fd52.ml/wen-du-dan-wei.html" rel="alternate"></link><published>2017-12-17T22:08:03+08:00</published><updated>2018-02-08T10:59:51+08:00</updated><author><name>71e6fd52</name></author><id>tag:blog.71e6fd52.ml,2017-12-17:/wen-du-dan-wei.html</id><summary type="html">&lt;p&gt;为什么不在温度单位后加常数表示实际温度&lt;/p&gt;
+&lt;p&gt;如用地球的温度单位&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;(20°C - 10°C) = 2(15°C - 10°C)
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;而 &lt;code&gt;10°C&lt;/code&gt; 却不等于 &lt;code&gt;2 * 5°C&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;加上常数后&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;((20°C + Tc) - (10°C + Tc)) = 2((15°C + Tc) - (10°C + Tc))
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;&lt;code&gt;10°C + Tc&lt;/code&gt; 自然不等于 &lt;code&gt;2(5°C + Tc)&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;单位换算也很清楚了&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;1K = 1°C
+Tc = Tk + 273.15°C
+1 …&lt;/pre&gt;&lt;/div&gt;</summary><content type="html">&lt;p&gt;为什么不在温度单位后加常数表示实际温度&lt;/p&gt;
 &lt;p&gt;如用地球的温度单位&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;(20°C - 10°C) = 2(15°C - 10°C)
 &lt;/pre&gt;&lt;/div&gt;
@@ -91,7 +122,17 @@ Tf = Tc + 32°F
 &lt;/pre&gt;&lt;/div&gt;
 
 
-&lt;p&gt;顺便一提，今天正好是博客建成 3 个月&lt;/p&gt;</content><category term="PEIKEEMEI"></category></entry><entry><title>Vegas 用 FrameServer 搭桥</title><link href="https://blog.71e6fd52.ml/vegas-yong-frameserver-da-qiao.html" rel="alternate"></link><published>2017-09-23T14:16:48+08:00</published><updated>2017-09-23T15:30:52+08:00</updated><author><name>71e6fd52</name></author><id>tag:blog.71e6fd52.ml,2017-09-23:/vegas-yong-frameserver-da-qiao.html</id><summary type="html">之前为了让 Sony Vegas pro 13.0 用 DebugMode FrameServer 搭桥，研究了很久最后发现了一个很简单的办法</summary><content type="html">&lt;p&gt;之前为了让 Sony Vegas pro 13.0 用 DebugMode FrameServer 搭桥，研究了很久最后发现了一个很简单的办法&lt;/p&gt;
+&lt;p&gt;顺便一提，今天正好是博客建成 3 个月&lt;/p&gt;</content><category term="PEIKEEMEI"></category></entry><entry><title>Vegas 用 FrameServer 搭桥</title><link href="https://blog.71e6fd52.ml/vegas-yong-frameserver-da-qiao.html" rel="alternate"></link><published>2017-09-23T14:16:48+08:00</published><updated>2017-09-23T15:30:52+08:00</updated><author><name>71e6fd52</name></author><id>tag:blog.71e6fd52.ml,2017-09-23:/vegas-yong-frameserver-da-qiao.html</id><summary type="html">&lt;p&gt;之前为了让 Sony Vegas pro 13.0 用 DebugMode FrameServer 搭桥，研究了很久最后发现了一个很简单的办法&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;安装 &lt;a href="http://vegasbar.lofter.com/post/1d4450de_74cd602"&gt;Vegas&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;安装 &lt;a href="http://pan.baidu.com/s/1pLRarub"&gt;DebugMode FrameServer 的 Vegas 13 版&lt;/a&gt; 密码：6qf3&lt;ol&gt;
+&lt;li&gt;打开安装程序&lt;/li&gt;
+&lt;li&gt;点击 I Agree&lt;/li&gt;
+&lt;li&gt;确定 Sony?Vegas…… 勾着&lt;/li&gt;
+&lt;li&gt;点击 Next&lt;/li&gt;
+&lt;li&gt;选择 DebugMode FrameServer 的安装路径&lt;/li&gt;
+&lt;li&gt;点击 Next&lt;/li&gt;
+&lt;li&gt;确定 Vegas 13 的安装路径（默认是 C:\Program Files\Sony\Vegas Pro 13 …&lt;/li&gt;&lt;/ol&gt;&lt;/li&gt;&lt;/ol&gt;</summary><content type="html">&lt;p&gt;之前为了让 Sony Vegas pro 13.0 用 DebugMode FrameServer 搭桥，研究了很久最后发现了一个很简单的办法&lt;/p&gt;
 &lt;ol&gt;
 &lt;li&gt;安装 &lt;a href="http://vegasbar.lofter.com/post/1d4450de_74cd602"&gt;Vegas&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;安装 &lt;a href="http://pan.baidu.com/s/1pLRarub"&gt;DebugMode FrameServer 的 Vegas 13 版&lt;/a&gt; 密码：6qf3&lt;ol&gt;
@@ -113,7 +154,11 @@ Tf = Tc + 32°F
 &lt;/li&gt;
 &lt;li&gt;已经导出了临时文件（桥）了。&lt;/li&gt;
 &lt;/ol&gt;
-&lt;p&gt;所以，为什么不用 FFmpeg 呢&lt;/p&gt;</content><category term="Vegas"></category></entry><entry><title>test</title><link href="https://blog.71e6fd52.ml/test.html" rel="alternate"></link><published>2017-09-17T15:11:41+08:00</published><updated>2017-09-23T14:12:06+08:00</updated><author><name>71e6fd52</name></author><id>tag:blog.71e6fd52.ml,2017-09-17:/test.html</id><summary type="html">第一篇博客就测试用吧？</summary><content type="html">&lt;p&gt;第一篇博客就测试用吧？&lt;/p&gt;
+&lt;p&gt;所以，为什么不用 FFmpeg 呢&lt;/p&gt;</content><category term="Vegas"></category></entry><entry><title>test</title><link href="https://blog.71e6fd52.ml/test.html" rel="alternate"></link><published>2017-09-17T15:11:41+08:00</published><updated>2017-09-23T14:12:06+08:00</updated><author><name>71e6fd52</name></author><id>tag:blog.71e6fd52.ml,2017-09-17:/test.html</id><summary type="html">&lt;p&gt;第一篇博客就测试用吧？&lt;/p&gt;
+&lt;p&gt;还是想写点什么呢。&lt;/p&gt;
+&lt;p&gt;我原来用的是 &lt;a href="https://github.com/isnowfy/simple"&gt;&lt;code&gt;simple&lt;/code&gt;&lt;/a&gt;,
+可以把 Markdown 自动发布在 github 上，后来我自己 fork 了一份，改了一些内容。
+后来有时候直接用 HTML，总之很难受，之后慢慢把之前的搬过来吧。&lt;/p&gt;</summary><content type="html">&lt;p&gt;第一篇博客就测试用吧？&lt;/p&gt;
 &lt;p&gt;还是想写点什么呢。&lt;/p&gt;
 &lt;p&gt;我原来用的是 &lt;a href="https://github.com/isnowfy/simple"&gt;&lt;code&gt;simple&lt;/code&gt;&lt;/a&gt;,
 可以把 Markdown 自动发布在 github 上，后来我自己 fork 了一份，改了一些内容。
