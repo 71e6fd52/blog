@@ -32,7 +32,7 @@
   <meta name="twitter:creator" content="71e6fd52">
   <meta name="twitter:url" content="https://blog.71e6fd52.ml/wen-du-dan-wei.html">
   <meta name="twitter:title" content="71e6fd52's blog ~ 温度单位">
-  <meta name="twitter:description" content="为什么不在温度单位后加常数表示实际温度 如用地球的温度单位 (20°C - 10°C) = 2(15°C - 10°C) 而 10°C 却不等于 2 * 5°C 加上常数后 ((20°C + Tc) - (10°C + Tc)) = 2((15°C + Tc) - (10°C + Tc)) 10°C + Tc 自然不等于 2(5°C + Tc) 单位换算也很清楚了 1K = 1°C Tc = Tk + 273.15°C 1 …">
+  <meta name="twitter:description" content="现在的温度单位/温标很不合理啊。 一个温度没有倍数关系的，比如 25°C 和 50°C 不是两倍关系，但是温度差却是有的， 0°C 与 50°C 的温差就是 0°C 与 25°C 的两倍，于是这样 50°C 是 25°C 的两倍了。 单位换算也一样，如果是温度的话，开尔文 是 摄氏度 + 273.15，还用到了加法。 而温度差，1°C = 1K，就像一般的物理量的换算一样。 所以，温度差用温度单位就像一个一般的物理量，而温度就看起来很奇怪。 这可以从加法那里感觉出来温度差了个常量，如果把温度写成 25°C …">
 
   <!-- simpread Meta Data -->
   <meta name="simpread:name" content="https://blog.71e6fd52.ml">
@@ -42,7 +42,7 @@
 
   <!-- Facebook Meta Data -->
   <meta property="og:title" content="71e6fd52's blog ~ 温度单位"/>
-  <meta property="og:description" content="为什么不在温度单位后加常数表示实际温度 如用地球的温度单位 (20°C - 10°C) = 2(15°C - 10°C) 而 10°C 却不等于 2 * 5°C 加上常数后 ((20°C + Tc) - (10°C + Tc)) = 2((15°C + Tc) - (10°C + Tc)) 10°C + Tc 自然不等于 2(5°C + Tc) 单位换算也很清楚了 1K = 1°C Tc = Tk + 273.15°C 1 …"/>
+  <meta property="og:description" content="现在的温度单位/温标很不合理啊。 一个温度没有倍数关系的，比如 25°C 和 50°C 不是两倍关系，但是温度差却是有的， 0°C 与 50°C 的温差就是 0°C 与 25°C 的两倍，于是这样 50°C 是 25°C 的两倍了。 单位换算也一样，如果是温度的话，开尔文 是 摄氏度 + 273.15，还用到了加法。 而温度差，1°C = 1K，就像一般的物理量的换算一样。 所以，温度差用温度单位就像一个一般的物理量，而温度就看起来很奇怪。 这可以从加法那里感觉出来温度差了个常量，如果把温度写成 25°C …"/>
   <meta property="og:image" content=""/>
   <link rel="stylesheet" href="https://blog.71e6fd52.ml/theme/css/comment.css" type="text/css"/>
 </head>
@@ -121,28 +121,23 @@
     </h2>
 
     <div class="entry-content blog-post">
-      <p>为什么不在温度单位后加常数表示实际温度</p>
-<p>如用地球的温度单位</p>
-<div class="highlight"><pre><span></span>(20°C - 10°C) = 2(15°C - 10°C)
-</pre></div>
-
-
-<p>而 <code>10°C</code> 却不等于 <code>2 * 5°C</code></p>
-<p>加上常数后</p>
-<div class="highlight"><pre><span></span>((20°C + Tc) - (10°C + Tc)) = 2((15°C + Tc) - (10°C + Tc))
-</pre></div>
-
-
-<p><code>10°C + Tc</code> 自然不等于 <code>2(5°C + Tc)</code></p>
-<p>单位换算也很清楚了</p>
+      <p>现在的温度单位/温标很不合理啊。</p>
+<p>一个温度没有倍数关系的，比如 25°C 和 50°C 不是两倍关系，但是温度差却是有的，
+0°C 与 50°C 的温差就是 0°C 与 25°C 的两倍，于是这样 50°C 是 25°C 的两倍了。</p>
+<p>单位换算也一样，如果是温度的话，开尔文 是 摄氏度 + 273.15，还用到了加法。
+而温度差，1°C = 1K，就像一般的物理量的换算一样。
+所以，温度差用温度单位就像一个一般的物理量，而温度就看起来很奇怪。</p>
+<p>这可以从加法那里感觉出来温度差了个常量，如果把温度写成 25°C + Bc，
+或者是 298°C + Bk，这就全都解决了。</p>
+<p>单位换算需要加法是因为还要换算这个常量（<code>Bc = Bk + 273.15°C</code>），
+而没有倍数关系是因为如果把 <code>25°C + Bc</code> 乘以 2，那么其中常量 Bc 也会被乘以 2，
+变成 <code>50°C + 2Bc</code> 就不等于 <code>50°C + Bc</code> 了</p>
+<p>单位换算就像这样：</p>
 <div class="highlight"><pre><span></span>1K = 1°C
-Tc = Tk + 273.15°C
+Bc = Bk + 273.15°C
 1°C = 1.8°F
-Tf = Tc + 32°F
+Bf = Bc + 32°F
 </pre></div>
-
-
-<p>顺便一提，今天正好是博客建成 3 个月</p>
     </div>
 
     <div class="post_list">
