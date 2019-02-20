@@ -1,2 +1,29 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>71e6fd52's blog - program</title><link href="https://blog.71e6fd52.ml/" rel="alternate"></link><link href="https://blog.71e6fd52.ml/feeds/program.atom.xml" rel="self"></link><id>https://blog.71e6fd52.ml/</id><updated>2019-02-15T16:40:55+08:00</updated><entry><title>编程基础（0）——目录</title><link href="https://blog.71e6fd52.ml/bian-cheng-ji-chu-0-mu-lu.html" rel="alternate"></link><published>2019-02-15T16:40:55+08:00</published><updated>2019-02-15T16:40:55+08:00</updated><author><name>71e6fd52</name></author><id>tag:blog.71e6fd52.ml,2019-02-15:/bian-cheng-ji-chu-0-mu-lu.html</id><summary type="html">&lt;p&gt;开个新坑，教一些不特定于任何编程语言的基本的编程知识。&lt;/p&gt;</summary><content type="html">&lt;p&gt;开个新坑，教一些不特定于任何编程语言的基本的编程知识。&lt;/p&gt;</content><category term="program"></category></entry></feed>
+<feed xmlns="http://www.w3.org/2005/Atom"><title>71e6fd52's blog - program</title><link href="https://blog.71e6fd52.ml/" rel="alternate"></link><link href="https://blog.71e6fd52.ml/feeds/program.atom.xml" rel="self"></link><id>https://blog.71e6fd52.ml/</id><updated>2019-02-20T09:53:45+08:00</updated><entry><title>编程基础（1）——编程语言分类</title><link href="https://blog.71e6fd52.ml/bian-cheng-ji-chu-1-bian-cheng-yu-yan-fen-lei.html" rel="alternate"></link><published>2019-02-20T09:53:45+08:00</published><updated>2019-02-20T09:53:45+08:00</updated><author><name>71e6fd52</name></author><id>tag:blog.71e6fd52.ml,2019-02-20:/bian-cheng-ji-chu-1-bian-cheng-yu-yan-fen-lei.html</id><summary type="html">&lt;p&gt;编程语言的各种分类&lt;/p&gt;</summary><content type="html">&lt;h2&gt;一些分类方法&lt;/h2&gt;
+&lt;h3&gt;编译/解释&lt;/h3&gt;
+&lt;p&gt;&lt;em&gt;编译&lt;/em&gt;就是用各种语言的&lt;a href="https://zh.wikipedia.org/zh-hans/%E7%B7%A8%E8%AD%AF%E5%99%A8"&gt;编译器&lt;/a&gt;把这种语言写的&lt;a href="https://zh.wikipedia.org/zh-hans/%E6%BA%90%E4%BB%A3%E7%A0%81"&gt;源代码&lt;/a&gt;，&lt;strong&gt;转换&lt;/strong&gt;成机器可以直接执行的&lt;a href="https://zh.wikipedia.org/zh-hans/%E6%9C%BA%E5%99%A8%E4%BB%A3%E7%A0%81"&gt;机器码&lt;/a&gt;，转换完成之后，源代码对运行就没什么用了。比如，一个加法，可能会直接转换成一条由 CPU 执行的 ADD 指令。&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;解释&lt;/em&gt;执行就是&lt;a href="https://zh.wikipedia.org/zh-hans/%E7%9B%B4%E8%AD%AF%E5%99%A8"&gt;解释器&lt;/a&gt;读取代码，再&lt;strong&gt;执行&lt;/strong&gt;它。比如，一个加法，虽然还是需要靠 ADD 指令，但是，这是解释器读取到了这个加法后，再&lt;strong&gt;调用&lt;/strong&gt;了 ADD 指令 。&lt;/p&gt;
+&lt;h3&gt;类型系统&lt;/h3&gt;
+&lt;p&gt;&lt;a href="https://zh.wikipedia.org/zh-hans/%E9%A1%9E%E5%9E%8B%E7%B3%BB%E7%B5%B1"&gt;类型系统&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;静态类型&lt;/em&gt;的语言就是一个变量声明之后就不能改变它的类型了，比如说 &lt;code&gt;a&lt;/code&gt; 贮存了一个数字，那么 &lt;code&gt;a&lt;/code&gt; 永远只能储存数字，不过这里的 &lt;code&gt;a&lt;/code&gt; 只是便于说明，在有些强类型的语言中（比如 rust），你可以声明一个和之前同样名字但不是同一个的变量。而且一个函数的参数类型需要声明（见第二章），不能既接受数字，又接受时间，同变量，有些（如 C）你可以声明一个同名字的函数称为&lt;em&gt;重载&lt;/em&gt;。&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;动态类型&lt;/em&gt;和静态类型相反，这些语言不在意类型，或者说&lt;a href="https://zh.wikipedia.org//zh-hans/%E9%B8%AD%E5%AD%90%E7%B1%BB%E5%9E%8B"&gt;鸭子类型&lt;/a&gt;（当看到一只鸟走起来像鸭子、游泳起来像鸭子、叫起来也像鸭子，那么这只鸟就可以被称为鸭子。）。比如有一个函数的作用是打开，并且触碰所有的心，你可以给它 Twitter 或者长毛象，也可以给它一盒心形巧克力XD。&lt;/p&gt;
+&lt;h3&gt;动态/静态&lt;/h3&gt;
+&lt;p&gt;根据 &lt;a href="https://zh.wikipedia.org/zh-hans/%E5%8A%A8%E6%80%81%E8%AF%AD%E8%A8%80"&gt;Wikipedia&lt;/a&gt;，「动态编程语言…是一类在运行时可以改变其结构的语言：例如新的函数、对象、甚至代码可以被引进。」简单的来说就是可以在运行时改变程序。&lt;/p&gt;
+&lt;p&gt;但是很多时候，动态语言是指弱类型语言或者解释执行语言，因为一般语言都是这么配的，同理静态/强类型/编译也经常被搞混。这部分非常混乱，你也这么混着就好了…&lt;/p&gt;
+&lt;h2&gt;另一种分类方法&lt;/h2&gt;
+&lt;h3&gt;函数式编程语言&lt;/h3&gt;
+&lt;p&gt;&lt;a href="https:/zh.wikipedia.org/zh-hans/%E5%87%BD%E6%95%B0%E5%BC%8F%E7%BC%96%E7%A8%8B"&gt;函数式编程&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;贴近数学的编程语言，最小化副作用。&lt;/p&gt;
+&lt;p&gt;一个函数的作用是求值，例如改变一个值，在屏幕上显示些东西这里就是函数的副作用。函数式编程语言力求把有副作用的函数和纯函数分开，来保证函数的正确性。&lt;/p&gt;
+&lt;h3&gt;指令式编程语言&lt;/h3&gt;
+&lt;p&gt;&lt;a href="https://zh.wikipedia.org/zh-hans/%E6%8C%87%E4%BB%A4%E5%BC%8F%E7%B7%A8%E7%A8%8B"&gt;指令式编程&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;最常见的种类，大量使用副作用。&lt;/p&gt;
+&lt;h3&gt;逻辑式编程语言&lt;/h3&gt;
+&lt;p&gt;&lt;a href="https://zh.wikipedia.org/zh-hans/%E9%82%8F%E8%BC%AF%E7%B7%A8%E7%A8%8B"&gt;逻辑编程&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;感兴趣自己研究，非常新奇，但是很鸡肋。&lt;/p&gt;</content><category term="program"></category></entry><entry><title>编程基础（0）——目录</title><link href="https://blog.71e6fd52.ml/bian-cheng-ji-chu-0-mu-lu.html" rel="alternate"></link><published>2019-02-15T16:40:55+08:00</published><updated>2019-02-15T16:40:55+08:00</updated><author><name>71e6fd52</name></author><id>tag:blog.71e6fd52.ml,2019-02-15:/bian-cheng-ji-chu-0-mu-lu.html</id><summary type="html">&lt;p&gt;开个坑，教一些不特定于任何编程语言的基本的编程知识。&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;a href="bian-cheng-ji-chu-1-bian-cheng-yu-yan-fen-lei.html"&gt;编程语言分类&lt;/a&gt;&lt;/li&gt;
+&lt;/ol&gt;</summary><content type="html">&lt;p&gt;开个坑，教一些不特定于任何编程语言的基本的编程知识。&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;a href="bian-cheng-ji-chu-1-bian-cheng-yu-yan-fen-lei.html"&gt;编程语言分类&lt;/a&gt;&lt;/li&gt;
+&lt;/ol&gt;</content><category term="program"></category></entry></feed>
