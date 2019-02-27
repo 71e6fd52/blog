@@ -3,7 +3,7 @@
 <head>
         <meta charset="utf-8">
         <!-- Site Meta Data -->
-        <title>编程基础（0）——目录</title>
+        <title>编程基础（2）——函数</title>
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <meta name="description" content="">
         <meta name="author" content="71e6fd52">
@@ -30,9 +30,9 @@
         <meta name="twitter:image" content="">
 
   <meta name="twitter:creator" content="71e6fd52">
-  <meta name="twitter:url" content="https://blog.71e6fd52.ml/bian-cheng-ji-chu-0-mu-lu.html">
-  <meta name="twitter:title" content="71e6fd52's blog ~ 编程基础（0）——目录">
-  <meta name="twitter:description" content="开个坑，教一些不特定于任何编程语言的基本的编程知识。 编程语言分类">
+  <meta name="twitter:url" content="https://blog.71e6fd52.ml/bian-cheng-ji-chu-2-han-shu.html">
+  <meta name="twitter:title" content="71e6fd52's blog ~ 编程基础（2）——函数">
+  <meta name="twitter:description" content="在数学中，一个函数长这样 f(x) = x + 1。f 看不出什么意义，为了让它有意义，可以把函数名变长，想 add_one(x) = x + 1。 同理，这个 x 也没有什么意义，也变长一点，可以变成 add_one(number) = number + 1。 在这里，形同 add_one number 的这些名字被称之为标识符，标识符一般可以由英文字母（注意，几乎所有语言都是区分大小写的）， 下划线（即 _），和部分 Unicode 字符（如汉字~~，ruby 甚至可以用不间断空格（一个看起来像空格的字符）~~）组成。 既然标识符一般可以用汉字，当然可以写出 加一(数字) = 数字 + 1 …">
 
   <!-- simpread Meta Data -->
   <meta name="simpread:name" content="https://blog.71e6fd52.ml">
@@ -41,8 +41,8 @@
   <meta name="simpread:include" content="<div class='entry-content'>">
 
   <!-- Facebook Meta Data -->
-  <meta property="og:title" content="71e6fd52's blog ~ 编程基础（0）——目录"/>
-  <meta property="og:description" content="开个坑，教一些不特定于任何编程语言的基本的编程知识。 编程语言分类"/>
+  <meta property="og:title" content="71e6fd52's blog ~ 编程基础（2）——函数"/>
+  <meta property="og:description" content="在数学中，一个函数长这样 f(x) = x + 1。f 看不出什么意义，为了让它有意义，可以把函数名变长，想 add_one(x) = x + 1。 同理，这个 x 也没有什么意义，也变长一点，可以变成 add_one(number) = number + 1。 在这里，形同 add_one number 的这些名字被称之为标识符，标识符一般可以由英文字母（注意，几乎所有语言都是区分大小写的）， 下划线（即 _），和部分 Unicode 字符（如汉字~~，ruby 甚至可以用不间断空格（一个看起来像空格的字符）~~）组成。 既然标识符一般可以用汉字，当然可以写出 加一(数字) = 数字 + 1 …"/>
   <meta property="og:image" content=""/>
   <link rel="stylesheet" href="https://blog.71e6fd52.ml/theme/css/comment.css" type="text/css"/>
 </head>
@@ -117,14 +117,19 @@
 <section id="content">
   <article>
     <h2 class="post_title post_detail">
-      <a href="https://blog.71e6fd52.ml/bian-cheng-ji-chu-0-mu-lu.html" rel="bookmark" title="Permalink to 编程基础（0）——目录">编程基础（0）——目录</a>
+      <a href="https://blog.71e6fd52.ml/bian-cheng-ji-chu-2-han-shu.html" rel="bookmark" title="Permalink to 编程基础（2）——函数">编程基础（2）——函数</a>
     </h2>
 
     <div class="entry-content blog-post">
-      <p>开个坑，教一些不特定于任何编程语言的基本的编程知识。</p>
-<ol>
-<li><a href="bian-cheng-ji-chu-1-bian-cheng-yu-yan-fen-lei.html">编程语言分类</a></li>
-</ol>
+      <p>在数学中，一个函数长这样 <code>f(x) = x + 1</code>。<code>f</code> 看不出什么意义，为了让它有意义，可以把函数名变长，想 <code>add_one(x) = x + 1</code>。
+同理，这个 <code>x</code> 也没有什么意义，也变长一点，可以变成 <code>add_one(number) = number + 1</code>。</p>
+<p>在这里，形同 <code>add_one</code> <code>number</code> 的这些名字被称之为标识符，标识符一般可以由英文字母（注意，几乎所有语言都是区分大小写的），
+下划线（即 <code>_</code>），和部分 Unicode 字符（如汉字~~，ruby 甚至可以用不间断空格（一个看起来像空格的字符）~~）组成。</p>
+<p>既然标识符一般可以用汉字，当然可以写出 <code>加一(数字) = 数字 + 1</code>，注意全角括号也是 Unicode 字符，所以你甚至可以用 <code>（（(（）) = （） + 1</code>。</p>
+<p>标识符只是一个名字，也就是说你完全可以文不对题，比如 <code>add_two(useless_value) = useless_value + 3</code>，
+但是你之后看到这样的函数时…</p>
+<p>因为程序里变量不一定是数字，也可以是时间、日期、文字等，所以需要标明参数的类型，就像 <code>add_one(number : integer) : integer = x + 1</code>，前面 <code>number : integer</code> 说明 <code>number</code> 是整数，后面 <code>: interger =</code> 说明整个函数 <code>add_one</code> _返回_一个数字。</p>
+<p>在函数式语言中，这样的函数已经够了，但是在过程式语言中，函数不是简单的由 <code>number + 1</code> 这样的表达式构成的，而是由语句构成的，下一章将讲述语句。</p>
     </div>
 
     <div class="post_list">
@@ -137,7 +142,7 @@
         </a>
       </span>
 
-      <span class="post_date">五 15 二月 2019</span>
+      <span class="post_date">一 18 二月 2019</span>
       <div><span>Tags : </span>
         <span><a href="https://blog.71e6fd52.ml/tag/program.html">#program, </a></span>
       </div>
@@ -146,41 +151,41 @@
 
       <div class="entry-social">
         <span class="twitter">
-          <a target="_blank" rel="nofollow" onclick="javascript:window.open(this.href, '', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=400,width=700');return false;" title="Twitter" href="https://twitter.com/share?url=https://blog.71e6fd52.ml/bian-cheng-ji-chu-0-mu-lu.html&text=编程基础（0）——目录&via=71e6fd52">
+          <a target="_blank" rel="nofollow" onclick="javascript:window.open(this.href, '', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=400,width=700');return false;" title="Twitter" href="https://twitter.com/share?url=https://blog.71e6fd52.ml/bian-cheng-ji-chu-2-han-shu.html&text=编程基础（2）——函数&via=71e6fd52">
             <img src="https://blog.71e6fd52.ml/theme/images/icons/twitter-s.png">
           </a>
         </span>
 
         <span class="gplus">
-          <a target="_blank" title="Google +" href="https://plus.google.com/share?url=https://blog.71e6fd52.ml/bian-cheng-ji-chu-0-mu-lu.html&hl=fr" rel="nofollow" onclick="javascript:window.open(this.href, '', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=450,width=650');return false;">
+          <a target="_blank" title="Google +" href="https://plus.google.com/share?url=https://blog.71e6fd52.ml/bian-cheng-ji-chu-2-han-shu.html&hl=fr" rel="nofollow" onclick="javascript:window.open(this.href, '', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=450,width=650');return false;">
             <img src="https://blog.71e6fd52.ml/theme/images/icons/google-s.png">
           </a>
         </span>
 
         <span class="facebook">
-          <a target="_blank" title="Facebook" rel="nofollow" onclick="javascript:window.open(this.href, '', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=500,width=700');return false;" href="https://www.facebook.com/sharer.php?u=https://blog.71e6fd52.ml/bian-cheng-ji-chu-0-mu-lu.html&t=编程基础（0）——目录">
+          <a target="_blank" title="Facebook" rel="nofollow" onclick="javascript:window.open(this.href, '', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=500,width=700');return false;" href="https://www.facebook.com/sharer.php?u=https://blog.71e6fd52.ml/bian-cheng-ji-chu-2-han-shu.html&t=编程基础（2）——函数">
             <img src="https://blog.71e6fd52.ml/theme/images/icons/facebook-s.png">
           </a>
         </span>
 
-        <a target="_blank" title="Linkedin" href="https://www.linkedin.com/shareArticle?mini=true&url=https://blog.71e6fd52.ml/bian-cheng-ji-chu-0-mu-lu.html&title=编程基础（0）——目录" rel="nofollow" onclick="javascript:window.open(this.href, '', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=450,width=650');return false;">
+        <a target="_blank" title="Linkedin" href="https://www.linkedin.com/shareArticle?mini=true&url=https://blog.71e6fd52.ml/bian-cheng-ji-chu-2-han-shu.html&title=编程基础（2）——函数" rel="nofollow" onclick="javascript:window.open(this.href, '', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=450,width=650');return false;">
           <img src="https://blog.71e6fd52.ml/theme/images/icons/linkedin-s.png">
         </a>
 
         <span class="mail">
-          <a href="mailto:?subject=编程基础（0）——目录&amp;body=在 71e6fd52 的网站上发现有关 [编程基础（0）——目录] 的文章。 https://blog.71e6fd52.ml/bian-cheng-ji-chu-0-mu-lu.html" title="Share by Email" target="_blank"><img src="https://blog.71e6fd52.ml/theme/images/icons/mail-s.png">
+          <a href="mailto:?subject=编程基础（2）——函数&amp;body=在 71e6fd52 的网站上发现有关 [编程基础（2）——函数] 的文章。 https://blog.71e6fd52.ml/bian-cheng-ji-chu-2-han-shu.html" title="Share by Email" target="_blank"><img src="https://blog.71e6fd52.ml/theme/images/icons/mail-s.png">
           </a>
         </span>
       </div>
     </div>
 
-      <a href="https://blog.71e6fd52.ml/pelican-highlight-test.html"
+      <a href="https://blog.71e6fd52.ml/bian-cheng-ji-chu-0-mu-lu.html"
       class="change-page left">
-        &lt;  pelican highlight test
+        &lt;  编程基础（0）——目录
       </a>
-      <a href="https://blog.71e6fd52.ml/bian-cheng-ji-chu-2-han-shu.html"
+      <a href="https://blog.71e6fd52.ml/bian-cheng-ji-chu-1-bian-cheng-yu-yan-fen-lei.html"
         class="change-page right">
-        编程基础（2）——函数  &gt;
+        编程基础（1）——编程语言分类  &gt;
       </a>
     <hr sytle="margin-top: 70px;">
     <h2 style="text-align: center; margin: 15px 0 0 0;">选一个评论框评论？</h2>
@@ -216,7 +221,7 @@
         <div id="disqus_thread"></div>
         <script data-cfasync="false" type="text/javascript">
           var disqus_config = function () {
-            this.page.identifier = "bian-cheng-ji-chu-0-mu-lu.html";
+            this.page.identifier = "bian-cheng-ji-chu-2-han-shu.html";
           };
           (function () {
             var dsq = document.createElement('script');
@@ -234,7 +239,7 @@
         <script src="https://imsun.github.io/gitment/dist/gitment.browser.js"></script>
         <script>
           var gitment = new Gitment({
-            id: 'bian-cheng-ji-chu-0-mu-lu.html',
+            id: 'bian-cheng-ji-chu-2-han-shu.html',
             owner: '71e6fd52',
             repo: 'blog',
             oauth: {
