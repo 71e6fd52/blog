@@ -1,5 +1,20 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>71e6fd52's blog - program</title><link href="https://blog.71e6fd52.ml/" rel="alternate"></link><link href="https://blog.71e6fd52.ml/feeds/program.atom.xml" rel="self"></link><id>https://blog.71e6fd52.ml/</id><updated>2019-02-27T13:29:47+08:00</updated><entry><title>编程基础（1）——编程语言分类</title><link href="https://blog.71e6fd52.ml/bian-cheng-ji-chu-1-bian-cheng-yu-yan-fen-lei.html" rel="alternate"></link><published>2019-02-20T09:53:45+08:00</published><updated>2019-02-27T13:29:25+08:00</updated><author><name>71e6fd52</name></author><id>tag:blog.71e6fd52.ml,2019-02-20:/bian-cheng-ji-chu-1-bian-cheng-yu-yan-fen-lei.html</id><summary type="html">&lt;p&gt;编程语言的各种分类&lt;/p&gt;</summary><content type="html">&lt;h2&gt;一些分类方法&lt;/h2&gt;
+<feed xmlns="http://www.w3.org/2005/Atom"><title>71e6fd52's blog - program</title><link href="https://blog.71e6fd52.ml/" rel="alternate"></link><link href="https://blog.71e6fd52.ml/feeds/program.atom.xml" rel="self"></link><id>https://blog.71e6fd52.ml/</id><updated>2019-02-27T13:31:40+08:00</updated><entry><title>编程基础（2）——函数</title><link href="https://blog.71e6fd52.ml/bian-cheng-ji-chu-2-han-shu.html" rel="alternate"></link><published>2019-02-27T13:31:19+08:00</published><updated>2019-02-27T13:31:19+08:00</updated><author><name>71e6fd52</name></author><id>tag:blog.71e6fd52.ml,2019-02-27:/bian-cheng-ji-chu-2-han-shu.html</id><summary type="html">&lt;p&gt;&lt;a href="bian-cheng-ji-chu-0-mu-lu.html"&gt;目录&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;在数学中，一个函数长这样 &lt;code&gt;f(x) = x + 1&lt;/code&gt;。&lt;code&gt;f&lt;/code&gt; 看不出什么意义，为了让它有意义，可以把函数名变长，想 &lt;code&gt;add_one(x) = x + 1&lt;/code&gt;。
+同理，这个 &lt;code&gt;x&lt;/code&gt; 也没有什么意义，也变长一点，可以变成 &lt;code&gt;add_one(number) = number + 1&lt;/code&gt;。&lt;/p&gt;
+&lt;p&gt;在这里，形同 &lt;code&gt;add_one&lt;/code&gt; &lt;code&gt;number&lt;/code&gt; 的这些名字被称之为标识符，标识符一般可以由英文字母（注意，几乎所有语言都是区分大小写的），
+下划线（即 &lt;code&gt;_&lt;/code&gt;），和部分 Unicode 字符（如汉字~~，ruby 甚至可以用不间断空格（一个看起来像空格的字符）~~）组成。&lt;/p&gt;
+&lt;p&gt;既然标识符一般可以用汉字，当然可以写出 &lt;code&gt;加一(数字) = 数字 …&lt;/code&gt;&lt;/p&gt;</summary><content type="html">&lt;p&gt;&lt;a href="bian-cheng-ji-chu-0-mu-lu.html"&gt;目录&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;在数学中，一个函数长这样 &lt;code&gt;f(x) = x + 1&lt;/code&gt;。&lt;code&gt;f&lt;/code&gt; 看不出什么意义，为了让它有意义，可以把函数名变长，想 &lt;code&gt;add_one(x) = x + 1&lt;/code&gt;。
+同理，这个 &lt;code&gt;x&lt;/code&gt; 也没有什么意义，也变长一点，可以变成 &lt;code&gt;add_one(number) = number + 1&lt;/code&gt;。&lt;/p&gt;
+&lt;p&gt;在这里，形同 &lt;code&gt;add_one&lt;/code&gt; &lt;code&gt;number&lt;/code&gt; 的这些名字被称之为标识符，标识符一般可以由英文字母（注意，几乎所有语言都是区分大小写的），
+下划线（即 &lt;code&gt;_&lt;/code&gt;），和部分 Unicode 字符（如汉字~~，ruby 甚至可以用不间断空格（一个看起来像空格的字符）~~）组成。&lt;/p&gt;
+&lt;p&gt;既然标识符一般可以用汉字，当然可以写出 &lt;code&gt;加一(数字) = 数字 + 1&lt;/code&gt;，注意全角括号也是 Unicode 字符，所以你甚至可以用 &lt;code&gt;（（(（）) = （） + 1&lt;/code&gt;。&lt;/p&gt;
+&lt;p&gt;标识符只是一个名字，也就是说你完全可以文不对题，比如 &lt;code&gt;add_two(useless_value) = useless_value + 3&lt;/code&gt;，
+但是你之后看到这样的函数时…&lt;/p&gt;
+&lt;p&gt;因为程序里变量不一定是数字，也可以是时间、日期、文字等，所以需要标明参数的类型，就像 &lt;code&gt;add_one(number : integer) : integer = x + 1&lt;/code&gt;，前面 &lt;code&gt;number : integer&lt;/code&gt; 说明 &lt;code&gt;number&lt;/code&gt; 是整数，后面 &lt;code&gt;: interger =&lt;/code&gt; 说明整个函数 &lt;code&gt;add_one&lt;/code&gt; _返回_一个数字。&lt;/p&gt;
+&lt;p&gt;在函数式语言中，这样的函数已经够了，但是在过程式语言中，函数不是简单的由 &lt;code&gt;number + 1&lt;/code&gt; 这样的表达式构成的，而是由语句构成的，下一章将讲述语句。&lt;/p&gt;</content><category term="program"></category></entry><entry><title>编程基础（1）——编程语言分类</title><link href="https://blog.71e6fd52.ml/bian-cheng-ji-chu-1-bian-cheng-yu-yan-fen-lei.html" rel="alternate"></link><published>2019-02-20T09:53:45+08:00</published><updated>2019-02-27T13:31:11+08:00</updated><author><name>71e6fd52</name></author><id>tag:blog.71e6fd52.ml,2019-02-20:/bian-cheng-ji-chu-1-bian-cheng-yu-yan-fen-lei.html</id><summary type="html">&lt;p&gt;编程语言的各种分类&lt;/p&gt;</summary><content type="html">&lt;p&gt;&lt;a href="bian-cheng-ji-chu-0-mu-lu.html"&gt;目录&lt;/a&gt;&lt;/p&gt;
+&lt;h2&gt;一些分类方法&lt;/h2&gt;
 &lt;h3&gt;编译/解释&lt;/h3&gt;
 &lt;p&gt;&lt;em&gt;编译&lt;/em&gt;就是用各种语言的&lt;a href="https://zh.wikipedia.org/zh-hans/%E7%B7%A8%E8%AD%AF%E5%99%A8"&gt;编译器&lt;/a&gt;把这种语言写的&lt;a href="https://zh.wikipedia.org/zh-hans/%E6%BA%90%E4%BB%A3%E7%A0%81"&gt;源代码&lt;/a&gt;，&lt;strong&gt;转换&lt;/strong&gt;成机器可以直接执行的&lt;a href="https://zh.wikipedia.org/zh-hans/%E6%9C%BA%E5%99%A8%E4%BB%A3%E7%A0%81"&gt;机器码&lt;/a&gt;，转换完成之后，源代码对运行就没什么用了。比如，一个加法，可能会直接转换成一条由 CPU 执行的 ADD 指令。&lt;/p&gt;
 &lt;p&gt;&lt;em&gt;解释&lt;/em&gt;执行就是&lt;a href="https://zh.wikipedia.org/zh-hans/%E7%9B%B4%E8%AD%AF%E5%99%A8"&gt;解释器&lt;/a&gt;读取代码，再&lt;strong&gt;执行&lt;/strong&gt;它。比如，一个加法，虽然还是需要靠 ADD 指令，但是，这是解释器读取到了这个加法后，再&lt;strong&gt;调用&lt;/strong&gt;了 ADD 指令 。&lt;/p&gt;
@@ -20,22 +35,12 @@
 &lt;p&gt;最常见的种类，大量使用副作用。&lt;/p&gt;
 &lt;h3&gt;逻辑式编程语言&lt;/h3&gt;
 &lt;p&gt;&lt;a href="https://zh.wikipedia.org/zh-hans/%E9%82%8F%E8%BC%AF%E7%B7%A8%E7%A8%8B"&gt;逻辑编程&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;感兴趣自己研究，非常新奇，但是很鸡肋。&lt;/p&gt;</content><category term="program"></category></entry><entry><title>编程基础（2）——函数</title><link href="https://blog.71e6fd52.ml/bian-cheng-ji-chu-2-han-shu.html" rel="alternate"></link><published>2019-02-18T15:02:46+08:00</published><updated>2019-02-27T13:29:47+08:00</updated><author><name>71e6fd52</name></author><id>tag:blog.71e6fd52.ml,2019-02-18:/bian-cheng-ji-chu-2-han-shu.html</id><summary type="html">&lt;p&gt;在数学中，一个函数长这样 &lt;code&gt;f(x) = x + 1&lt;/code&gt;。&lt;code&gt;f&lt;/code&gt; 看不出什么意义，为了让它有意义，可以把函数名变长，想 &lt;code&gt;add_one(x) = x + 1&lt;/code&gt;。
-同理，这个 &lt;code&gt;x&lt;/code&gt; 也没有什么意义，也变长一点，可以变成 &lt;code&gt;add_one(number) = number + 1&lt;/code&gt;。&lt;/p&gt;
-&lt;p&gt;在这里，形同 &lt;code&gt;add_one&lt;/code&gt; &lt;code&gt;number&lt;/code&gt; 的这些名字被称之为标识符，标识符一般可以由英文字母（注意，几乎所有语言都是区分大小写的），
-下划线（即 &lt;code&gt;_&lt;/code&gt;），和部分 Unicode 字符（如汉字~~，ruby 甚至可以用不间断空格（一个看起来像空格的字符）~~）组成。&lt;/p&gt;
-&lt;p&gt;既然标识符一般可以用汉字，当然可以写出 &lt;code&gt;加一(数字) = 数字 + 1 …&lt;/code&gt;&lt;/p&gt;</summary><content type="html">&lt;p&gt;在数学中，一个函数长这样 &lt;code&gt;f(x) = x + 1&lt;/code&gt;。&lt;code&gt;f&lt;/code&gt; 看不出什么意义，为了让它有意义，可以把函数名变长，想 &lt;code&gt;add_one(x) = x + 1&lt;/code&gt;。
-同理，这个 &lt;code&gt;x&lt;/code&gt; 也没有什么意义，也变长一点，可以变成 &lt;code&gt;add_one(number) = number + 1&lt;/code&gt;。&lt;/p&gt;
-&lt;p&gt;在这里，形同 &lt;code&gt;add_one&lt;/code&gt; &lt;code&gt;number&lt;/code&gt; 的这些名字被称之为标识符，标识符一般可以由英文字母（注意，几乎所有语言都是区分大小写的），
-下划线（即 &lt;code&gt;_&lt;/code&gt;），和部分 Unicode 字符（如汉字~~，ruby 甚至可以用不间断空格（一个看起来像空格的字符）~~）组成。&lt;/p&gt;
-&lt;p&gt;既然标识符一般可以用汉字，当然可以写出 &lt;code&gt;加一(数字) = 数字 + 1&lt;/code&gt;，注意全角括号也是 Unicode 字符，所以你甚至可以用 &lt;code&gt;（（(（）) = （） + 1&lt;/code&gt;。&lt;/p&gt;
-&lt;p&gt;标识符只是一个名字，也就是说你完全可以文不对题，比如 &lt;code&gt;add_two(useless_value) = useless_value + 3&lt;/code&gt;，
-但是你之后看到这样的函数时…&lt;/p&gt;
-&lt;p&gt;因为程序里变量不一定是数字，也可以是时间、日期、文字等，所以需要标明参数的类型，就像 &lt;code&gt;add_one(number : integer) : integer = x + 1&lt;/code&gt;，前面 &lt;code&gt;number : integer&lt;/code&gt; 说明 &lt;code&gt;number&lt;/code&gt; 是整数，后面 &lt;code&gt;: interger =&lt;/code&gt; 说明整个函数 &lt;code&gt;add_one&lt;/code&gt; _返回_一个数字。&lt;/p&gt;
-&lt;p&gt;在函数式语言中，这样的函数已经够了，但是在过程式语言中，函数不是简单的由 &lt;code&gt;number + 1&lt;/code&gt; 这样的表达式构成的，而是由语句构成的，下一章将讲述语句。&lt;/p&gt;</content><category term="program"></category></entry><entry><title>编程基础（0）——目录</title><link href="https://blog.71e6fd52.ml/bian-cheng-ji-chu-0-mu-lu.html" rel="alternate"></link><published>2019-02-15T16:40:55+08:00</published><updated>2019-02-15T16:40:55+08:00</updated><author><name>71e6fd52</name></author><id>tag:blog.71e6fd52.ml,2019-02-15:/bian-cheng-ji-chu-0-mu-lu.html</id><summary type="html">&lt;p&gt;开个坑，教一些不特定于任何编程语言的基本的编程知识。&lt;/p&gt;
+&lt;p&gt;感兴趣自己研究，非常新奇，但是很鸡肋。&lt;/p&gt;</content><category term="program"></category></entry><entry><title>编程基础（0）——目录</title><link href="https://blog.71e6fd52.ml/bian-cheng-ji-chu-0-mu-lu.html" rel="alternate"></link><published>2019-02-15T16:40:55+08:00</published><updated>2019-02-27T13:31:40+08:00</updated><author><name>71e6fd52</name></author><id>tag:blog.71e6fd52.ml,2019-02-15:/bian-cheng-ji-chu-0-mu-lu.html</id><summary type="html">&lt;p&gt;开个坑，教一些不特定于任何编程语言的基本的编程知识。&lt;/p&gt;
 &lt;ol&gt;
 &lt;li&gt;&lt;a href="bian-cheng-ji-chu-1-bian-cheng-yu-yan-fen-lei.html"&gt;编程语言分类&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="bian-cheng-ji-chu-2-han-shu.html"&gt;函数&lt;/a&gt;&lt;/li&gt;
 &lt;/ol&gt;</summary><content type="html">&lt;p&gt;开个坑，教一些不特定于任何编程语言的基本的编程知识。&lt;/p&gt;
 &lt;ol&gt;
 &lt;li&gt;&lt;a href="bian-cheng-ji-chu-1-bian-cheng-yu-yan-fen-lei.html"&gt;编程语言分类&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="bian-cheng-ji-chu-2-han-shu.html"&gt;函数&lt;/a&gt;&lt;/li&gt;
 &lt;/ol&gt;</content><category term="program"></category></entry></feed>
