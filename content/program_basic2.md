@@ -1,9 +1,10 @@
 Title: 编程基础（2）——函数
-Date: 2019-02-18 15:02:46
-Modified: 2019-02-27 13:29:47
+Date: 2019-02-27 13:31:19
 Author: 71e6fd52
 Category: program
 Tags: program
+
+[目录](bian-cheng-ji-chu-0-mu-lu.html)
 
 在数学中，一个函数长这样 `f(x) = x + 1`。`f` 看不出什么意义，为了让它有意义，可以把函数名变长，想 `add_one(x) = x + 1`。
 同理，这个 `x` 也没有什么意义，也变长一点，可以变成 `add_one(number) = number + 1`。
