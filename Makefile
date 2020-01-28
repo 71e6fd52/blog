@@ -26,7 +26,7 @@ CLOUDFILES_CONTAINER=my_cloudfiles_container
 DROPBOX_DIR=~/Dropbox/Public/
 
 GITHUB_PAGES_BRANCH=gh-pages
-GITHUB_PAGES_CNAME=blog.71e6fd52.ml
+GITHUB_PAGES_CNAME=blog.yahvk.ml
 
 DEBUG ?= 0
 ifeq ($(DEBUG), 1)
