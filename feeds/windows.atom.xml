@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>71e6fd52's blog - Windows</title><link href="https://blog.71e6fd52.ml/" rel="alternate"></link><link href="https://blog.71e6fd52.ml/feeds/windows.atom.xml" rel="self"></link><id>https://blog.71e6fd52.ml/</id><updated>2017-09-23T15:30:52+08:00</updated><entry><title>Vegas 用 FrameServer 搭桥</title><link href="https://blog.71e6fd52.ml/vegas-yong-frameserver-da-qiao.html" rel="alternate"></link><published>2017-09-23T14:16:48+08:00</published><updated>2017-09-23T15:30:52+08:00</updated><author><name>71e6fd52</name></author><id>tag:blog.71e6fd52.ml,2017-09-23:/vegas-yong-frameserver-da-qiao.html</id><summary type="html">&lt;p&gt;之前为了让 Sony Vegas pro 13.0 用 DebugMode FrameServer 搭桥，研究了很久最后发现了一个很简单的办法&lt;/p&gt;
+<feed xmlns="http://www.w3.org/2005/Atom"><title>71e6fd52's blog - Windows</title><link href="https://blog.yahvk.ml/" rel="alternate"></link><link href="https://blog.yahvk.ml/feeds/windows.atom.xml" rel="self"></link><id>https://blog.yahvk.ml/</id><updated>2017-09-23T15:30:52+08:00</updated><entry><title>Vegas 用 FrameServer 搭桥</title><link href="https://blog.yahvk.ml/vegas-yong-frameserver-da-qiao.html" rel="alternate"></link><published>2017-09-23T14:16:48+08:00</published><updated>2017-09-23T15:30:52+08:00</updated><author><name>71e6fd52</name></author><id>tag:blog.yahvk.ml,2017-09-23:/vegas-yong-frameserver-da-qiao.html</id><summary type="html">&lt;p&gt;之前为了让 Sony Vegas pro 13.0 用 DebugMode FrameServer 搭桥，研究了很久最后发现了一个很简单的办法&lt;/p&gt;
 &lt;ol&gt;
 &lt;li&gt;安装 &lt;a href="http://vegasbar.lofter.com/post/1d4450de_74cd602"&gt;Vegas&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;安装 &lt;a href="http://pan.baidu.com/s/1pLRarub"&gt;DebugMode FrameServer 的 Vegas 13 版&lt;/a&gt; 密码：6qf3&lt;ol&gt;
@@ -31,4 +31,4 @@
 &lt;/li&gt;
 &lt;li&gt;已经导出了临时文件（桥）了。&lt;/li&gt;
 &lt;/ol&gt;
-&lt;p&gt;所以，为什么不用 FFmpeg 呢&lt;/p&gt;</content><category term="Vegas"></category></entry></feed>
+&lt;p&gt;所以，为什么不用 FFmpeg 呢&lt;/p&gt;</content><category term="Windows"></category><category term="Vegas"></category></entry></feed>

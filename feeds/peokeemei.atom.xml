@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>71e6fd52's blog - PEOKEEMEI</title><link href="https://blog.71e6fd52.ml/" rel="alternate"></link><link href="https://blog.71e6fd52.ml/feeds/peokeemei.atom.xml" rel="self"></link><id>https://blog.71e6fd52.ml/</id><updated>2019-02-15T16:40:13+08:00</updated><entry><title>温度单位</title><link href="https://blog.71e6fd52.ml/wen-du-dan-wei.html" rel="alternate"></link><published>2017-12-17T22:08:03+08:00</published><updated>2019-02-15T16:40:13+08:00</updated><author><name>71e6fd52</name></author><id>tag:blog.71e6fd52.ml,2017-12-17:/wen-du-dan-wei.html</id><summary type="html">&lt;p&gt;现在的温度单位/温标很不合理啊。&lt;/p&gt;
+<feed xmlns="http://www.w3.org/2005/Atom"><title>71e6fd52's blog - PEOKEEMEI</title><link href="https://blog.yahvk.ml/" rel="alternate"></link><link href="https://blog.yahvk.ml/feeds/peokeemei.atom.xml" rel="self"></link><id>https://blog.yahvk.ml/</id><updated>2019-02-15T16:40:13+08:00</updated><entry><title>温度单位</title><link href="https://blog.yahvk.ml/wen-du-dan-wei.html" rel="alternate"></link><published>2017-12-17T22:08:03+08:00</published><updated>2019-02-15T16:40:13+08:00</updated><author><name>71e6fd52</name></author><id>tag:blog.yahvk.ml,2017-12-17:/wen-du-dan-wei.html</id><summary type="html">&lt;p&gt;现在的温度单位/温标很不合理啊。&lt;/p&gt;
 &lt;p&gt;一个温度没有倍数关系的，比如 25°C 和 50°C 不是两倍关系，但是温度差却是有的，
 0°C 与 50°C 的温差就是 0°C 与 25°C 的两倍，于是这样 50°C 是 25°C 的两倍了。&lt;/p&gt;
 &lt;p&gt;单位换算也一样，如果是温度的话，开尔文 是 摄氏度 + 273.15，还用到了加法。
@@ -17,8 +17,8 @@
 而没有倍数关系是因为如果把 &lt;code&gt;25°C + Bc&lt;/code&gt; 乘以 2，那么其中常量 Bc 也会被乘以 2，
 变成 &lt;code&gt;50°C + 2Bc&lt;/code&gt; 就不等于 &lt;code&gt;50°C + Bc&lt;/code&gt; 了&lt;/p&gt;
 &lt;p&gt;单位换算就像这样：&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;1K = 1°C
-Bc = Bk + 273.15°C
-1°C = 1.8°F
-Bf = Bc + 32°F
-&lt;/pre&gt;&lt;/div&gt;</content><category term="PEIKEEMEI"></category></entry></feed>
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="err"&gt;1K = 1°C&lt;/span&gt;
+&lt;span class="err"&gt;Bc = Bk + 273.15°C&lt;/span&gt;
+&lt;span class="err"&gt;1°C = 1.8°F&lt;/span&gt;
+&lt;span class="err"&gt;Bf = Bc + 32°F&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;</content><category term="PEOKEEMEI"></category><category term="PEIKEEMEI"></category></entry></feed>

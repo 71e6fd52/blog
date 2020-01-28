@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>71e6fd52's blog</title><link href="https://blog.71e6fd52.ml/" rel="alternate"></link><link href="https://blog.71e6fd52.ml/feeds/all.atom.xml" rel="self"></link><id>https://blog.71e6fd52.ml/</id><updated>2019-02-27T13:31:40+08:00</updated><entry><title>编程基础（2）——函数</title><link href="https://blog.71e6fd52.ml/bian-cheng-ji-chu-2-han-shu.html" rel="alternate"></link><published>2019-02-27T13:31:19+08:00</published><updated>2019-02-27T13:31:19+08:00</updated><author><name>71e6fd52</name></author><id>tag:blog.71e6fd52.ml,2019-02-27:/bian-cheng-ji-chu-2-han-shu.html</id><summary type="html">&lt;p&gt;&lt;a href="bian-cheng-ji-chu-0-mu-lu.html"&gt;目录&lt;/a&gt;&lt;/p&gt;
+<feed xmlns="http://www.w3.org/2005/Atom"><title>71e6fd52's blog</title><link href="https://blog.yahvk.ml/" rel="alternate"></link><link href="https://blog.yahvk.ml/feeds/all.atom.xml" rel="self"></link><id>https://blog.yahvk.ml/</id><updated>2019-02-27T13:31:40+08:00</updated><entry><title>编程基础（2）——函数</title><link href="https://blog.yahvk.ml/bian-cheng-ji-chu-2-han-shu.html" rel="alternate"></link><published>2019-02-27T13:31:19+08:00</published><updated>2019-02-27T13:31:19+08:00</updated><author><name>71e6fd52</name></author><id>tag:blog.yahvk.ml,2019-02-27:/bian-cheng-ji-chu-2-han-shu.html</id><summary type="html">&lt;p&gt;&lt;a href="bian-cheng-ji-chu-0-mu-lu.html"&gt;目录&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;在数学中，一个函数长这样 &lt;code&gt;f(x) = x + 1&lt;/code&gt;。&lt;code&gt;f&lt;/code&gt; 看不出什么意义，为了让它有意义，可以把函数名变长，想 &lt;code&gt;add_one(x) = x + 1&lt;/code&gt;。
 同理，这个 &lt;code&gt;x&lt;/code&gt; 也没有什么意义，也变长一点，可以变成 &lt;code&gt;add_one(number) = number + 1&lt;/code&gt;。&lt;/p&gt;
 &lt;p&gt;在这里，形同 &lt;code&gt;add_one&lt;/code&gt; &lt;code&gt;number&lt;/code&gt; 的这些名字被称之为标识符，标识符一般可以由英文字母（注意，几乎所有语言都是区分大小写的），
@@ -13,7 +13,7 @@
 &lt;p&gt;标识符只是一个名字，也就是说你完全可以文不对题，比如 &lt;code&gt;add_two(useless_value) = useless_value + 3&lt;/code&gt;，
 但是你之后看到这样的函数时…&lt;/p&gt;
 &lt;p&gt;因为程序里变量不一定是数字，也可以是时间、日期、文字等，所以需要标明参数的类型，就像 &lt;code&gt;add_one(number : integer) : integer = x + 1&lt;/code&gt;，前面 &lt;code&gt;number : integer&lt;/code&gt; 说明 &lt;code&gt;number&lt;/code&gt; 是整数，后面 &lt;code&gt;: interger =&lt;/code&gt; 说明整个函数 &lt;code&gt;add_one&lt;/code&gt; _返回_一个数字。&lt;/p&gt;
-&lt;p&gt;在函数式语言中，这样的函数已经够了，但是在过程式语言中，函数不是简单的由 &lt;code&gt;number + 1&lt;/code&gt; 这样的表达式构成的，而是由语句构成的，下一章将讲述语句。&lt;/p&gt;</content><category term="program"></category></entry><entry><title>编程基础（1）——编程语言分类</title><link href="https://blog.71e6fd52.ml/bian-cheng-ji-chu-1-bian-cheng-yu-yan-fen-lei.html" rel="alternate"></link><published>2019-02-20T09:53:45+08:00</published><updated>2019-02-27T13:31:11+08:00</updated><author><name>71e6fd52</name></author><id>tag:blog.71e6fd52.ml,2019-02-20:/bian-cheng-ji-chu-1-bian-cheng-yu-yan-fen-lei.html</id><summary type="html">&lt;p&gt;编程语言的各种分类&lt;/p&gt;</summary><content type="html">&lt;p&gt;&lt;a href="bian-cheng-ji-chu-0-mu-lu.html"&gt;目录&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;在函数式语言中，这样的函数已经够了，但是在过程式语言中，函数不是简单的由 &lt;code&gt;number + 1&lt;/code&gt; 这样的表达式构成的，而是由语句构成的，下一章将讲述语句。&lt;/p&gt;</content><category term="program"></category><category term="program"></category></entry><entry><title>编程基础（1）——编程语言分类</title><link href="https://blog.yahvk.ml/bian-cheng-ji-chu-1-bian-cheng-yu-yan-fen-lei.html" rel="alternate"></link><published>2019-02-20T09:53:45+08:00</published><updated>2019-02-27T13:31:11+08:00</updated><author><name>71e6fd52</name></author><id>tag:blog.yahvk.ml,2019-02-20:/bian-cheng-ji-chu-1-bian-cheng-yu-yan-fen-lei.html</id><summary type="html">&lt;p&gt;编程语言的各种分类&lt;/p&gt;</summary><content type="html">&lt;p&gt;&lt;a href="bian-cheng-ji-chu-0-mu-lu.html"&gt;目录&lt;/a&gt;&lt;/p&gt;
 &lt;h2&gt;一些分类方法&lt;/h2&gt;
 &lt;h3&gt;编译/解释&lt;/h3&gt;
 &lt;p&gt;&lt;em&gt;编译&lt;/em&gt;就是用各种语言的&lt;a href="https://zh.wikipedia.org/zh-hans/%E7%B7%A8%E8%AD%AF%E5%99%A8"&gt;编译器&lt;/a&gt;把这种语言写的&lt;a href="https://zh.wikipedia.org/zh-hans/%E6%BA%90%E4%BB%A3%E7%A0%81"&gt;源代码&lt;/a&gt;，&lt;strong&gt;转换&lt;/strong&gt;成机器可以直接执行的&lt;a href="https://zh.wikipedia.org/zh-hans/%E6%9C%BA%E5%99%A8%E4%BB%A3%E7%A0%81"&gt;机器码&lt;/a&gt;，转换完成之后，源代码对运行就没什么用了。比如，一个加法，可能会直接转换成一条由 CPU 执行的 ADD 指令。&lt;/p&gt;
@@ -35,27 +35,23 @@
 &lt;p&gt;最常见的种类，大量使用副作用。&lt;/p&gt;
 &lt;h3&gt;逻辑式编程语言&lt;/h3&gt;
 &lt;p&gt;&lt;a href="https://zh.wikipedia.org/zh-hans/%E9%82%8F%E8%BC%AF%E7%B7%A8%E7%A8%8B"&gt;逻辑编程&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;感兴趣自己研究，非常新奇，但是很鸡肋。&lt;/p&gt;</content><category term="program"></category></entry><entry><title>编程基础（0）——目录</title><link href="https://blog.71e6fd52.ml/bian-cheng-ji-chu-0-mu-lu.html" rel="alternate"></link><published>2019-02-15T16:40:55+08:00</published><updated>2019-02-27T13:31:40+08:00</updated><author><name>71e6fd52</name></author><id>tag:blog.71e6fd52.ml,2019-02-15:/bian-cheng-ji-chu-0-mu-lu.html</id><summary type="html">&lt;p&gt;开个坑，教一些不特定于任何编程语言的基本的编程知识。&lt;/p&gt;
+&lt;p&gt;感兴趣自己研究，非常新奇，但是很鸡肋。&lt;/p&gt;</content><category term="program"></category><category term="program"></category></entry><entry><title>编程基础（0）——目录</title><link href="https://blog.yahvk.ml/bian-cheng-ji-chu-0-mu-lu.html" rel="alternate"></link><published>2019-02-15T16:40:55+08:00</published><updated>2019-02-27T13:31:40+08:00</updated><author><name>71e6fd52</name></author><id>tag:blog.yahvk.ml,2019-02-15:/bian-cheng-ji-chu-0-mu-lu.html</id><content type="html">&lt;p&gt;开个坑，教一些不特定于任何编程语言的基本的编程知识。&lt;/p&gt;
 &lt;ol&gt;
 &lt;li&gt;&lt;a href="bian-cheng-ji-chu-1-bian-cheng-yu-yan-fen-lei.html"&gt;编程语言分类&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href="bian-cheng-ji-chu-2-han-shu.html"&gt;函数&lt;/a&gt;&lt;/li&gt;
-&lt;/ol&gt;</summary><content type="html">&lt;p&gt;开个坑，教一些不特定于任何编程语言的基本的编程知识。&lt;/p&gt;
-&lt;ol&gt;
-&lt;li&gt;&lt;a href="bian-cheng-ji-chu-1-bian-cheng-yu-yan-fen-lei.html"&gt;编程语言分类&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href="bian-cheng-ji-chu-2-han-shu.html"&gt;函数&lt;/a&gt;&lt;/li&gt;
-&lt;/ol&gt;</content><category term="program"></category></entry><entry><title>pelican highlight test</title><link href="https://blog.71e6fd52.ml/pelican-highlight-test.html" rel="alternate"></link><published>2018-02-10T10:25:40+08:00</published><updated>2018-02-10T10:25:40+08:00</updated><author><name>71e6fd52</name></author><id>tag:blog.71e6fd52.ml,2018-02-10:/pelican-highlight-test.html</id><summary type="html">&lt;p&gt;Test pelican highlight&lt;/p&gt;</summary><content type="html">&lt;p&gt;Outside a list:&lt;/p&gt;
+&lt;/ol&gt;</content><category term="program"></category><category term="program"></category></entry><entry><title>pelican highlight test</title><link href="https://blog.yahvk.ml/pelican-highlight-test.html" rel="alternate"></link><published>2018-02-10T10:25:40+08:00</published><updated>2018-02-10T10:25:40+08:00</updated><author><name>71e6fd52</name></author><id>tag:blog.yahvk.ml,2018-02-10:/pelican-highlight-test.html</id><summary type="html">&lt;p&gt;Test pelican highlight&lt;/p&gt;</summary><content type="html">&lt;p&gt;Outside a list:&lt;/p&gt;
 &lt;p&gt;::: version:&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="k"&gt;print&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;foo&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="nb"&gt;print&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;foo&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
 
 
 &lt;p&gt;``` version:&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="k"&gt;print&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;foo&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="nb"&gt;print&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;foo&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
 
 
 &lt;p&gt;#! version:&lt;/p&gt;
-&lt;table class="highlighttable"&gt;&lt;tr&gt;&lt;td class="linenos"&gt;&lt;div class="linenodiv"&gt;&lt;pre&gt;1&lt;/pre&gt;&lt;/div&gt;&lt;/td&gt;&lt;td class="code"&gt;&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="k"&gt;print&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;foo&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;table class="highlighttable"&gt;&lt;tr&gt;&lt;td class="linenos"&gt;&lt;div class="linenodiv"&gt;&lt;pre&gt;1&lt;/pre&gt;&lt;/div&gt;&lt;/td&gt;&lt;td class="code"&gt;&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="nb"&gt;print&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;foo&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
 &lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
 
@@ -67,7 +63,7 @@
 &lt;p&gt;:::python
 print("foo")&lt;/p&gt;
 &lt;p&gt;Using eight spaces to indent:&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="k"&gt;print&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;foo&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="nb"&gt;print&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;foo&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
 
 
@@ -78,9 +74,9 @@ print("foo")&lt;/p&gt;
 &lt;p&gt;&lt;code&gt;python
 print("foo")&lt;/code&gt;&lt;/p&gt;
 &lt;p&gt;Using eight spaces to indent:&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;```python
-print(&amp;quot;foo&amp;quot;)
-```
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="err"&gt;```python&lt;/span&gt;
+&lt;span class="err"&gt;print(&amp;quot;foo&amp;quot;)&lt;/span&gt;
+&lt;span class="err"&gt;```&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
 
 
@@ -91,12 +87,12 @@ print(&amp;quot;foo&amp;quot;)
 &lt;h1&gt;!python&lt;/h1&gt;
 &lt;p&gt;print("foo")&lt;/p&gt;
 &lt;p&gt;Using eight spaces to indent:&lt;/p&gt;
-&lt;table class="highlighttable"&gt;&lt;tr&gt;&lt;td class="linenos"&gt;&lt;div class="linenodiv"&gt;&lt;pre&gt;1&lt;/pre&gt;&lt;/div&gt;&lt;/td&gt;&lt;td class="code"&gt;&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="k"&gt;print&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;foo&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;table class="highlighttable"&gt;&lt;tr&gt;&lt;td class="linenos"&gt;&lt;div class="linenodiv"&gt;&lt;pre&gt;1&lt;/pre&gt;&lt;/div&gt;&lt;/td&gt;&lt;td class="code"&gt;&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="nb"&gt;print&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;foo&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
 &lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
 
 &lt;/li&gt;
-&lt;/ol&gt;</content><category term="Pelican"></category></entry><entry><title>如何玩蛋白质</title><link href="https://blog.71e6fd52.ml/ru-he-wan-dan-bai-zhi.html" rel="alternate"></link><published>2018-02-08T11:16:13+08:00</published><updated>2018-02-08T11:16:13+08:00</updated><author><name>71e6fd52</name></author><id>tag:blog.71e6fd52.ml,2018-02-08:/ru-he-wan-dan-bai-zhi.html</id><summary type="html">&lt;p&gt;Foldit 是一个折叠蛋白质的游戏，折叠的结果将会用于科学研究。&lt;/p&gt;
+&lt;/ol&gt;</content><category term="Pelican"></category><category term="Pelican"></category></entry><entry><title>如何玩蛋白质</title><link href="https://blog.yahvk.ml/ru-he-wan-dan-bai-zhi.html" rel="alternate"></link><published>2018-02-08T11:16:13+08:00</published><updated>2018-02-08T11:16:13+08:00</updated><author><name>71e6fd52</name></author><id>tag:blog.yahvk.ml,2018-02-08:/ru-he-wan-dan-bai-zhi.html</id><summary type="html">&lt;p&gt;Foldit 是一个折叠蛋白质的游戏，折叠的结果将会用于科学研究。&lt;/p&gt;
 &lt;p&gt;以 Linux 系统为例&lt;/p&gt;
 &lt;p&gt;首先，&lt;a href="http://fold.it/portal/download/linux"&gt;下载 foldit&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;下载完成以后，解压，并运行 &lt;code&gt;Foldit&lt;/code&gt;&lt;/p&gt;
@@ -129,7 +125,7 @@ print(&amp;quot;foo&amp;quot;)
 教程的介绍在 &lt;a href="http://foldit.wikia.com/wiki/Tutorial_Puzzles"&gt;http://foldit.wikia.com/wiki/Tutorial_Puzzles&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;要了解更多信息，请务必查看 &lt;a href="http://foldit.wikia.com/wiki/Foldit_Wiki"&gt;Foldit 维基&lt;/a&gt;,
 那里有很多很棒的信息，提示，技巧，关于结构的信息等。&lt;/p&gt;
-&lt;p&gt;现在，你可以和你的蛋白质玩耍了。&lt;/p&gt;</content><category term="foldit"></category><category term="distributed computing"></category></entry><entry><title>温度单位</title><link href="https://blog.71e6fd52.ml/wen-du-dan-wei.html" rel="alternate"></link><published>2017-12-17T22:08:03+08:00</published><updated>2019-02-15T16:40:13+08:00</updated><author><name>71e6fd52</name></author><id>tag:blog.71e6fd52.ml,2017-12-17:/wen-du-dan-wei.html</id><summary type="html">&lt;p&gt;现在的温度单位/温标很不合理啊。&lt;/p&gt;
+&lt;p&gt;现在，你可以和你的蛋白质玩耍了。&lt;/p&gt;</content><category term="foldit"></category><category term="foldit"></category><category term="distributed computing"></category></entry><entry><title>温度单位</title><link href="https://blog.yahvk.ml/wen-du-dan-wei.html" rel="alternate"></link><published>2017-12-17T22:08:03+08:00</published><updated>2019-02-15T16:40:13+08:00</updated><author><name>71e6fd52</name></author><id>tag:blog.yahvk.ml,2017-12-17:/wen-du-dan-wei.html</id><summary type="html">&lt;p&gt;现在的温度单位/温标很不合理啊。&lt;/p&gt;
 &lt;p&gt;一个温度没有倍数关系的，比如 25°C 和 50°C 不是两倍关系，但是温度差却是有的，
 0°C 与 50°C 的温差就是 0°C 与 25°C 的两倍，于是这样 50°C 是 25°C 的两倍了。&lt;/p&gt;
 &lt;p&gt;单位换算也一样，如果是温度的话，开尔文 是 摄氏度 + 273.15，还用到了加法。
@@ -147,11 +143,11 @@ print(&amp;quot;foo&amp;quot;)
 而没有倍数关系是因为如果把 &lt;code&gt;25°C + Bc&lt;/code&gt; 乘以 2，那么其中常量 Bc 也会被乘以 2，
 变成 &lt;code&gt;50°C + 2Bc&lt;/code&gt; 就不等于 &lt;code&gt;50°C + Bc&lt;/code&gt; 了&lt;/p&gt;
 &lt;p&gt;单位换算就像这样：&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;1K = 1°C
-Bc = Bk + 273.15°C
-1°C = 1.8°F
-Bf = Bc + 32°F
-&lt;/pre&gt;&lt;/div&gt;</content><category term="PEIKEEMEI"></category></entry><entry><title>Vegas 用 FrameServer 搭桥</title><link href="https://blog.71e6fd52.ml/vegas-yong-frameserver-da-qiao.html" rel="alternate"></link><published>2017-09-23T14:16:48+08:00</published><updated>2017-09-23T15:30:52+08:00</updated><author><name>71e6fd52</name></author><id>tag:blog.71e6fd52.ml,2017-09-23:/vegas-yong-frameserver-da-qiao.html</id><summary type="html">&lt;p&gt;之前为了让 Sony Vegas pro 13.0 用 DebugMode FrameServer 搭桥，研究了很久最后发现了一个很简单的办法&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="err"&gt;1K = 1°C&lt;/span&gt;
+&lt;span class="err"&gt;Bc = Bk + 273.15°C&lt;/span&gt;
+&lt;span class="err"&gt;1°C = 1.8°F&lt;/span&gt;
+&lt;span class="err"&gt;Bf = Bc + 32°F&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;</content><category term="PEOKEEMEI"></category><category term="PEIKEEMEI"></category></entry><entry><title>Vegas 用 FrameServer 搭桥</title><link href="https://blog.yahvk.ml/vegas-yong-frameserver-da-qiao.html" rel="alternate"></link><published>2017-09-23T14:16:48+08:00</published><updated>2017-09-23T15:30:52+08:00</updated><author><name>71e6fd52</name></author><id>tag:blog.yahvk.ml,2017-09-23:/vegas-yong-frameserver-da-qiao.html</id><summary type="html">&lt;p&gt;之前为了让 Sony Vegas pro 13.0 用 DebugMode FrameServer 搭桥，研究了很久最后发现了一个很简单的办法&lt;/p&gt;
 &lt;ol&gt;
 &lt;li&gt;安装 &lt;a href="http://vegasbar.lofter.com/post/1d4450de_74cd602"&gt;Vegas&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;安装 &lt;a href="http://pan.baidu.com/s/1pLRarub"&gt;DebugMode FrameServer 的 Vegas 13 版&lt;/a&gt; 密码：6qf3&lt;ol&gt;
@@ -183,12 +179,8 @@ Bf = Bc + 32°F
 &lt;/li&gt;
 &lt;li&gt;已经导出了临时文件（桥）了。&lt;/li&gt;
 &lt;/ol&gt;
-&lt;p&gt;所以，为什么不用 FFmpeg 呢&lt;/p&gt;</content><category term="Vegas"></category></entry><entry><title>test</title><link href="https://blog.71e6fd52.ml/test.html" rel="alternate"></link><published>2017-09-17T15:11:41+08:00</published><updated>2017-09-23T14:12:06+08:00</updated><author><name>71e6fd52</name></author><id>tag:blog.71e6fd52.ml,2017-09-17:/test.html</id><summary type="html">&lt;p&gt;第一篇博客就测试用吧？&lt;/p&gt;
+&lt;p&gt;所以，为什么不用 FFmpeg 呢&lt;/p&gt;</content><category term="Windows"></category><category term="Vegas"></category></entry><entry><title>test</title><link href="https://blog.yahvk.ml/test.html" rel="alternate"></link><published>2017-09-17T15:11:41+08:00</published><updated>2017-09-23T14:12:06+08:00</updated><author><name>71e6fd52</name></author><id>tag:blog.yahvk.ml,2017-09-17:/test.html</id><content type="html">&lt;p&gt;第一篇博客就测试用吧？&lt;/p&gt;
 &lt;p&gt;还是想写点什么呢。&lt;/p&gt;
 &lt;p&gt;我原来用的是 &lt;a href="https://github.com/isnowfy/simple"&gt;&lt;code&gt;simple&lt;/code&gt;&lt;/a&gt;,
 可以把 Markdown 自动发布在 github 上，后来我自己 fork 了一份，改了一些内容。
-后来有时候直接用 HTML，总之很难受，之后慢慢把之前的搬过来吧。&lt;/p&gt;</summary><content type="html">&lt;p&gt;第一篇博客就测试用吧？&lt;/p&gt;
-&lt;p&gt;还是想写点什么呢。&lt;/p&gt;
-&lt;p&gt;我原来用的是 &lt;a href="https://github.com/isnowfy/simple"&gt;&lt;code&gt;simple&lt;/code&gt;&lt;/a&gt;,
-可以把 Markdown 自动发布在 github 上，后来我自己 fork 了一份，改了一些内容。
-后来有时候直接用 HTML，总之很难受，之后慢慢把之前的搬过来吧。&lt;/p&gt;</content><category term="Pelican"></category><category term="Blog"></category></entry></feed>
+后来有时候直接用 HTML，总之很难受，之后慢慢把之前的搬过来吧。&lt;/p&gt;</content><category term="Pelican"></category><category term="Pelican"></category><category term="Blog"></category></entry></feed>
