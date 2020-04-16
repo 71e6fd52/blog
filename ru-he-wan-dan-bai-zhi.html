@@ -205,18 +205,18 @@
         var switch_comment = function (name) {
           if (name === 'disqus') {
             document.getElementById('disqus_thread').style.display="block";
-            document.getElementById('gitment').style.display="none";
+            document.getElementById('gitalk').style.display="none";
             document.getElementById('disqus_comment').style.background="#ff7300";
             document.getElementById('disqus_comment').style.color="#fff";
-            document.getElementById('gitment_comment').style.background="#ddd";
-            document.getElementById('gitment_comment').style.color="#000";
-          } else if (name === 'gitment') {
+            document.getElementById('gitalk_comment').style.background="#ddd";
+            document.getElementById('gitalk_comment').style.color="#000";
+          } else if (name === 'gitalk') {
             document.getElementById('disqus_thread').style.display="none";
-            document.getElementById('gitment').style.display="block";
+            document.getElementById('gitalk').style.display="block";
             document.getElementById('disqus_comment').style.background="#ddd";
             document.getElementById('disqus_comment').style.color="#000";
-            document.getElementById('gitment_comment').style.background="#ff7300";
-            document.getElementById('gitment_comment').style.color="#fff";
+            document.getElementById('gitalk_comment').style.background="#ff7300";
+            document.getElementById('gitalk_comment').style.color="#fff";
           }
         };
       </script>
@@ -224,8 +224,8 @@
         <li id="disqus_comment">
           <button class="comment_switch" onclick="switch_comment('disqus')">Disqus</button>
         </li>
-        <li id="gitment_comment">
-          <button class="comment_switch" onclick="switch_comment('gitment')">Gitment</button>
+        <li id="gitalk_comment">
+          <button class="comment_switch" onclick="switch_comment('gitalk')">Gitalk</button>
         </li>
       </ul>
       <!-- DISQUS BEGIN -->
@@ -244,23 +244,24 @@
           })();
         </script>
       <!-- DISQUS END -->
-      <!-- GITMENT BEGIN -->
-        <div id="gitment"></div>
-        <link rel="stylesheet" href="https://imsun.github.io/gitment/style/default.css">
-        <script src="https://imsun.github.io/gitment/dist/gitment.browser.js"></script>
+      <!-- GITALK BEGIN -->
+        <div id="gitalk"></div>
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.css">
+        <script src="https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.min.js"></script>
         <script>
-          var gitment = new Gitment({
-            id: 'ru-he-wan-dan-bai-zhi.html',
-            owner: '71e6fd52',
+          const gitalk = new Gitalk({
+            clientID: 'cc78bf6b5758fd53a38a',
+            clientSecret: '96acad33ae8646e60b8f0bfd7d1c99e24f7a7caf',
             repo: 'blog',
-            oauth: {
-              client_id: 'cc78bf6b5758fd53a38a',
-              client_secret: '96acad33ae8646e60b8f0bfd7d1c99e24f7a7caf',
-            },
+            owner: '71e6fd52',
+            admin: ['71e6fd52'],
+            id: 'ru-he-wan-dan-bai-zhi.html',
+            distractionFreeMode: true
           })
-          gitment.render('gitment')
+
+          gitalk.render('gitalk')
         </script>
-      <!-- GITMENT END -->
+      <!-- GITALK END -->
     </div>
 
   </article>
