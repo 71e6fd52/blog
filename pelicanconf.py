@@ -26,14 +26,22 @@ AUTHOR_FEED_RSS = None
 
 # Social widget
 SOCIAL = (
-        ('github', 'https://github.com/71e6fd52'),
-        ('twitter', 'https://twitter.com/71e6fd52'),
-        ('mail-s', 'DAStudio.71e6fd52@gmail.com')
-          )
+    ('github', 'https://github.com/71e6fd52'),
+    ('twitter', 'https://twitter.com/71e6fd52'),
+    ('mail-s', 'mailto:71e6fd52@gmail.com'),
+)
 
 TWITTER_USERNAME = '71e6fd52'
 
 DEFAULT_PAGINATION = 20
+
+STATIC_PATHS = [
+    'images',
+    'extra',
+]
+EXTRA_PATH_METADATA = {
+    'extra/favicon.ico': {'path': 'favicon.ico'},
+}
 
 FAVICON = 'favicon.ico'
 
