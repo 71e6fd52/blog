@@ -7,7 +7,7 @@
 &lt;audio autoplay loop controls&gt;
   &lt;source src="https://blog.yahvk.ml/audio/tudou.opus" type="audio/ogg; codecs=opus"/&gt;
   &lt;source src="https://blog.yahvk.ml/audio/tudou.mp3" type="audio/mpeg"/&gt;
-  &lt;p markdown="span"&gt;看起来你的浏览器听不到呢，链接在这里：&lt;a href="https://blog.yahvk.ml/audio/tudou.mp3"&gt;{attach}/audio/tudou.mp3&lt;/a&gt;&lt;/p&gt;
+  &lt;p&gt;看起来你的浏览器听不到呢，链接在这里：&lt;a href="https://blog.yahvk.ml/audio/tudou.mp3"&gt;{attach}/audio/tudou.mp3&lt;/a&gt;&lt;/p&gt;
 &lt;/audio&gt;
 &lt;/div&gt;
 
