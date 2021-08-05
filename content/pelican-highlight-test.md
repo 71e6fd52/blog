@@ -1,6 +1,6 @@
 Title: pelican highlight test
 Date: 2018-02-10 10:25:40
-Author: 71e6fd52
+Author: yahvk
 Category: Pelican
 Tags: Pelican
 Summary: Test pelican highlight

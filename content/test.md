@@ -1,7 +1,7 @@
 Title: test
 Date: 2017-09-17 15:11:41
 Modified: 2017-09-23 14:12:06
-Author: 71e6fd52
+Author: yahvk
 Category: Pelican
 Tags: Pelican, Blog
 

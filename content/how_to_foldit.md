@@ -1,6 +1,6 @@
 Title: 如何玩蛋白质
 Date: 2018-02-08 11:16:13
-Author: 71e6fd52
+Author: yahvk
 Category: foldit
 Tags: foldit, distributed computing
 
