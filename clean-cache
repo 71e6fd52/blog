@@ -25,7 +25,7 @@ file =
   end
 
 data =
-  if file == 'all'
+  if file == 'all' || file.size > 20
     { purge_everything: true }
   elsif file
     file << 'https://blog.yahvk.ml/'
