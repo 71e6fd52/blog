@@ -63,8 +63,8 @@ https://www.keyfc.net/bbs/showtopic-22242.aspx
 
 PEiD 查壳 `PECompact 2.x`，esp 定律后单步跟踪到 `0053C715 jmp eax`，顺利找到 oep 004c7618。
 
-![]({attach}images/tudou-2.webp)
-![]({attach}images/tudou-3.webp)
+![jmp eax]({attach}images/tudou-2.webp)
+![oep]({attach}images/tudou-3.webp)
 
 脱完壳后运行显示 `无法定位程序输入点 MtdllDefWindowProc_A`，
 依照 https://reverseengineering.stackexchange.com/questions/11309/imprec-invalid-ntdlldefwindowproc-a-seem-valid
@@ -75,7 +75,7 @@ PEiD 查壳 `PECompact 2.x`，esp 定律后单步跟踪到 `0053C715 jmp eax`，
 由前面所述，解码器使用的是 `InternetGetCookieA` 函数，直接 OD 打断点在 `InternetGetCookieA` 上。
 跟踪一下，发现它实际上只读取了 `dnt` 这一个 cookie，然后发现了我复制 Cookie 时的错误……
 
-![]({attach}images/tudou-4.webp)
+![OD界面]({attach}images/tudou-4.webp)
 
 ## 完成
 
