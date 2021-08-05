@@ -108,6 +108,8 @@
                 <li><a
                         href="https://blog.yahvk.ml/category/program.html">program</a></li>
                 <li><a
+                        href="https://blog.yahvk.ml/category/reverseengineering.html">reverseengineering</a></li>
+                <li><a
                         href="https://blog.yahvk.ml/category/windows.html">Windows</a></li>
         </ul>
 
@@ -143,11 +145,10 @@
 <p>没有反编译经验，这里的反编译流程是我自己 google 研究出来的，不一定是最好的。</p>
 <p>我当时用的课后网的 apk 传到 mega 上了：<a href="https://mega.nz/file/8HAg1YpS#odqb6VBz6j3jQdeYEK1CstimutTu2tdEGeq_6Vf9LjE">https://mega.nz/file/8HAg1YpS#odqb6VBz6j3jQdeYEK1CstimutTu2tdEGeq_6Vf9LjE</a></p>
 <h3>反编译</h3>
-<div class="highlight"><pre><span></span>apktool d kehou.apk -o kehou-apktool <span class="c1"># 解包 kehou.apk 到 kehou-apktool</span>
+<div class="highlight"><pre><span></span><code>apktool d kehou.apk -o kehou-apktool <span class="c1"># 解包 kehou.apk 到 kehou-apktool</span>
 d2j-dex2jar kehou.apk <span class="c1"># 提取 kehou.apk 代码为 jar</span>
 jadx kehou-dex2jar.jar <span class="c1"># 把上一步提取出的 jar 反编译为 java 代码放在 kehou-dex2jar/sources/</span>
-</pre></div>
-
+</code></pre></div>
 
 <h3>修改代码</h3>
 <h4>签到</h4>
@@ -158,9 +159,8 @@ jadx kehou-dex2jar.jar <span class="c1"># 把上一步提取出的 jar 反编译
 点击签到按钮后会调用 <code>RollcallConfirmViewController#onBtnClickRollcallConfirm</code>。</p>
 <p>所以只要在 <code>onStartRollcallConfirm</code> 中调用 <code>onBtnClickRollcallConfirm</code>，就可以在开始签到的时候自动签到了。</p>
 <p>然后我还在 <code>onBtnClickRollcallConfirm</code> 加了个提示：</p>
-<div class="highlight"><pre><span></span><span class="n">Toast</span><span class="p">.</span><span class="na">makeText</span><span class="p">(</span><span class="k">this</span><span class="p">.</span><span class="na">m_pIMainActivity</span><span class="p">.</span><span class="na">getActivity</span><span class="p">(),</span> <span class="s">&quot;已自动签到&quot;</span><span class="p">,</span> <span class="n">Toast</span><span class="p">.</span><span class="na">LENGTH_LONG</span><span class="p">).</span><span class="na">show</span><span class="p">();</span>
-</pre></div>
-
+<div class="highlight"><pre><span></span><code><span class="n">Toast</span><span class="p">.</span><span class="na">makeText</span><span class="p">(</span><span class="k">this</span><span class="p">.</span><span class="na">m_pIMainActivity</span><span class="p">.</span><span class="na">getActivity</span><span class="p">(),</span> <span class="s">&quot;已自动签到&quot;</span><span class="p">,</span> <span class="n">Toast</span><span class="p">.</span><span class="na">LENGTH_LONG</span><span class="p">).</span><span class="na">show</span><span class="p">();</span>
+</code></pre></div>
 
 <h4>认真度</h4>
 <p>由上一步可以看出来所有课后网自己的代码都在 vizpower 中，直播课相关的内容在 vizpower/imeeting。</p>
@@ -169,22 +169,19 @@ jadx kehou-dex2jar.jar <span class="c1"># 把上一步提取出的 jar 反编译
 在 <code>onPause</code> 中把停止 Timer 的 <code>DesktopShareMgr.getInstance().stopDSTimer();</code> 这一行注释掉就可以一直「认真」了。</p>
 <h3>编译回 apk</h3>
 <p>需要 Android SDK，编译出 class 文件：</p>
-<div class="highlight"><pre><span></span>javac -cp /opt/android-sdk/platforms/android-29/android.jar:.../kehou-dex2jar.jar &lt;edited files&gt; <span class="c1"># 把 android.jar 和 kehou-dex2jar.jar 的路径换成你自己的</span>
-</pre></div>
-
+<div class="highlight"><pre><span></span><code>javac -cp /opt/android-sdk/platforms/android-29/android.jar:.../kehou-dex2jar.jar &lt;edited files&gt; <span class="c1"># 把 android.jar 和 kehou-dex2jar.jar 的路径换成你自己的</span>
+</code></pre></div>
 
 <p>把编译出来的 class 文件按原来的目录组织起来，我放在 inject/source 下，然后编译出 dex 文件，再反编译为 smali 文件：</p>
-<div class="highlight"><pre><span></span>dx --dex --output<span class="o">=</span>classes.dex <span class="nb">source</span>
+<div class="highlight"><pre><span></span><code>dx --dex --output<span class="o">=</span>classes.dex <span class="nb">source</span>
 d2j-baksmali classes.dex
-</pre></div>
-
+</code></pre></div>
 
 <p>然后用这些 smali 替换掉 apktool 解出来的 smali 文件，然后用 apktool 打包，再签名。</p>
-<div class="highlight"><pre><span></span>apktool b kehou-apktool
+<div class="highlight"><pre><span></span><code>apktool b kehou-apktool
 <span class="nb">cd</span> kehou-apktool/dist/
 d2j-apk-sign kehou.apk
-</pre></div>
-
+</code></pre></div>
 
 <h3>附注</h3>
 <p>有一些文件内有部分无法反编译的代码，这时用上一节的方法就不行了，
@@ -203,23 +200,21 @@ d2j-apk-sign kehou.apk
 <p>代码：<a href="https://gitlab.com/71e6fd52/kehou_proxy">https://gitlab.com/71e6fd52/kehou_proxy</a></p>
 <h3>通讯协议</h3>
 <p>我用的 VirtualBox 自带抓包功能：</p>
-<div class="highlight"><pre><span></span>mkfifo /tmp/file.pcap
+<div class="highlight"><pre><span></span><code>mkfifo /tmp/file.pcap
 VBoxManage modifyvm vm1 --nictrace1 on --nictracefile1 /tmp/file.pcap
 wireshark -k -i /tmp/file.pcap <span class="p">&amp;</span>
-</pre></div>
-
+</code></pre></div>
 
 <p>但是看抓出的包并不容易看出来，只能看出通讯在 9980 端口上，这时破解一中反编译的源代码就派上了用场。</p>
 <p>经过对源代码的分析可以看出包的格式为 <code>0x02 0x02 &lt;后面的长度:i16&gt; 0x01 &lt;命令号:i16&gt; &lt;内容&gt;</code>，
 所有数字为小端。</p>
 <p>所有命令在 vizpower/mtmgr/PDU 下，如 <code>ReplyNaming</code> 的命令号为 -32206(0x32 0x82)，内容由</p>
-<div class="highlight"><pre><span></span><span class="kd">public</span> <span class="kt">byte</span> <span class="n">bTime</span> <span class="o">=</span> <span class="p">((</span><span class="kt">byte</span><span class="p">)</span> <span class="mi">0</span><span class="p">);</span>
+<div class="highlight"><pre><span></span><code><span class="kd">public</span> <span class="kt">byte</span> <span class="n">bTime</span> <span class="o">=</span> <span class="p">((</span><span class="kt">byte</span><span class="p">)</span> <span class="mi">0</span><span class="p">);</span>
 <span class="kd">public</span> <span class="kt">int</span> <span class="n">dwUserID</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
 <span class="p">...</span>
 <span class="n">byteBuffer</span><span class="p">.</span><span class="na">putInt</span><span class="p">(</span><span class="k">this</span><span class="p">.</span><span class="na">dwUserID</span><span class="p">);</span>
 <span class="n">byteBuffer</span><span class="p">.</span><span class="na">put</span><span class="p">(</span><span class="k">this</span><span class="p">.</span><span class="na">bTime</span><span class="p">);</span>
-</pre></div>
-
+</code></pre></div>
 
 <p>可见先是 i32 的 dwUserID，然后是 i8 的 bTime。</p>
 <p>再看一下调用的代码可以看出来 dwUserID 是加入课堂时会由 <code>NotifyJoinMeeting</code>(-32254) 分配的 ID，
@@ -227,22 +222,20 @@ bTime 是签到所花的秒数。</p>
 <h3>修改网络</h3>
 <p>先要让网络经过 nftable，我最初用的是 arp 攻击，后来直接让主机作为虚拟机的网关。</p>
 <p>建一个 tap，此处虚拟机网段为 192.168.2.0/24 ：</p>
-<div class="highlight"><pre><span></span>ip tuntap add dev tap0 mode tap user <span class="nv">$USER</span>
+<div class="highlight"><pre><span></span><code>ip tuntap add dev tap0 mode tap user <span class="nv">$USER</span>
 ip addr add <span class="m">192</span>.168.2.1/24 scope link dev tap0
 ip link <span class="nb">set</span> tap0 up
-</pre></div>
-
+</code></pre></div>
 
 <p>虚拟机设置为桥接网络，桥接在 tap0 上。</p>
 <p>在把所有发往 9980 的端口劫持了（以主机地址为 192.168.1.200 为例）：</p>
-<div class="highlight"><pre><span></span>table ip nat {
+<div class="highlight"><pre><span></span><code>table ip nat {
   chain prerouting {
     type nat hook prerouting priority 0;
     ip saddr 192.168.2.0/24 tcp dport 9980 dnat to 192.168.1.200;
   }
 }
-</pre></div>
-
+</code></pre></div>
 
 <p>接下来再在主机上启动一个监听 9980 端口的程序，并把收到的数据（做些修改的）转发到课后网的服务器上。
 这个程序在收到 <code>NotifyJoinMeeting</code>(-32254) 时记录下 UserID，
@@ -302,6 +295,10 @@ ip link <span class="nb">set</span> tap0 up
       <a href="https://blog.yahvk.ml/bian-cheng-ji-chu-0-mu-lu.html"
       class="change-page left">
         &lt;  编程基础（0）——目录
+      </a>
+      <a href="https://blog.yahvk.ml/xiu-fu-tu-dou-wen-jie-ma-qi.html"
+        class="change-page right">
+        修复土豆文解码器  &gt;
       </a>
     <hr style="margin-top: 70px;">
     <h2 style="text-align: center; margin: 15px 0 0 0;">选一个评论框评论？</h2>

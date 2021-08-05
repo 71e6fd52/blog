@@ -11,8 +11,8 @@
 而没有倍数关系是因为如果把 &lt;code&gt;25°C + Bc&lt;/code&gt; 乘以 2，那么其中常量 Bc 也会被乘以 2，
 变成 &lt;code&gt;50°C + 2Bc&lt;/code&gt; 就不等于 &lt;code&gt;50°C + Bc&lt;/code&gt; 了&lt;/p&gt;
 &lt;p&gt;单位换算就像这样：&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="err"&gt;1K = 1°C&lt;/span&gt;
-&lt;span class="err"&gt;Bc = Bk + 273.15°C&lt;/span&gt;
-&lt;span class="err"&gt;1°C = 1.8°F&lt;/span&gt;
-&lt;span class="err"&gt;Bf = Bc + 32°F&lt;/span&gt;
-&lt;/pre&gt;&lt;/div&gt;</content><category term="PEOKEEMEI"></category><category term="PEIKEEMEI"></category></entry></feed>
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="mf"&gt;1&lt;/span&gt;&lt;span class="n"&gt;K&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="mf"&gt;1&lt;/span&gt;&lt;span class="err"&gt;°&lt;/span&gt;&lt;span class="n"&gt;C&lt;/span&gt;
+&lt;span class="n"&gt;Bc&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;Bk&lt;/span&gt; &lt;span class="o"&gt;+&lt;/span&gt; &lt;span class="mf"&gt;273.15&lt;/span&gt;&lt;span class="err"&gt;°&lt;/span&gt;&lt;span class="n"&gt;C&lt;/span&gt;
+&lt;span class="mf"&gt;1&lt;/span&gt;&lt;span class="err"&gt;°&lt;/span&gt;&lt;span class="n"&gt;C&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="mf"&gt;1.8&lt;/span&gt;&lt;span class="err"&gt;°&lt;/span&gt;&lt;span class="n"&gt;F&lt;/span&gt;
+&lt;span class="n"&gt;Bf&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;Bc&lt;/span&gt; &lt;span class="o"&gt;+&lt;/span&gt; &lt;span class="mf"&gt;32&lt;/span&gt;&lt;span class="err"&gt;°&lt;/span&gt;&lt;span class="n"&gt;F&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</content><category term="PEOKEEMEI"></category><category term="PEIKEEMEI"></category></entry></feed>

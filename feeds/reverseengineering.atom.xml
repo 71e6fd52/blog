@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom"><title>71e6fd52's blog - reverseengineering</title><link href="https://blog.yahvk.ml/" rel="alternate"></link><link href="https://blog.yahvk.ml/feeds/reverseengineering.atom.xml" rel="self"></link><id>https://blog.yahvk.ml/</id><updated>2021-08-05T14:19:52+08:00</updated><entry><title>修复土豆文解码器</title><link href="https://blog.yahvk.ml/xiu-fu-tu-dou-wen-jie-ma-qi.html" rel="alternate"></link><published>2021-08-05T14:19:52+08:00</published><updated>2021-08-05T14:19:52+08:00</updated><author><name>71e6fd52</name></author><id>tag:blog.yahvk.ml,2021-08-05:/xiu-fu-tu-dou-wen-jie-ma-qi.html</id><summary type="html">整理硬盘时，在硬盘中翻到了多年前在 &lt;a href="https://www.keyfc.net"&gt;KeyFC&lt;/a&gt; 下载的&lt;a href="https://www.keyfc.net/bbs/showtopic-25834.aspx"&gt;土豆文&lt;/a&gt;套件，
+随着 Windows 系统的不断更新，土豆文解码器的登录检测已经无法正常工作了。</summary><content type="html">&lt;p&gt;整理硬盘时，在硬盘中翻到了多年前在 &lt;a href="https://www.keyfc.net"&gt;KeyFC&lt;/a&gt; 下载的&lt;a href="https://www.keyfc.net/bbs/showtopic-25834.aspx"&gt;土豆文&lt;/a&gt;套件，
+随着 Windows 系统的不断更新，土豆文解码器的登录检测已经无法正常工作了。&lt;/p&gt;
+&lt;p&gt;土豆星星歌附上
+&lt;audio autoplay loop controls&gt;
+  &lt;source src="https://blog.yahvk.ml/audio/tudou.opus" type="audio/ogg; codecs=opus"/&gt;
+  &lt;source src="https://blog.yahvk.ml/audio/tudou.mp3" type="audio/mpeg"/&gt;
+&lt;br&gt;
+&lt;p&gt;
+    看起来你的浏览器听不到呢，链接在这里：&lt;a href="https://blog.yahvk.ml/audio/tudou.mp3"&gt;{attach}/audio/tudou.mp3&lt;/a&gt;
+  &lt;/p&gt;&lt;/p&gt;
+&lt;p&gt;&lt;/audio&gt;&lt;/p&gt;
+&lt;h2&gt;KeyFC&lt;/h2&gt;
+&lt;p&gt;&lt;a href="https://www.keyfc.net"&gt;KeyFC&lt;/a&gt; 是个超级有爱的论坛~&lt;/p&gt;
+&lt;p&gt;多年前路过 KFC，被神秘的土豆文所吸引。下载完土豆文套件，玩了一会儿，然后尘封在了硬盘的角落里。
+也再没访问过 KFC。&lt;/p&gt;
+&lt;p&gt;硬盘角落中的土豆文套件终于被我看到，使我重新找到了 KFC。已经看完 CLANNAD 的我再次浏览 KFC ，KFC 的温暖深深的感动了我。&lt;/p&gt;
+&lt;h2&gt;土豆文&lt;/h2&gt;
+&lt;blockquote&gt;
+&lt;p&gt;土豆文是蕴含了世界发展底层规律的远古先进语言，其真正来源已不可考。
+土豆文不是文字，而是一种规律。
+土豆文不通过文字本身表达意思，而通过字符的排列规律展现其含义。
+现代科学研究认为，土豆文主要展现了以下规律：
+1. 叠加。事物之间没有明显的边界，对与错，好与坏，阴与阳等总是相互纠缠在一起，不停的复制叠加成为不同的繁复形态。
+2. 相似。事物之间有普遍的相似性，不仅表现在事物之间的相似，也表现在局部与整体的相似，过去与未来的相似
+3. 同源。 复杂的甚至是对立的事物，同样是由初始的最简单的某种元素，根据叠加与相似的规律发展而成。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;https://www.keyfc.net/bbs/showtopic-22242.aspx&lt;/p&gt;
+&lt;p&gt;总之，土豆文就是一种对文字的编码，长这样：&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;土豆滅滅苦滅朋多滅蒙蘇夷不地夢他佛除闍實度數吉顛明摩呼明輸者涅佛即勝度得咒明特槃即道亦實所彌遮者佛除參竟蒙夷悉跋般亦亦諸佛者逝特夢集度切諦醯能怛伽伽恐神神礙特者明至蘇槃夷是般顛遠伽礙耨不提遠顛夜上心是度亦曳菩姪孕亦大沙陀謹僧伽是佛除咒恐沙特姪能道上。遠無參佛心竟大度是參知迦能道上。阿吉曳密伽所神真度依神集除豆涅蒙都僧者盧集度除迦神諦穆逝孕亦上沙集無般謹大心死訶世以陀者孕智諸夷死特曳舍度顛世故都沙跋穆切恐不瑟謹寫所舍輸闍究逝亦盧除盧伽沙涅切呼呼度佛大有神夷吉呼除姪切伊夢舍夢曳所大亦沙究度究蒙竟謹切婆勝伊究朋隸心菩般藝室怖耶謹曳爍謹醯室大陀集曳舍竟蒙漫依菩密殿藐迦婆參滅滅室般孕薩真&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h2&gt;登录&lt;/h2&gt;
+&lt;p&gt;土豆文解码器启动后将先验证是否在 KeyFC 登录，从对土豆文的相关介绍来看，他回去读取 IE 的 cookie，但是怎么读取呢？&lt;/p&gt;
+&lt;p&gt;上火绒剑！&lt;/p&gt;
+&lt;p&gt;&lt;img alt="火绒剑界面" src="https://blog.yahvk.ml/images/tudou-1.webp"&gt;&lt;/p&gt;
+&lt;p&gt;从火绒剑分析得到，它调用了 wininet 的 &lt;a href="https://docs.microsoft.com/en-us/windows/win32/api/wininet/nf-wininet-internetgetcookiea"&gt;InternetGetCookieA&lt;/a&gt; 函数。
+但是用 IE11 登录 KFC 并不能让解码器登录，大概是 IE11 已经不用这套函数了。&lt;/p&gt;
+&lt;p&gt;继续研究 wininet 的文档，找到了另一个函数 &lt;a href="https://docs.microsoft.com/en-us/windows/win32/api/wininet/nf-wininet-internetsetcookiea"&gt;InternetSetCookieA&lt;/a&gt;。
+那么推测只要用 InternetSetCookieA 设置了 Cookie，就可以使解码器登录了。&lt;/p&gt;
+&lt;p&gt;写了个 Powershell 脚本设置了 Cookie，但是并没有成功（实际上是复制时漏了字符），上 OD！&lt;/p&gt;
+&lt;h2&gt;脱壳&lt;/h2&gt;
+&lt;p&gt;为了找出解码器的具体工作原理，我决定反编译。&lt;/p&gt;
+&lt;p&gt;PEiD 查壳 &lt;code&gt;PECompact 2.x&lt;/code&gt;，esp 定律后单步跟踪到 &lt;code&gt;0053C715 jmp eax&lt;/code&gt;，顺利找到 oep 004c7618。&lt;/p&gt;
+&lt;p&gt;&lt;img alt="" src="https://blog.yahvk.ml/images/tudou-2.webp"&gt;
+&lt;img alt="" src="https://blog.yahvk.ml/images/tudou-3.webp"&gt;&lt;/p&gt;
+&lt;p&gt;脱完壳后运行显示 &lt;code&gt;无法定位程序输入点 MtdllDefWindowProc_A&lt;/code&gt;，
+依照 https://reverseengineering.stackexchange.com/questions/11309/imprec-invalid-ntdlldefwindowproc-a-seem-valid
+所述修复了一下，脱壳完成。&lt;/p&gt;
+&lt;h2&gt;探索&lt;/h2&gt;
+&lt;p&gt;由前面所述，解码器使用的是 &lt;code&gt;InternetGetCookieA&lt;/code&gt; 函数，直接 OD 打断点在 &lt;code&gt;InternetGetCookieA&lt;/code&gt; 上。
+跟踪一下，发现它实际上只读取了 &lt;code&gt;dnt&lt;/code&gt; 这一个 cookie，然后发现了我复制 Cookie 时的错误……&lt;/p&gt;
+&lt;p&gt;&lt;img alt="" src="https://blog.yahvk.ml/images/tudou-4.webp"&gt;&lt;/p&gt;
+&lt;h2&gt;完成&lt;/h2&gt;
+&lt;p&gt;powershell 的核心代码是这样：&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="n"&gt;$source&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s"&gt;@&amp;quot;&lt;/span&gt;
+&lt;span class="n"&gt;using&lt;/span&gt; &lt;span class="n"&gt;System&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;Runtime&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;InteropServices&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
+&lt;span class="n"&gt;using&lt;/span&gt; &lt;span class="n"&gt;System&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
+&lt;span class="n"&gt;namespace&lt;/span&gt; &lt;span class="n"&gt;Cookies&lt;/span&gt;
+&lt;span class="p"&gt;{&lt;/span&gt;
+    &lt;span class="n"&gt;public&lt;/span&gt; &lt;span class="k"&gt;static&lt;/span&gt; &lt;span class="k"&gt;class&lt;/span&gt; &lt;span class="k"&gt;setter&lt;/span&gt;
+    &lt;span class="p"&gt;{&lt;/span&gt;
+        &lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="n"&gt;DllImport&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;wininet.dll&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;CharSet&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;CharSet&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;Auto&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;SetLastError&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="nb"&gt;true&lt;/span&gt;&lt;span class="p"&gt;)]&lt;/span&gt;
+        &lt;span class="n"&gt;private&lt;/span&gt; &lt;span class="k"&gt;static&lt;/span&gt; &lt;span class="k"&gt;extern&lt;/span&gt; &lt;span class="kt"&gt;bool&lt;/span&gt; &lt;span class="n"&gt;InternetSetCookie&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;string&lt;/span&gt; &lt;span class="n"&gt;url&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;string&lt;/span&gt; &lt;span class="n"&gt;name&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;string&lt;/span&gt; &lt;span class="n"&gt;data&lt;/span&gt;&lt;span class="p"&gt;);&lt;/span&gt;
+
+        &lt;span class="n"&gt;public&lt;/span&gt; &lt;span class="k"&gt;static&lt;/span&gt; &lt;span class="kt"&gt;bool&lt;/span&gt; &lt;span class="n"&gt;SetWinINETCookieString&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;string&lt;/span&gt; &lt;span class="n"&gt;url&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;string&lt;/span&gt; &lt;span class="n"&gt;name&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;string&lt;/span&gt; &lt;span class="n"&gt;data&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+        &lt;span class="p"&gt;{&lt;/span&gt;
+            &lt;span class="kt"&gt;bool&lt;/span&gt; &lt;span class="n"&gt;res&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="k"&gt;setter&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;InternetSetCookie&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;url&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;name&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;data&lt;/span&gt;&lt;span class="p"&gt;);&lt;/span&gt;
+            &lt;span class="k"&gt;if&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="o"&gt;!&lt;/span&gt;&lt;span class="n"&gt;res&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+            &lt;span class="p"&gt;{&lt;/span&gt;
+                &lt;span class="n"&gt;throw&lt;/span&gt; &lt;span class="n"&gt;new&lt;/span&gt; &lt;span class="n"&gt;Exception&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;Exception setting cookie: Win32 Error code=&amp;quot;&lt;/span&gt;&lt;span class="o"&gt;+&lt;/span&gt;&lt;span class="n"&gt;Marshal&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;GetLastWin32Error&lt;/span&gt;&lt;span class="p"&gt;());&lt;/span&gt;
+            &lt;span class="p"&gt;}&lt;/span&gt;&lt;span class="k"&gt;else&lt;/span&gt;&lt;span class="p"&gt;{&lt;/span&gt;
+                &lt;span class="k"&gt;return&lt;/span&gt; &lt;span class="n"&gt;res&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
+            &lt;span class="p"&gt;}&lt;/span&gt;
+        &lt;span class="p"&gt;}&lt;/span&gt;
+    &lt;span class="p"&gt;}&lt;/span&gt;
+&lt;span class="p"&gt;}&lt;/span&gt;
+&lt;span class="s"&gt;&amp;quot;@&lt;/span&gt;
+
+&lt;span class="n"&gt;Add&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;Type&lt;/span&gt; &lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;TypeDefinition&lt;/span&gt; &lt;span class="n"&gt;$source&lt;/span&gt; &lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;Language&lt;/span&gt; &lt;span class="n"&gt;CSharp&lt;/span&gt;
+
+&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="n"&gt;DateTime&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt;&lt;span class="n"&gt;$dateTime&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;Get&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;Date&lt;/span&gt;
+&lt;span class="n"&gt;$str&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;$dateTime&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;AddDays&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="mi"&gt;30&lt;/span&gt;&lt;span class="p"&gt;).&lt;/span&gt;&lt;span class="n"&gt;ToString&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;R&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+
+&lt;span class="n"&gt;$dnt&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;Read&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;Host&lt;/span&gt; &lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;Prompt&lt;/span&gt; &lt;span class="err"&gt;&amp;#39;请输入&lt;/span&gt; &lt;span class="n"&gt;Cookie&lt;/span&gt; &lt;span class="n"&gt;dnt&lt;/span&gt; &lt;span class="err"&gt;的值&amp;#39;&lt;/span&gt;
+&lt;span class="n"&gt;$dnt&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;$dnt&lt;/span&gt; &lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;replace&lt;/span&gt; &lt;span class="err"&gt;&amp;#39;&lt;/span&gt;&lt;span class="o"&gt;^&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;dnt&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;&lt;span class="o"&gt;?&lt;/span&gt;&lt;span class="err"&gt;\&lt;/span&gt;&lt;span class="n"&gt;s&lt;/span&gt;&lt;span class="o"&gt;*:?&lt;/span&gt;&lt;span class="err"&gt;\&lt;/span&gt;&lt;span class="n"&gt;s&lt;/span&gt;&lt;span class="o"&gt;*&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;?&amp;#39;, &amp;#39;&amp;#39;&lt;/span&gt;
+&lt;span class="n"&gt;$dnt&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;$dnt&lt;/span&gt; &lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;replace&lt;/span&gt; &lt;span class="err"&gt;&amp;#39;&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;$&amp;#39;, &amp;#39;&amp;#39;&lt;/span&gt;
+
+&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="n"&gt;Cookies&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="k"&gt;setter&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt;&lt;span class="o"&gt;::&lt;/span&gt;&lt;span class="n"&gt;SetWinINETCookieString&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;http://www.keyfc.net&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s"&gt;&amp;quot;dnt&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s"&gt;&amp;quot;$dnt;Expires=$str&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;之后大概会做个 Qt 版的发 KFC 上。&lt;/p&gt;</content><category term="reverseengineering"></category><category term="reverseengineering"></category></entry></feed>

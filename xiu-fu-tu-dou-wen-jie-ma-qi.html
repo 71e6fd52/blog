@@ -1,0 +1,368 @@
+<!doctype html>
+<html lang="zh" itemscope itemtype="https://schema.org/Person">
+<head>
+        <meta charset="utf-8">
+        <!-- Site Meta Data -->
+        <title>修复土豆文解码器</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="description" content="">
+        <meta name="author" content="71e6fd52">
+
+        <link rel="shortcut icon" href="https://blog.yahvk.ml/favicon.ico">
+
+        <!-- schema.org -->
+        <meta itemprop="name" content="71e6fd52's blog">
+        <meta itemprop="image" content="">
+        <meta itemprop="description" content="">
+
+        <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,600,700' rel='stylesheet' type='text/css'>
+        <!-- Style Meta Data -->
+        <link rel="stylesheet" href="https://blog.yahvk.ml/theme/css/style.css" type="text/css"/>
+        <link rel="stylesheet" href="https://blog.yahvk.ml/theme/css/pygments.css" type="text/css"/>
+
+        <!-- Feed Meta Data -->
+            <link href="https://blog.yahvk.ml/feeds/all.atom.xml" type="application/atom+xml" rel="alternate"
+                  title="71e6fd52's blog ATOM Feed"/>
+
+        <!-- Twitter Feed -->
+        <meta name="twitter:card" content="summary">
+        <meta name="twitter:site" content="71e6fd52">
+        <meta name="twitter:image" content="">
+
+  <meta name="twitter:creator" content="71e6fd52">
+  <meta name="twitter:url" content="https://blog.yahvk.ml/xiu-fu-tu-dou-wen-jie-ma-qi.html">
+  <meta name="twitter:title" content="71e6fd52's blog ~ 修复土豆文解码器">
+  <meta name="twitter:description" content="整理硬盘时，在硬盘中翻到了多年前在 KeyFC 下载的土豆文套件， 随着 Windows 系统的不断更新，土豆文解码器的登录检测已经无法正常工作了。">
+
+  <!-- simpread Meta Data -->
+  <meta name="simpread:name" content="https://blog.yahvk.ml">
+  <meta name="simpread:title" content="<h2>">
+  <meta name="simpread:desc" content>
+  <meta name="simpread:include" content="<div class='entry-content'>">
+
+  <!-- Facebook Meta Data -->
+  <meta property="og:title" content="71e6fd52's blog ~ 修复土豆文解码器"/>
+  <meta property="og:description" content="整理硬盘时，在硬盘中翻到了多年前在 KeyFC 下载的土豆文套件， 随着 Windows 系统的不断更新，土豆文解码器的登录检测已经无法正常工作了。"/>
+  <meta property="og:image" content=""/>
+  <link rel="stylesheet" href="https://blog.yahvk.ml/theme/css/comment.css" type="text/css"/>
+</head>
+
+<body>
+<!-- Sidebar -->
+<aside>
+    <!--<center><a href="https://blog.yahvk.ml"><img id="avatar" src=""></a></center>-->
+    <h1><a href="https://blog.yahvk.ml" style="text-decoration: inherit; color: inherit;">71e6fd52's blog</a></h1>
+    <br>
+
+        <a class="twitter-follow-button"
+           href="https://twitter.com/71e6fd52"
+           data-show-count="false"
+           data-lang="en">
+            Follow @twitterdev
+        </a>
+        <script type="text/javascript">
+            window.twttr = (function (d, s, id) {
+                var t, js, fjs = d.getElementsByTagName(s)[0];
+                if (d.getElementById(id)) return;
+                js = d.createElement(s);
+                js.id = id;
+                js.src = "https://platform.twitter.com/widgets.js";
+                fjs.parentNode.insertBefore(js, fjs);
+                return window.twttr || (t = {
+                        _e: [], ready: function (f) {
+                            t._e.push(f)
+                        }
+                    });
+            }(document, "script", "twitter-wjs"));
+        </script>
+
+    <nav class="nav">
+        <ul class="list-bare">
+
+
+
+        </ul>
+    </nav>
+
+    <p class="social">
+                <a href="https://github.com/71e6fd52" target="_blank"><img
+                        src="https://blog.yahvk.ml/theme/images/icons/github.png"></a>
+                <a href="https://twitter.com/71e6fd52" target="_blank"><img
+                        src="https://blog.yahvk.ml/theme/images/icons/twitter.png"></a>
+                <a href="mailto:71e6fd52@gmail.com" target="_blank"><img
+                        src="https://blog.yahvk.ml/theme/images/icons/mail-s.png"></a>
+            <a href="https://blog.yahvk.ml/feeds/all.atom.xml" rel="alternate">
+                <img src="https://blog.yahvk.ml/theme/images/icons/rss.png"></a>
+    </p>
+
+        <h2>Categories</h2>
+        <ul class="navbar">
+                <li><a
+                        href="https://blog.yahvk.ml/category/foldit.html">foldit</a></li>
+                <li><a
+                        href="https://blog.yahvk.ml/category/misc.html">misc</a></li>
+                <li><a
+                        href="https://blog.yahvk.ml/category/pelican.html">Pelican</a></li>
+                <li><a
+                        href="https://blog.yahvk.ml/category/peokeemei.html">PEOKEEMEI</a></li>
+                <li><a
+                        href="https://blog.yahvk.ml/category/program.html">program</a></li>
+                <li class="active"><a
+                        href="https://blog.yahvk.ml/category/reverseengineering.html">reverseengineering</a></li>
+                <li><a
+                        href="https://blog.yahvk.ml/category/windows.html">Windows</a></li>
+        </ul>
+
+
+</aside>
+
+<!-- Content -->
+<article>
+<section id="content">
+  <article>
+    <h2 class="post_title post_detail">
+      <a href="https://blog.yahvk.ml/xiu-fu-tu-dou-wen-jie-ma-qi.html" rel="bookmark" title="Permalink to 修复土豆文解码器">修复土豆文解码器</a>
+    </h2>
+
+    <div class="entry-content blog-post">
+      <p>整理硬盘时，在硬盘中翻到了多年前在 <a href="https://www.keyfc.net">KeyFC</a> 下载的<a href="https://www.keyfc.net/bbs/showtopic-25834.aspx">土豆文</a>套件，
+随着 Windows 系统的不断更新，土豆文解码器的登录检测已经无法正常工作了。</p>
+<p>土豆星星歌附上
+<audio autoplay loop controls>
+  <source src="https://blog.yahvk.ml/audio/tudou.opus" type="audio/ogg; codecs=opus"/>
+  <source src="https://blog.yahvk.ml/audio/tudou.mp3" type="audio/mpeg"/>
+<br>
+<p>
+    看起来你的浏览器听不到呢，链接在这里：<a href="https://blog.yahvk.ml/audio/tudou.mp3">{attach}/audio/tudou.mp3</a>
+  </p></p>
+<p></audio></p>
+<h2>KeyFC</h2>
+<p><a href="https://www.keyfc.net">KeyFC</a> 是个超级有爱的论坛~</p>
+<p>多年前路过 KFC，被神秘的土豆文所吸引。下载完土豆文套件，玩了一会儿，然后尘封在了硬盘的角落里。
+也再没访问过 KFC。</p>
+<p>硬盘角落中的土豆文套件终于被我看到，使我重新找到了 KFC。已经看完 CLANNAD 的我再次浏览 KFC ，KFC 的温暖深深的感动了我。</p>
+<h2>土豆文</h2>
+<blockquote>
+<p>土豆文是蕴含了世界发展底层规律的远古先进语言，其真正来源已不可考。
+土豆文不是文字，而是一种规律。
+土豆文不通过文字本身表达意思，而通过字符的排列规律展现其含义。
+现代科学研究认为，土豆文主要展现了以下规律：
+1. 叠加。事物之间没有明显的边界，对与错，好与坏，阴与阳等总是相互纠缠在一起，不停的复制叠加成为不同的繁复形态。
+2. 相似。事物之间有普遍的相似性，不仅表现在事物之间的相似，也表现在局部与整体的相似，过去与未来的相似
+3. 同源。 复杂的甚至是对立的事物，同样是由初始的最简单的某种元素，根据叠加与相似的规律发展而成。</p>
+</blockquote>
+<p>https://www.keyfc.net/bbs/showtopic-22242.aspx</p>
+<p>总之，土豆文就是一种对文字的编码，长这样：</p>
+<blockquote>
+<p>土豆滅滅苦滅朋多滅蒙蘇夷不地夢他佛除闍實度數吉顛明摩呼明輸者涅佛即勝度得咒明特槃即道亦實所彌遮者佛除參竟蒙夷悉跋般亦亦諸佛者逝特夢集度切諦醯能怛伽伽恐神神礙特者明至蘇槃夷是般顛遠伽礙耨不提遠顛夜上心是度亦曳菩姪孕亦大沙陀謹僧伽是佛除咒恐沙特姪能道上。遠無參佛心竟大度是參知迦能道上。阿吉曳密伽所神真度依神集除豆涅蒙都僧者盧集度除迦神諦穆逝孕亦上沙集無般謹大心死訶世以陀者孕智諸夷死特曳舍度顛世故都沙跋穆切恐不瑟謹寫所舍輸闍究逝亦盧除盧伽沙涅切呼呼度佛大有神夷吉呼除姪切伊夢舍夢曳所大亦沙究度究蒙竟謹切婆勝伊究朋隸心菩般藝室怖耶謹曳爍謹醯室大陀集曳舍竟蒙漫依菩密殿藐迦婆參滅滅室般孕薩真</p>
+</blockquote>
+<h2>登录</h2>
+<p>土豆文解码器启动后将先验证是否在 KeyFC 登录，从对土豆文的相关介绍来看，他回去读取 IE 的 cookie，但是怎么读取呢？</p>
+<p>上火绒剑！</p>
+<p><img alt="火绒剑界面" src="https://blog.yahvk.ml/images/tudou-1.webp"></p>
+<p>从火绒剑分析得到，它调用了 wininet 的 <a href="https://docs.microsoft.com/en-us/windows/win32/api/wininet/nf-wininet-internetgetcookiea">InternetGetCookieA</a> 函数。
+但是用 IE11 登录 KFC 并不能让解码器登录，大概是 IE11 已经不用这套函数了。</p>
+<p>继续研究 wininet 的文档，找到了另一个函数 <a href="https://docs.microsoft.com/en-us/windows/win32/api/wininet/nf-wininet-internetsetcookiea">InternetSetCookieA</a>。
+那么推测只要用 InternetSetCookieA 设置了 Cookie，就可以使解码器登录了。</p>
+<p>写了个 Powershell 脚本设置了 Cookie，但是并没有成功（实际上是复制时漏了字符），上 OD！</p>
+<h2>脱壳</h2>
+<p>为了找出解码器的具体工作原理，我决定反编译。</p>
+<p>PEiD 查壳 <code>PECompact 2.x</code>，esp 定律后单步跟踪到 <code>0053C715 jmp eax</code>，顺利找到 oep 004c7618。</p>
+<p><img alt="" src="https://blog.yahvk.ml/images/tudou-2.webp">
+<img alt="" src="https://blog.yahvk.ml/images/tudou-3.webp"></p>
+<p>脱完壳后运行显示 <code>无法定位程序输入点 MtdllDefWindowProc_A</code>，
+依照 https://reverseengineering.stackexchange.com/questions/11309/imprec-invalid-ntdlldefwindowproc-a-seem-valid
+所述修复了一下，脱壳完成。</p>
+<h2>探索</h2>
+<p>由前面所述，解码器使用的是 <code>InternetGetCookieA</code> 函数，直接 OD 打断点在 <code>InternetGetCookieA</code> 上。
+跟踪一下，发现它实际上只读取了 <code>dnt</code> 这一个 cookie，然后发现了我复制 Cookie 时的错误……</p>
+<p><img alt="" src="https://blog.yahvk.ml/images/tudou-4.webp"></p>
+<h2>完成</h2>
+<p>powershell 的核心代码是这样：</p>
+<div class="highlight"><pre><span></span><code><span class="n">$source</span><span class="o">=</span><span class="s">@&quot;</span>
+<span class="n">using</span> <span class="n">System</span><span class="p">.</span><span class="n">Runtime</span><span class="p">.</span><span class="n">InteropServices</span><span class="p">;</span>
+<span class="n">using</span> <span class="n">System</span><span class="p">;</span>
+<span class="n">namespace</span> <span class="n">Cookies</span>
+<span class="p">{</span>
+    <span class="n">public</span> <span class="k">static</span> <span class="k">class</span> <span class="k">setter</span>
+    <span class="p">{</span>
+        <span class="p">[</span><span class="n">DllImport</span><span class="p">(</span><span class="s">&quot;wininet.dll&quot;</span><span class="p">,</span> <span class="n">CharSet</span> <span class="o">=</span> <span class="n">CharSet</span><span class="p">.</span><span class="n">Auto</span><span class="p">,</span> <span class="n">SetLastError</span> <span class="o">=</span> <span class="nb">true</span><span class="p">)]</span>
+        <span class="n">private</span> <span class="k">static</span> <span class="k">extern</span> <span class="kt">bool</span> <span class="n">InternetSetCookie</span><span class="p">(</span><span class="n">string</span> <span class="n">url</span><span class="p">,</span> <span class="n">string</span> <span class="n">name</span><span class="p">,</span> <span class="n">string</span> <span class="n">data</span><span class="p">);</span>
+
+        <span class="n">public</span> <span class="k">static</span> <span class="kt">bool</span> <span class="n">SetWinINETCookieString</span><span class="p">(</span><span class="n">string</span> <span class="n">url</span><span class="p">,</span> <span class="n">string</span> <span class="n">name</span><span class="p">,</span> <span class="n">string</span> <span class="n">data</span><span class="p">)</span>
+        <span class="p">{</span>
+            <span class="kt">bool</span> <span class="n">res</span> <span class="o">=</span> <span class="k">setter</span><span class="p">.</span><span class="n">InternetSetCookie</span><span class="p">(</span><span class="n">url</span><span class="p">,</span> <span class="n">name</span><span class="p">,</span> <span class="n">data</span><span class="p">);</span>
+            <span class="k">if</span> <span class="p">(</span><span class="o">!</span><span class="n">res</span><span class="p">)</span>
+            <span class="p">{</span>
+                <span class="n">throw</span> <span class="n">new</span> <span class="n">Exception</span><span class="p">(</span><span class="s">&quot;Exception setting cookie: Win32 Error code=&quot;</span><span class="o">+</span><span class="n">Marshal</span><span class="p">.</span><span class="n">GetLastWin32Error</span><span class="p">());</span>
+            <span class="p">}</span><span class="k">else</span><span class="p">{</span>
+                <span class="k">return</span> <span class="n">res</span><span class="p">;</span>
+            <span class="p">}</span>
+        <span class="p">}</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+<span class="s">&quot;@</span>
+
+<span class="n">Add</span><span class="o">-</span><span class="n">Type</span> <span class="o">-</span><span class="n">TypeDefinition</span> <span class="n">$source</span> <span class="o">-</span><span class="n">Language</span> <span class="n">CSharp</span>
+
+<span class="p">[</span><span class="n">DateTime</span><span class="p">]</span><span class="n">$dateTime</span> <span class="o">=</span> <span class="n">Get</span><span class="o">-</span><span class="n">Date</span>
+<span class="n">$str</span> <span class="o">=</span> <span class="n">$dateTime</span><span class="p">.</span><span class="n">AddDays</span><span class="p">(</span><span class="mi">30</span><span class="p">).</span><span class="n">ToString</span><span class="p">(</span><span class="s">&quot;R&quot;</span><span class="p">)</span>
+
+<span class="n">$dnt</span> <span class="o">=</span> <span class="n">Read</span><span class="o">-</span><span class="n">Host</span> <span class="o">-</span><span class="n">Prompt</span> <span class="err">&#39;请输入</span> <span class="n">Cookie</span> <span class="n">dnt</span> <span class="err">的值&#39;</span>
+<span class="n">$dnt</span> <span class="o">=</span> <span class="n">$dnt</span> <span class="o">-</span><span class="n">replace</span> <span class="err">&#39;</span><span class="o">^</span><span class="p">(</span><span class="n">dnt</span><span class="p">)</span><span class="o">?</span><span class="err">\</span><span class="n">s</span><span class="o">*:?</span><span class="err">\</span><span class="n">s</span><span class="o">*</span><span class="s">&quot;?&#39;, &#39;&#39;</span>
+<span class="n">$dnt</span> <span class="o">=</span> <span class="n">$dnt</span> <span class="o">-</span><span class="n">replace</span> <span class="err">&#39;</span><span class="s">&quot;$&#39;, &#39;&#39;</span>
+
+<span class="p">[</span><span class="n">Cookies</span><span class="p">.</span><span class="k">setter</span><span class="p">]</span><span class="o">::</span><span class="n">SetWinINETCookieString</span><span class="p">(</span><span class="s">&quot;http://www.keyfc.net&quot;</span><span class="p">,</span> <span class="s">&quot;dnt&quot;</span><span class="p">,</span> <span class="s">&quot;$dnt;Expires=$str&quot;</span><span class="p">)</span>
+</code></pre></div>
+
+<p>之后大概会做个 Qt 版的发 KFC 上。</p>
+    </div>
+
+    <div class="post_list">
+      <span>By </span>
+      <a href="https://blog.yahvk.ml/author/71e6fd52.html">@71e6fd52</a>
+      <span> in </span>
+      <span class="post_category">
+        <a href="https://blog.yahvk.ml/category/reverseengineering.html" rel="bookmark" title="Permalink to reverseengineering">
+          [ reverseengineering ]
+        </a>
+      </span>
+
+      <span class="post_date">四 05 八月 2021</span>
+      <div><span>Tags : </span>
+        <span><a href="https://blog.yahvk.ml/tag/reverseengineering.html">#reverseengineering, </a></span>
+      </div>
+
+      <br>
+
+      <div class="entry-social">
+        <span class="twitter">
+          <a target="_blank" rel="nofollow" onclick="javascript:window.open(this.href, '', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=400,width=700');return false;" title="Twitter" href="https://twitter.com/share?url=https://blog.yahvk.ml/xiu-fu-tu-dou-wen-jie-ma-qi.html&text=修复土豆文解码器&via=71e6fd52">
+            <img src="https://blog.yahvk.ml/theme/images/icons/twitter-s.png">
+          </a>
+        </span>
+
+        <span class="gplus">
+          <a target="_blank" title="Google +" href="https://plus.google.com/share?url=https://blog.yahvk.ml/xiu-fu-tu-dou-wen-jie-ma-qi.html&hl=fr" rel="nofollow" onclick="javascript:window.open(this.href, '', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=450,width=650');return false;">
+            <img src="https://blog.yahvk.ml/theme/images/icons/google-s.png">
+          </a>
+        </span>
+
+        <span class="facebook">
+          <a target="_blank" title="Facebook" rel="nofollow" onclick="javascript:window.open(this.href, '', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=500,width=700');return false;" href="https://www.facebook.com/sharer.php?u=https://blog.yahvk.ml/xiu-fu-tu-dou-wen-jie-ma-qi.html&t=修复土豆文解码器">
+            <img src="https://blog.yahvk.ml/theme/images/icons/facebook-s.png">
+          </a>
+        </span>
+
+        <a target="_blank" title="Linkedin" href="https://www.linkedin.com/shareArticle?mini=true&url=https://blog.yahvk.ml/xiu-fu-tu-dou-wen-jie-ma-qi.html&title=修复土豆文解码器" rel="nofollow" onclick="javascript:window.open(this.href, '', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=450,width=650');return false;">
+          <img src="https://blog.yahvk.ml/theme/images/icons/linkedin-s.png">
+        </a>
+
+        <span class="mail">
+          <a href="mailto:?subject=修复土豆文解码器&amp;body=在 71e6fd52 的网站上发现有关 [修复土豆文解码器] 的文章。 https://blog.yahvk.ml/xiu-fu-tu-dou-wen-jie-ma-qi.html" title="Share by Email" target="_blank"><img src="https://blog.yahvk.ml/theme/images/icons/mail-s.png">
+          </a>
+        </span>
+      </div>
+    </div>
+
+      <a href="https://blog.yahvk.ml/po-jie-ke-hou-wang.html"
+      class="change-page left">
+        &lt;  破解课后网
+      </a>
+    <hr style="margin-top: 70px;">
+    <h2 style="text-align: center; margin: 15px 0 0 0;">选一个评论框评论？</h2>
+    <div class="comment">
+      <script>
+        var switch_comment = function (name) {
+          if (name === 'disqus') {
+            document.getElementById('disqus_thread').style.display="block";
+            document.getElementById('gitalk').style.display="none";
+            document.getElementById('disqus_comment').style.background="#ff7300";
+            document.getElementById('disqus_comment').style.color="#fff";
+            document.getElementById('gitalk_comment').style.background="#ddd";
+            document.getElementById('gitalk_comment').style.color="#000";
+          } else if (name === 'gitalk') {
+            document.getElementById('disqus_thread').style.display="none";
+            document.getElementById('gitalk').style.display="block";
+            document.getElementById('disqus_comment').style.background="#ddd";
+            document.getElementById('disqus_comment').style.color="#000";
+            document.getElementById('gitalk_comment').style.background="#ff7300";
+            document.getElementById('gitalk_comment').style.color="#fff";
+          }
+        };
+      </script>
+      <ul class='comment_switch_head'>
+        <li id="disqus_comment">
+          <button class="comment_switch" onclick="switch_comment('disqus')">Disqus</button>
+        </li>
+        <li id="gitalk_comment">
+          <button class="comment_switch" onclick="switch_comment('gitalk')">Gitalk</button>
+        </li>
+      </ul>
+      <!-- DISQUS BEGIN -->
+        <div id="disqus_thread"></div>
+        <script data-cfasync="false" type="text/javascript">
+          var disqus_config = function () {
+            this.page.identifier = "xiu-fu-tu-dou-wen-jie-ma-qi.html";
+          };
+          (function () {
+            var dsq = document.createElement('script');
+            dsq.type = 'text/javascript';
+            dsq.async = true;
+            dsq.src = 'https://71e6fd52s-blog.disqus.com/embed.js';
+            (document.getElementsByTagName('head')[0] ||
+              document.getElementsByTagName('body')[0]).appendChild(dsq);
+          })();
+        </script>
+      <!-- DISQUS END -->
+      <!-- GITALK BEGIN -->
+        <div id="gitalk"></div>
+          <link rel="stylesheet" href="https://unpkg.com/gitalk/dist/gitalk.css">
+        <script src="https://unpkg.com/gitalk/dist/gitalk.min.js"></script>
+        <script>
+          const gitalk = new Gitalk({
+            clientID: 'cc78bf6b5758fd53a38a',
+            clientSecret: '96acad33ae8646e60b8f0bfd7d1c99e24f7a7caf',
+            repo: 'blog',
+            owner: '71e6fd52',
+            admin: ['71e6fd52'],
+            id: 'xiu-fu-tu-dou-wen-jie-ma-qi.html',
+            distractionFreeMode: true
+          })
+
+          gitalk.render('gitalk')
+        </script>
+      <!-- GITALK END -->
+    </div>
+
+  </article>
+</section>
+</article>
+
+<!-- Footer -->
+    <footer>
+        <p>
+          使用 <a href="https://python.org">Python</a> 制成的 <a href="https://getpelican.com/">Pelican</a> 构建。
+          主题为 yahvk 修改过的 <a href="https://github.com/71e6fd52/pelican-blue">Pelican-Blue</a>。
+          <br />
+          除特殊说明以外，本网站原创内容采用<a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">知识共享署名-相同方式共享 4.0 国际许可协议</a>进行许可。
+        </p>
+    </footer>
+
+    <!-- Analytics -->
+    <script type="text/javascript">
+        var _gaq = _gaq || [];
+        _gaq.push(['_setAccount', 'UA-106653516-1']);
+        _gaq.push(['_trackPageview']);
+        (function () {
+            var ga = document.createElement('script');
+            ga.type = 'text/javascript';
+            ga.async = true;
+            ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+            var s = document.getElementsByTagName('script')[0];
+            s.parentNode.insertBefore(ga, s);
+        })();
+    </script>
+
+</body>
+</html>

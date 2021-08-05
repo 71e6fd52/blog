@@ -3,9 +3,8 @@
 &lt;p&gt;以 Linux 系统为例&lt;/p&gt;
 &lt;p&gt;首先，&lt;a href="http://fold.it/portal/download/linux"&gt;下载 foldit&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;下载完成以后，解压，并运行 &lt;code&gt;Foldit&lt;/code&gt;&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;$ ./Foldit
-&lt;/pre&gt;&lt;/div&gt;
-
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;$ ./Foldit
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
 &lt;p&gt;它会启动，并说 “Contacting Server to Check for Updates...”，之后会进入自动更新&lt;/p&gt;
 &lt;p&gt;在下载和自动更新的过程中，可以看看&lt;a href="http://fold.it/portal/guidelines"&gt;社区规则&lt;/a&gt;&lt;/p&gt;
