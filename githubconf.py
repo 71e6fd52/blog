@@ -10,7 +10,7 @@ import sys
 sys.path.append(os.curdir)
 from pelicanconf import *
 
-SITEURL = 'https://blog.yahvk.moe'
+SITEURL = 'https://blog.yahvk.ml'
 RELATIVE_URLS = False
 
 FEED_ALL_ATOM = 'feeds/all.atom.xml'
@@ -18,7 +18,7 @@ CATEGORY_FEED_ATOM = 'feeds/{slug}.atom.xml'
 
 DELETE_OUTPUT_DIRECTORY = True
 
-DISQUS_SITENAME = 'yahvk-blog'
+DISQUS_SITENAME = '71e6fd52s-blog'
 GITALK_OWNER = '71e6fd52'
 GITALK_REPO = 'blog'
 GITALK_ID = 'cc78bf6b5758fd53a38a'

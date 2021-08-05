@@ -7,6 +7,7 @@ INPUTDIR=$(BASEDIR)/content
 OUTPUTDIR=$(BASEDIR)/output
 CONFFILE=$(BASEDIR)/pelicanconf.py
 PUBLISHCONF=$(BASEDIR)/publishconf.py
+GITHUBCONF=$(BASEDIR)/githubconf.py
 
 FTP_HOST=localhost
 FTP_USER=anonymous
@@ -112,12 +113,16 @@ s3_upload: publish
 cf_upload: publish
 	cd $(OUTPUTDIR) && swift -v -A https://auth.api.rackspacecloud.com/v1.0 -U $(CLOUDFILES_USERNAME) -K $(CLOUDFILES_API_KEY) upload -c $(CLOUDFILES_CONTAINER) .
 
-github: publish
-	ghp-import -m "Generate Pelican site" -b $(GITHUB_PAGES_BRANCH) -c $(GITHUB_PAGES_CNAME) $(OUTPUTDIR)
+copy_upload: publish
+	cp -r $(OUTPUTDIR)/* /srv/http/blog
+
+github:
+	$(PELICAN) $(INPUTDIR) -o $(OUTPUTDIR)_git -s $(GITHUBCONF) $(PELICANOPTS)
+	ghp-import -m "Generate Pelican site" -b $(GITHUB_PAGES_BRANCH) -c $(GITHUB_PAGES_CNAME) $(OUTPUTDIR)_git
 	git push origin $(GITHUB_PAGES_BRANCH)
 
-release: github
+release: github copy_upload
 	git push --recurse-submodules=on-demand
 	$(CURDIR)/clean-cache
 
-.PHONY: html help clean regenerate serve serve-global devserver publish ssh_upload rsync_upload dropbox_upload ftp_upload s3_upload cf_upload github
+.PHONY: html help clean regenerate serve serve-global devserver publish ssh_upload rsync_upload dropbox_upload ftp_upload s3_upload cf_upload github copy_upload
