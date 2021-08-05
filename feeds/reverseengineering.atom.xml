@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>71e6fd52's blog - reverseengineering</title><link href="https://blog.yahvk.ml/" rel="alternate"></link><link href="https://blog.yahvk.ml/feeds/reverseengineering.atom.xml" rel="self"></link><id>https://blog.yahvk.ml/</id><updated>2021-08-05T14:19:52+08:00</updated><entry><title>修复土豆文解码器</title><link href="https://blog.yahvk.ml/xiu-fu-tu-dou-wen-jie-ma-qi.html" rel="alternate"></link><published>2021-08-05T14:19:52+08:00</published><updated>2021-08-05T14:19:52+08:00</updated><author><name>71e6fd52</name></author><id>tag:blog.yahvk.ml,2021-08-05:/xiu-fu-tu-dou-wen-jie-ma-qi.html</id><summary type="html">整理硬盘时，在硬盘中翻到了多年前在 &lt;a href="https://www.keyfc.net"&gt;KeyFC&lt;/a&gt; 下载的&lt;a href="https://www.keyfc.net/bbs/showtopic-25834.aspx"&gt;土豆文&lt;/a&gt;套件，
+<feed xmlns="http://www.w3.org/2005/Atom"><title>yahvk's blog - reverseengineering</title><link href="https://blog.yahvk.ml/" rel="alternate"></link><link href="https://blog.yahvk.ml/feeds/reverseengineering.atom.xml" rel="self"></link><id>https://blog.yahvk.ml/</id><updated>2021-08-05T14:19:52+08:00</updated><entry><title>修复土豆文解码器</title><link href="https://blog.yahvk.ml/xiu-fu-tu-dou-wen-jie-ma-qi.html" rel="alternate"></link><published>2021-08-05T14:19:52+08:00</published><updated>2021-08-05T14:19:52+08:00</updated><author><name>yahvk</name></author><id>tag:blog.yahvk.ml,2021-08-05:/xiu-fu-tu-dou-wen-jie-ma-qi.html</id><summary type="html">整理硬盘时，在硬盘中翻到了多年前在 &lt;a href="https://www.keyfc.net"&gt;KeyFC&lt;/a&gt; 下载的&lt;a href="https://www.keyfc.net/bbs/showtopic-25834.aspx"&gt;土豆文&lt;/a&gt;套件，
 随着 Windows 系统的不断更新，土豆文解码器的登录检测已经无法正常工作了。</summary><content type="html">&lt;p&gt;整理硬盘时，在硬盘中翻到了多年前在 &lt;a href="https://www.keyfc.net"&gt;KeyFC&lt;/a&gt; 下载的&lt;a href="https://www.keyfc.net/bbs/showtopic-25834.aspx"&gt;土豆文&lt;/a&gt;套件，
 随着 Windows 系统的不断更新，土豆文解码器的登录检测已经无法正常工作了。&lt;/p&gt;
 &lt;div&gt;
@@ -43,15 +43,15 @@
 &lt;h2&gt;脱壳&lt;/h2&gt;
 &lt;p&gt;为了找出解码器的具体工作原理，我决定反编译。&lt;/p&gt;
 &lt;p&gt;PEiD 查壳 &lt;code&gt;PECompact 2.x&lt;/code&gt;，esp 定律后单步跟踪到 &lt;code&gt;0053C715 jmp eax&lt;/code&gt;，顺利找到 oep 004c7618。&lt;/p&gt;
-&lt;p&gt;&lt;img alt="" src="https://blog.yahvk.ml/images/tudou-2.webp"&gt;
-&lt;img alt="" src="https://blog.yahvk.ml/images/tudou-3.webp"&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img alt="jmp eax" src="https://blog.yahvk.ml/images/tudou-2.webp"&gt;
+&lt;img alt="oep" src="https://blog.yahvk.ml/images/tudou-3.webp"&gt;&lt;/p&gt;
 &lt;p&gt;脱完壳后运行显示 &lt;code&gt;无法定位程序输入点 MtdllDefWindowProc_A&lt;/code&gt;，
 依照 https://reverseengineering.stackexchange.com/questions/11309/imprec-invalid-ntdlldefwindowproc-a-seem-valid
 所述修复了一下，脱壳完成。&lt;/p&gt;
 &lt;h2&gt;探索&lt;/h2&gt;
 &lt;p&gt;由前面所述，解码器使用的是 &lt;code&gt;InternetGetCookieA&lt;/code&gt; 函数，直接 OD 打断点在 &lt;code&gt;InternetGetCookieA&lt;/code&gt; 上。
 跟踪一下，发现它实际上只读取了 &lt;code&gt;dnt&lt;/code&gt; 这一个 cookie，然后发现了我复制 Cookie 时的错误……&lt;/p&gt;
-&lt;p&gt;&lt;img alt="" src="https://blog.yahvk.ml/images/tudou-4.webp"&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img alt="OD界面" src="https://blog.yahvk.ml/images/tudou-4.webp"&gt;&lt;/p&gt;
 &lt;h2&gt;完成&lt;/h2&gt;
 &lt;p&gt;土豆文解码器会使用 &lt;code&gt;InternetGetCookieA&lt;/code&gt; 轮询 &lt;code&gt;http://www.KeyFC.net&lt;/code&gt; 的 Cookie，从中提取出 &lt;code&gt;dnt&lt;/code&gt; 的值。
 &lt;code&gt;dnt&lt;/code&gt; 的值形如 &lt;code&gt;userid=&amp;lt;userid&amp;gt;&amp;amp;password=&amp;lt;encoded password&amp;gt;&amp;amp;...&lt;/code&gt;，根据我的观察，解码器实际上只提前了其中 userid 的值。&lt;/p&gt;

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>71e6fd52's blog</title><link href="https://blog.yahvk.ml/" rel="alternate"></link><link href="https://blog.yahvk.ml/feeds/all.atom.xml" rel="self"></link><id>https://blog.yahvk.ml/</id><updated>2021-08-05T14:19:52+08:00</updated><entry><title>修复土豆文解码器</title><link href="https://blog.yahvk.ml/xiu-fu-tu-dou-wen-jie-ma-qi.html" rel="alternate"></link><published>2021-08-05T14:19:52+08:00</published><updated>2021-08-05T14:19:52+08:00</updated><author><name>71e6fd52</name></author><id>tag:blog.yahvk.ml,2021-08-05:/xiu-fu-tu-dou-wen-jie-ma-qi.html</id><summary type="html">整理硬盘时，在硬盘中翻到了多年前在 &lt;a href="https://www.keyfc.net"&gt;KeyFC&lt;/a&gt; 下载的&lt;a href="https://www.keyfc.net/bbs/showtopic-25834.aspx"&gt;土豆文&lt;/a&gt;套件，
+<feed xmlns="http://www.w3.org/2005/Atom"><title>yahvk's blog</title><link href="https://blog.yahvk.ml/" rel="alternate"></link><link href="https://blog.yahvk.ml/feeds/all.atom.xml" rel="self"></link><id>https://blog.yahvk.ml/</id><updated>2021-08-05T14:19:52+08:00</updated><entry><title>修复土豆文解码器</title><link href="https://blog.yahvk.ml/xiu-fu-tu-dou-wen-jie-ma-qi.html" rel="alternate"></link><published>2021-08-05T14:19:52+08:00</published><updated>2021-08-05T14:19:52+08:00</updated><author><name>yahvk</name></author><id>tag:blog.yahvk.ml,2021-08-05:/xiu-fu-tu-dou-wen-jie-ma-qi.html</id><summary type="html">整理硬盘时，在硬盘中翻到了多年前在 &lt;a href="https://www.keyfc.net"&gt;KeyFC&lt;/a&gt; 下载的&lt;a href="https://www.keyfc.net/bbs/showtopic-25834.aspx"&gt;土豆文&lt;/a&gt;套件，
 随着 Windows 系统的不断更新，土豆文解码器的登录检测已经无法正常工作了。</summary><content type="html">&lt;p&gt;整理硬盘时，在硬盘中翻到了多年前在 &lt;a href="https://www.keyfc.net"&gt;KeyFC&lt;/a&gt; 下载的&lt;a href="https://www.keyfc.net/bbs/showtopic-25834.aspx"&gt;土豆文&lt;/a&gt;套件，
 随着 Windows 系统的不断更新，土豆文解码器的登录检测已经无法正常工作了。&lt;/p&gt;
 &lt;div&gt;
@@ -43,15 +43,15 @@
 &lt;h2&gt;脱壳&lt;/h2&gt;
 &lt;p&gt;为了找出解码器的具体工作原理，我决定反编译。&lt;/p&gt;
 &lt;p&gt;PEiD 查壳 &lt;code&gt;PECompact 2.x&lt;/code&gt;，esp 定律后单步跟踪到 &lt;code&gt;0053C715 jmp eax&lt;/code&gt;，顺利找到 oep 004c7618。&lt;/p&gt;
-&lt;p&gt;&lt;img alt="" src="https://blog.yahvk.ml/images/tudou-2.webp"&gt;
-&lt;img alt="" src="https://blog.yahvk.ml/images/tudou-3.webp"&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img alt="jmp eax" src="https://blog.yahvk.ml/images/tudou-2.webp"&gt;
+&lt;img alt="oep" src="https://blog.yahvk.ml/images/tudou-3.webp"&gt;&lt;/p&gt;
 &lt;p&gt;脱完壳后运行显示 &lt;code&gt;无法定位程序输入点 MtdllDefWindowProc_A&lt;/code&gt;，
 依照 https://reverseengineering.stackexchange.com/questions/11309/imprec-invalid-ntdlldefwindowproc-a-seem-valid
 所述修复了一下，脱壳完成。&lt;/p&gt;
 &lt;h2&gt;探索&lt;/h2&gt;
 &lt;p&gt;由前面所述，解码器使用的是 &lt;code&gt;InternetGetCookieA&lt;/code&gt; 函数，直接 OD 打断点在 &lt;code&gt;InternetGetCookieA&lt;/code&gt; 上。
 跟踪一下，发现它实际上只读取了 &lt;code&gt;dnt&lt;/code&gt; 这一个 cookie，然后发现了我复制 Cookie 时的错误……&lt;/p&gt;
-&lt;p&gt;&lt;img alt="" src="https://blog.yahvk.ml/images/tudou-4.webp"&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img alt="OD界面" src="https://blog.yahvk.ml/images/tudou-4.webp"&gt;&lt;/p&gt;
 &lt;h2&gt;完成&lt;/h2&gt;
 &lt;p&gt;土豆文解码器会使用 &lt;code&gt;InternetGetCookieA&lt;/code&gt; 轮询 &lt;code&gt;http://www.KeyFC.net&lt;/code&gt; 的 Cookie，从中提取出 &lt;code&gt;dnt&lt;/code&gt; 的值。
 &lt;code&gt;dnt&lt;/code&gt; 的值形如 &lt;code&gt;userid=&amp;lt;userid&amp;gt;&amp;amp;password=&amp;lt;encoded password&amp;gt;&amp;amp;...&lt;/code&gt;，根据我的观察，解码器实际上只提前了其中 userid 的值。&lt;/p&gt;
@@ -92,7 +92,7 @@
 &lt;span class="no"&gt;[Cookies.setter]&lt;/span&gt;&lt;span class="p"&gt;::&lt;/span&gt;&lt;span class="n"&gt;SetWinINETCookieString&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;http://www.keyfc.net&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s2"&gt;&amp;quot;dnt&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s2"&gt;&amp;quot;$dnt;Expires=$str&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
-&lt;p&gt;之后大概会做个 Qt 版的发 KFC 上。&lt;/p&gt;</content><category term="reverseengineering"></category><category term="reverseengineering"></category></entry><entry><title>破解课后网</title><link href="https://blog.yahvk.ml/po-jie-ke-hou-wang.html" rel="alternate"></link><published>2020-04-17T09:32:01+08:00</published><updated>2020-04-17T09:32:01+08:00</updated><author><name>71e6fd52</name></author><id>tag:blog.yahvk.ml,2020-04-17:/po-jie-ke-hou-wang.html</id><summary type="html"></summary><content type="html">&lt;p&gt;疫情期间在家上网课，我们学校用的是&lt;a href="https://www.kehou.com/"&gt;课后网&lt;/a&gt;。
+&lt;p&gt;之后大概会做个 Qt 版的发 KFC 上。&lt;/p&gt;</content><category term="reverseengineering"></category><category term="reverseengineering"></category></entry><entry><title>破解课后网</title><link href="https://blog.yahvk.ml/po-jie-ke-hou-wang.html" rel="alternate"></link><published>2020-04-17T09:32:01+08:00</published><updated>2020-04-17T09:32:01+08:00</updated><author><name>yahvk</name></author><id>tag:blog.yahvk.ml,2020-04-17:/po-jie-ke-hou-wang.html</id><summary type="html"></summary><content type="html">&lt;p&gt;疫情期间在家上网课，我们学校用的是&lt;a href="https://www.kehou.com/"&gt;课后网&lt;/a&gt;。
 为了能在网课上摸鱼，我就破解了课后网。&lt;/p&gt;
 &lt;h2&gt;防止摸鱼&lt;/h2&gt;
 &lt;p&gt;在课后网中每节课都有这么一个表格&lt;/p&gt;
@@ -209,8 +209,8 @@ ip link &lt;span class="nb"&gt;set&lt;/span&gt; tap0 up
 在收到 &lt;code&gt;RequestNaming&lt;/code&gt;(-32207) 时回复 &lt;code&gt;ReplyNaming&lt;/code&gt;(-32206)。&lt;/p&gt;
 &lt;h3&gt;获取 ip&lt;/h3&gt;
 &lt;p&gt;上一节所说的中间程序需要连接到课后网的服务器上，但是据我观察，课后网的服务器地址每节课是不一样的。&lt;/p&gt;
-&lt;p&gt;所以我就加了一个程序，抓取课后网试图连接的服务器的 ip 地址发送给这个中间程序，这就是我的代码中 &lt;code&gt;pcap_server.rb&lt;/code&gt; 的用处。&lt;/p&gt;</content><category term="misc"></category><category term="kehou"></category></entry><entry><title>编程基础（0）——目录</title><link href="https://blog.yahvk.ml/bian-cheng-ji-chu-0-mu-lu.html" rel="alternate"></link><published>2019-02-15T16:40:55+08:00</published><updated>2020-04-16T17:21:58+08:00</updated><author><name>71e6fd52</name></author><id>tag:blog.yahvk.ml,2019-02-15:/bian-cheng-ji-chu-0-mu-lu.html</id><summary type="html">UPDATE: 已弃坑，写得不知所云，要看的自己去 git 历史（8343dba）里找。</summary><content type="html">&lt;p&gt;UPDATE: 已弃坑，写得不知所云，要看的自己去 git 历史（8343dba）里找。&lt;/p&gt;
-&lt;p&gt;开个坑，教一些不特定于任何编程语言的基本的编程知识。&lt;/p&gt;</content><category term="program"></category><category term="program"></category></entry><entry><title>pelican highlight test</title><link href="https://blog.yahvk.ml/pelican-highlight-test.html" rel="alternate"></link><published>2018-02-10T10:25:40+08:00</published><updated>2018-02-10T10:25:40+08:00</updated><author><name>71e6fd52</name></author><id>tag:blog.yahvk.ml,2018-02-10:/pelican-highlight-test.html</id><summary type="html">&lt;p&gt;Test pelican highlight&lt;/p&gt;</summary><content type="html">&lt;p&gt;Outside a list:&lt;/p&gt;
+&lt;p&gt;所以我就加了一个程序，抓取课后网试图连接的服务器的 ip 地址发送给这个中间程序，这就是我的代码中 &lt;code&gt;pcap_server.rb&lt;/code&gt; 的用处。&lt;/p&gt;</content><category term="misc"></category><category term="kehou"></category></entry><entry><title>编程基础（0）——目录</title><link href="https://blog.yahvk.ml/bian-cheng-ji-chu-0-mu-lu.html" rel="alternate"></link><published>2019-02-15T16:40:55+08:00</published><updated>2020-04-16T17:21:58+08:00</updated><author><name>yahvk</name></author><id>tag:blog.yahvk.ml,2019-02-15:/bian-cheng-ji-chu-0-mu-lu.html</id><summary type="html">UPDATE: 已弃坑，写得不知所云，要看的自己去 git 历史（8343dba）里找。</summary><content type="html">&lt;p&gt;UPDATE: 已弃坑，写得不知所云，要看的自己去 git 历史（8343dba）里找。&lt;/p&gt;
+&lt;p&gt;开个坑，教一些不特定于任何编程语言的基本的编程知识。&lt;/p&gt;</content><category term="program"></category><category term="program"></category></entry><entry><title>pelican highlight test</title><link href="https://blog.yahvk.ml/pelican-highlight-test.html" rel="alternate"></link><published>2018-02-10T10:25:40+08:00</published><updated>2018-02-10T10:25:40+08:00</updated><author><name>yahvk</name></author><id>tag:blog.yahvk.ml,2018-02-10:/pelican-highlight-test.html</id><summary type="html">&lt;p&gt;Test pelican highlight&lt;/p&gt;</summary><content type="html">&lt;p&gt;Outside a list:&lt;/p&gt;
 &lt;p&gt;::: version:&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="nb"&gt;print&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;foo&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
@@ -257,7 +257,7 @@ print(&amp;quot;foo&amp;quot;)
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 &lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
 &lt;/li&gt;
-&lt;/ol&gt;</content><category term="Pelican"></category><category term="Pelican"></category></entry><entry><title>如何玩蛋白质</title><link href="https://blog.yahvk.ml/ru-he-wan-dan-bai-zhi.html" rel="alternate"></link><published>2018-02-08T11:16:13+08:00</published><updated>2018-02-08T11:16:13+08:00</updated><author><name>71e6fd52</name></author><id>tag:blog.yahvk.ml,2018-02-08:/ru-he-wan-dan-bai-zhi.html</id><summary type="html">Foldit 是一个折叠蛋白质的游戏，折叠的结果将会用于科学研究。</summary><content type="html">&lt;p&gt;Foldit 是一个折叠蛋白质的游戏，折叠的结果将会用于科学研究。&lt;/p&gt;
+&lt;/ol&gt;</content><category term="Pelican"></category><category term="Pelican"></category></entry><entry><title>如何玩蛋白质</title><link href="https://blog.yahvk.ml/ru-he-wan-dan-bai-zhi.html" rel="alternate"></link><published>2018-02-08T11:16:13+08:00</published><updated>2018-02-08T11:16:13+08:00</updated><author><name>yahvk</name></author><id>tag:blog.yahvk.ml,2018-02-08:/ru-he-wan-dan-bai-zhi.html</id><summary type="html">Foldit 是一个折叠蛋白质的游戏，折叠的结果将会用于科学研究。</summary><content type="html">&lt;p&gt;Foldit 是一个折叠蛋白质的游戏，折叠的结果将会用于科学研究。&lt;/p&gt;
 &lt;p&gt;以 Linux 系统为例&lt;/p&gt;
 &lt;p&gt;首先，&lt;a href="http://fold.it/portal/download/linux"&gt;下载 foldit&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;下载完成以后，解压，并运行 &lt;code&gt;Foldit&lt;/code&gt;&lt;/p&gt;
@@ -274,7 +274,7 @@ print(&amp;quot;foo&amp;quot;)
 教程的介绍在 &lt;a href="http://foldit.wikia.com/wiki/Tutorial_Puzzles"&gt;http://foldit.wikia.com/wiki/Tutorial_Puzzles&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;要了解更多信息，请务必查看 &lt;a href="http://foldit.wikia.com/wiki/Foldit_Wiki"&gt;Foldit 维基&lt;/a&gt;,
 那里有很多很棒的信息，提示，技巧，关于结构的信息等。&lt;/p&gt;
-&lt;p&gt;现在，你可以和你的蛋白质玩耍了。&lt;/p&gt;</content><category term="foldit"></category><category term="foldit"></category><category term="distributed computing"></category></entry><entry><title>温度单位</title><link href="https://blog.yahvk.ml/wen-du-dan-wei.html" rel="alternate"></link><published>2017-12-17T22:08:03+08:00</published><updated>2019-02-15T16:40:13+08:00</updated><author><name>71e6fd52</name></author><id>tag:blog.yahvk.ml,2017-12-17:/wen-du-dan-wei.html</id><summary type="html">现在的温度单位/温标很不合理啊。</summary><content type="html">&lt;p&gt;现在的温度单位/温标很不合理啊。&lt;/p&gt;
+&lt;p&gt;现在，你可以和你的蛋白质玩耍了。&lt;/p&gt;</content><category term="foldit"></category><category term="foldit"></category><category term="distributed computing"></category></entry><entry><title>温度单位</title><link href="https://blog.yahvk.ml/wen-du-dan-wei.html" rel="alternate"></link><published>2017-12-17T22:08:03+08:00</published><updated>2019-02-15T16:40:13+08:00</updated><author><name>yahvk</name></author><id>tag:blog.yahvk.ml,2017-12-17:/wen-du-dan-wei.html</id><summary type="html">现在的温度单位/温标很不合理啊。</summary><content type="html">&lt;p&gt;现在的温度单位/温标很不合理啊。&lt;/p&gt;
 &lt;p&gt;一个温度没有倍数关系的，比如 25°C 和 50°C 不是两倍关系，但是温度差却是有的，
 0°C 与 50°C 的温差就是 0°C 与 25°C 的两倍，于是这样 50°C 是 25°C 的两倍了。&lt;/p&gt;
 &lt;p&gt;单位换算也一样，如果是温度的话，开尔文 是 摄氏度 + 273.15，还用到了加法。
@@ -290,7 +290,7 @@ print(&amp;quot;foo&amp;quot;)
 &lt;span class="n"&gt;Bc&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;Bk&lt;/span&gt; &lt;span class="o"&gt;+&lt;/span&gt; &lt;span class="mf"&gt;273.15&lt;/span&gt;&lt;span class="err"&gt;°&lt;/span&gt;&lt;span class="n"&gt;C&lt;/span&gt;
 &lt;span class="mf"&gt;1&lt;/span&gt;&lt;span class="err"&gt;°&lt;/span&gt;&lt;span class="n"&gt;C&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="mf"&gt;1.8&lt;/span&gt;&lt;span class="err"&gt;°&lt;/span&gt;&lt;span class="n"&gt;F&lt;/span&gt;
 &lt;span class="n"&gt;Bf&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;Bc&lt;/span&gt; &lt;span class="o"&gt;+&lt;/span&gt; &lt;span class="mf"&gt;32&lt;/span&gt;&lt;span class="err"&gt;°&lt;/span&gt;&lt;span class="n"&gt;F&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</content><category term="PEOKEEMEI"></category><category term="PEIKEEMEI"></category></entry><entry><title>Vegas 用 FrameServer 搭桥</title><link href="https://blog.yahvk.ml/vegas-yong-frameserver-da-qiao.html" rel="alternate"></link><published>2017-09-23T14:16:48+08:00</published><updated>2017-09-23T15:30:52+08:00</updated><author><name>71e6fd52</name></author><id>tag:blog.yahvk.ml,2017-09-23:/vegas-yong-frameserver-da-qiao.html</id><summary type="html">之前为了让 Sony Vegas pro 13.0 用 DebugMode FrameServer 搭桥，研究了很久最后发现了一个很简单的办法</summary><content type="html">&lt;p&gt;之前为了让 Sony Vegas pro 13.0 用 DebugMode FrameServer 搭桥，研究了很久最后发现了一个很简单的办法&lt;/p&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</content><category term="PEOKEEMEI"></category><category term="PEIKEEMEI"></category></entry><entry><title>Vegas 用 FrameServer 搭桥</title><link href="https://blog.yahvk.ml/vegas-yong-frameserver-da-qiao.html" rel="alternate"></link><published>2017-09-23T14:16:48+08:00</published><updated>2017-09-23T15:30:52+08:00</updated><author><name>yahvk</name></author><id>tag:blog.yahvk.ml,2017-09-23:/vegas-yong-frameserver-da-qiao.html</id><summary type="html">之前为了让 Sony Vegas pro 13.0 用 DebugMode FrameServer 搭桥，研究了很久最后发现了一个很简单的办法</summary><content type="html">&lt;p&gt;之前为了让 Sony Vegas pro 13.0 用 DebugMode FrameServer 搭桥，研究了很久最后发现了一个很简单的办法&lt;/p&gt;
 &lt;ol&gt;
 &lt;li&gt;安装 &lt;a href="http://vegasbar.lofter.com/post/1d4450de_74cd602"&gt;Vegas&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;安装 &lt;a href="http://pan.baidu.com/s/1pLRarub"&gt;DebugMode FrameServer 的 Vegas 13 版&lt;/a&gt; 密码：6qf3&lt;ol&gt;
@@ -312,7 +312,7 @@ print(&amp;quot;foo&amp;quot;)
 &lt;/li&gt;
 &lt;li&gt;已经导出了临时文件（桥）了。&lt;/li&gt;
 &lt;/ol&gt;
-&lt;p&gt;所以，为什么不用 FFmpeg 呢&lt;/p&gt;</content><category term="Windows"></category><category term="Vegas"></category></entry><entry><title>test</title><link href="https://blog.yahvk.ml/test.html" rel="alternate"></link><published>2017-09-17T15:11:41+08:00</published><updated>2017-09-23T14:12:06+08:00</updated><author><name>71e6fd52</name></author><id>tag:blog.yahvk.ml,2017-09-17:/test.html</id><summary type="html">第一篇博客就测试用吧？</summary><content type="html">&lt;p&gt;第一篇博客就测试用吧？&lt;/p&gt;
+&lt;p&gt;所以，为什么不用 FFmpeg 呢&lt;/p&gt;</content><category term="Windows"></category><category term="Vegas"></category></entry><entry><title>test</title><link href="https://blog.yahvk.ml/test.html" rel="alternate"></link><published>2017-09-17T15:11:41+08:00</published><updated>2017-09-23T14:12:06+08:00</updated><author><name>yahvk</name></author><id>tag:blog.yahvk.ml,2017-09-17:/test.html</id><summary type="html">第一篇博客就测试用吧？</summary><content type="html">&lt;p&gt;第一篇博客就测试用吧？&lt;/p&gt;
 &lt;p&gt;还是想写点什么呢。&lt;/p&gt;
 &lt;p&gt;我原来用的是 &lt;a href="https://github.com/isnowfy/simple"&gt;&lt;code&gt;simple&lt;/code&gt;&lt;/a&gt;,
 可以把 Markdown 自动发布在 github 上，后来我自己 fork 了一份，改了一些内容。
