@@ -2,12 +2,13 @@
 <feed xmlns="http://www.w3.org/2005/Atom"><title>71e6fd52's blog - reverseengineering</title><link href="https://blog.yahvk.ml/" rel="alternate"></link><link href="https://blog.yahvk.ml/feeds/reverseengineering.atom.xml" rel="self"></link><id>https://blog.yahvk.ml/</id><updated>2021-08-05T14:19:52+08:00</updated><entry><title>修复土豆文解码器</title><link href="https://blog.yahvk.ml/xiu-fu-tu-dou-wen-jie-ma-qi.html" rel="alternate"></link><published>2021-08-05T14:19:52+08:00</published><updated>2021-08-05T14:19:52+08:00</updated><author><name>71e6fd52</name></author><id>tag:blog.yahvk.ml,2021-08-05:/xiu-fu-tu-dou-wen-jie-ma-qi.html</id><summary type="html">整理硬盘时，在硬盘中翻到了多年前在 &lt;a href="https://www.keyfc.net"&gt;KeyFC&lt;/a&gt; 下载的&lt;a href="https://www.keyfc.net/bbs/showtopic-25834.aspx"&gt;土豆文&lt;/a&gt;套件，
 随着 Windows 系统的不断更新，土豆文解码器的登录检测已经无法正常工作了。</summary><content type="html">&lt;p&gt;整理硬盘时，在硬盘中翻到了多年前在 &lt;a href="https://www.keyfc.net"&gt;KeyFC&lt;/a&gt; 下载的&lt;a href="https://www.keyfc.net/bbs/showtopic-25834.aspx"&gt;土豆文&lt;/a&gt;套件，
 随着 Windows 系统的不断更新，土豆文解码器的登录检测已经无法正常工作了。&lt;/p&gt;
-&lt;p&gt;土豆星星歌附上&lt;/p&gt;
-&lt;p&gt;&lt;audio autoplay loop controls&gt;
+&lt;p&gt;土豆星星歌附上
+&lt;br&gt;
+&lt;audio autoplay loop controls&gt;
   &lt;source src="https://blog.yahvk.ml/audio/tudou.opus" type="audio/ogg; codecs=opus"/&gt;
   &lt;source src="https://blog.yahvk.ml/audio/tudou.mp3" type="audio/mpeg"/&gt;
 &lt;br&gt;
-&lt;p&gt;看起来你的浏览器听不到呢，链接在这里：&lt;a href="https://blog.yahvk.ml/audio/tudou.mp3"&gt;{attach}/audio/tudou.mp3&lt;/a&gt;&lt;/p&gt;&lt;/p&gt;
+&lt;div&gt;看起来你的浏览器听不到呢，链接在这里：&lt;a href="https://blog.yahvk.ml/audio/tudou.mp3"&gt;{attach}/audio/tudou.mp3&lt;/a&gt;&lt;/div&gt;&lt;/p&gt;
 &lt;p&gt;&lt;/audio&gt;&lt;/p&gt;
 &lt;h2&gt;KeyFC&lt;/h2&gt;
 &lt;p&gt;&lt;a href="https://www.keyfc.net"&gt;KeyFC&lt;/a&gt; 是个超级有爱的论坛~&lt;/p&gt;
