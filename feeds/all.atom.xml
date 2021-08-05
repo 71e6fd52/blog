@@ -3,12 +3,10 @@
 随着 Windows 系统的不断更新，土豆文解码器的登录检测已经无法正常工作了。</summary><content type="html">&lt;p&gt;整理硬盘时，在硬盘中翻到了多年前在 &lt;a href="https://www.keyfc.net"&gt;KeyFC&lt;/a&gt; 下载的&lt;a href="https://www.keyfc.net/bbs/showtopic-25834.aspx"&gt;土豆文&lt;/a&gt;套件，
 随着 Windows 系统的不断更新，土豆文解码器的登录检测已经无法正常工作了。&lt;/p&gt;
 &lt;p&gt;土豆星星歌附上
-&lt;br&gt;
-&lt;audio autoplay loop controls&gt;
+&lt;audio autoplay loop controls style="display: block;"&gt;
   &lt;source src="https://blog.yahvk.ml/audio/tudou.opus" type="audio/ogg; codecs=opus"/&gt;
   &lt;source src="https://blog.yahvk.ml/audio/tudou.mp3" type="audio/mpeg"/&gt;
-&lt;br&gt;
-&lt;div&gt;看起来你的浏览器听不到呢，链接在这里：&lt;a href="https://blog.yahvk.ml/audio/tudou.mp3"&gt;{attach}/audio/tudou.mp3&lt;/a&gt;&lt;/div&gt;&lt;/p&gt;
+  &lt;p markdown="span"&gt;看起来你的浏览器听不到呢，链接在这里：&amp;lt;a href="{attach}/audio/tudou.mp3"&amp;gt;{attach}/audio/tudou.mp3&amp;lt;/a&amp;gt;&lt;/p&gt;&lt;/p&gt;
 &lt;p&gt;&lt;/audio&gt;&lt;/p&gt;
 &lt;h2&gt;KeyFC&lt;/h2&gt;
 &lt;p&gt;&lt;a href="https://www.keyfc.net"&gt;KeyFC&lt;/a&gt; 是个超级有爱的论坛~&lt;/p&gt;
