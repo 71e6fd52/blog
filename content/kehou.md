@@ -1,9 +1,8 @@
 Title: 破解课后网
 Date: 2020-04-17 09:32:01
 Author: yahvk
-Category: 
+Category: reverseengineering
 Tags: kehou
-Summary:
 
 疫情期间在家上网课，我们学校用的是[课后网](https://www.kehou.com/)。
 为了能在网课上摸鱼，我就破解了课后网。
