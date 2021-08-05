@@ -127,14 +127,12 @@
     <div class="entry-content blog-post">
       <p>整理硬盘时，在硬盘中翻到了多年前在 <a href="https://www.keyfc.net">KeyFC</a> 下载的<a href="https://www.keyfc.net/bbs/showtopic-25834.aspx">土豆文</a>套件，
 随着 Windows 系统的不断更新，土豆文解码器的登录检测已经无法正常工作了。</p>
-<p>土豆星星歌附上
-<audio autoplay loop controls>
+<p>土豆星星歌附上</p>
+<p><audio autoplay loop controls>
   <source src="https://blog.yahvk.ml/audio/tudou.opus" type="audio/ogg; codecs=opus"/>
   <source src="https://blog.yahvk.ml/audio/tudou.mp3" type="audio/mpeg"/>
 <br>
-<p>
-    看起来你的浏览器听不到呢，链接在这里：<a href="https://blog.yahvk.ml/audio/tudou.mp3">{attach}/audio/tudou.mp3</a>
-  </p></p>
+<p>看起来你的浏览器听不到呢，链接在这里：<a href="https://blog.yahvk.ml/audio/tudou.mp3">{attach}/audio/tudou.mp3</a></p></p>
 <p></audio></p>
 <h2>KeyFC</h2>
 <p><a href="https://www.keyfc.net">KeyFC</a> 是个超级有爱的论坛~</p>
@@ -178,41 +176,43 @@
 跟踪一下，发现它实际上只读取了 <code>dnt</code> 这一个 cookie，然后发现了我复制 Cookie 时的错误……</p>
 <p><img alt="" src="https://blog.yahvk.ml/images/tudou-4.webp"></p>
 <h2>完成</h2>
-<p>powershell 的核心代码是这样：</p>
-<div class="highlight"><pre><span></span><code><span class="n">$source</span><span class="o">=</span><span class="s">@&quot;</span>
-<span class="n">using</span> <span class="n">System</span><span class="p">.</span><span class="n">Runtime</span><span class="p">.</span><span class="n">InteropServices</span><span class="p">;</span>
-<span class="n">using</span> <span class="n">System</span><span class="p">;</span>
-<span class="n">namespace</span> <span class="n">Cookies</span>
-<span class="p">{</span>
-    <span class="n">public</span> <span class="k">static</span> <span class="k">class</span> <span class="k">setter</span>
-    <span class="p">{</span>
-        <span class="p">[</span><span class="n">DllImport</span><span class="p">(</span><span class="s">&quot;wininet.dll&quot;</span><span class="p">,</span> <span class="n">CharSet</span> <span class="o">=</span> <span class="n">CharSet</span><span class="p">.</span><span class="n">Auto</span><span class="p">,</span> <span class="n">SetLastError</span> <span class="o">=</span> <span class="nb">true</span><span class="p">)]</span>
-        <span class="n">private</span> <span class="k">static</span> <span class="k">extern</span> <span class="kt">bool</span> <span class="n">InternetSetCookie</span><span class="p">(</span><span class="n">string</span> <span class="n">url</span><span class="p">,</span> <span class="n">string</span> <span class="n">name</span><span class="p">,</span> <span class="n">string</span> <span class="n">data</span><span class="p">);</span>
+<p>土豆文解码器会使用 <code>InternetGetCookieA</code> 轮询 <code>http://www.KeyFC.net</code> 的 Cookie，从中提取出 <code>dnt</code> 的值。
+<code>dnt</code> 的值形如 <code>userid=&lt;userid&gt;&amp;password=&lt;encoded password&gt;&amp;...</code>，根据我的观察，解码器实际上只提前了其中 userid 的值。</p>
+<p>最后我用 powershell 做了一个登录器：</p>
+<div class="highlight"><pre><span></span><code><span class="nv">$source</span><span class="p">=</span><span class="sh">@&quot;</span>
+<span class="sh">using System.Runtime.InteropServices;</span>
+<span class="sh">using System;</span>
+<span class="sh">namespace Cookies</span>
+<span class="sh">{</span>
+<span class="sh">    public static class setter</span>
+<span class="sh">    {</span>
+<span class="sh">        [DllImport(&quot;wininet.dll&quot;, CharSet = CharSet.Auto, SetLastError = true)]</span>
+<span class="sh">        private static extern bool InternetSetCookie(string url, string name, string data);</span>
 
-        <span class="n">public</span> <span class="k">static</span> <span class="kt">bool</span> <span class="n">SetWinINETCookieString</span><span class="p">(</span><span class="n">string</span> <span class="n">url</span><span class="p">,</span> <span class="n">string</span> <span class="n">name</span><span class="p">,</span> <span class="n">string</span> <span class="n">data</span><span class="p">)</span>
-        <span class="p">{</span>
-            <span class="kt">bool</span> <span class="n">res</span> <span class="o">=</span> <span class="k">setter</span><span class="p">.</span><span class="n">InternetSetCookie</span><span class="p">(</span><span class="n">url</span><span class="p">,</span> <span class="n">name</span><span class="p">,</span> <span class="n">data</span><span class="p">);</span>
-            <span class="k">if</span> <span class="p">(</span><span class="o">!</span><span class="n">res</span><span class="p">)</span>
-            <span class="p">{</span>
-                <span class="n">throw</span> <span class="n">new</span> <span class="n">Exception</span><span class="p">(</span><span class="s">&quot;Exception setting cookie: Win32 Error code=&quot;</span><span class="o">+</span><span class="n">Marshal</span><span class="p">.</span><span class="n">GetLastWin32Error</span><span class="p">());</span>
-            <span class="p">}</span><span class="k">else</span><span class="p">{</span>
-                <span class="k">return</span> <span class="n">res</span><span class="p">;</span>
-            <span class="p">}</span>
-        <span class="p">}</span>
-    <span class="p">}</span>
-<span class="p">}</span>
-<span class="s">&quot;@</span>
+<span class="sh">        public static bool SetWinINETCookieString(string url, string name, string data)</span>
+<span class="sh">        {</span>
+<span class="sh">            bool res = setter.InternetSetCookie(url, name, data);</span>
+<span class="sh">            if (!res)</span>
+<span class="sh">            {</span>
+<span class="sh">                throw new Exception(&quot;Exception setting cookie: Win32 Error code=&quot;+Marshal.GetLastWin32Error());</span>
+<span class="sh">            }else{</span>
+<span class="sh">                return res;</span>
+<span class="sh">            }</span>
+<span class="sh">        }</span>
+<span class="sh">    }</span>
+<span class="sh">}</span>
+<span class="sh">&quot;@</span>
 
-<span class="n">Add</span><span class="o">-</span><span class="n">Type</span> <span class="o">-</span><span class="n">TypeDefinition</span> <span class="n">$source</span> <span class="o">-</span><span class="n">Language</span> <span class="n">CSharp</span>
+<span class="nb">Add-Type</span> <span class="n">-TypeDefinition</span> <span class="nv">$source</span> <span class="n">-Language</span> <span class="n">CSharp</span>
 
-<span class="p">[</span><span class="n">DateTime</span><span class="p">]</span><span class="n">$dateTime</span> <span class="o">=</span> <span class="n">Get</span><span class="o">-</span><span class="n">Date</span>
-<span class="n">$str</span> <span class="o">=</span> <span class="n">$dateTime</span><span class="p">.</span><span class="n">AddDays</span><span class="p">(</span><span class="mi">30</span><span class="p">).</span><span class="n">ToString</span><span class="p">(</span><span class="s">&quot;R&quot;</span><span class="p">)</span>
+<span class="no">[DateTime]</span><span class="nv">$dateTime</span> <span class="p">=</span> <span class="nb">Get-Date</span>
+<span class="nv">$str</span> <span class="p">=</span> <span class="nv">$dateTime</span><span class="p">.</span><span class="n">AddDays</span><span class="p">(</span><span class="n">30</span><span class="p">).</span><span class="n">ToString</span><span class="p">(</span><span class="s2">&quot;R&quot;</span><span class="p">)</span>
 
-<span class="n">$dnt</span> <span class="o">=</span> <span class="n">Read</span><span class="o">-</span><span class="n">Host</span> <span class="o">-</span><span class="n">Prompt</span> <span class="err">&#39;请输入</span> <span class="n">Cookie</span> <span class="n">dnt</span> <span class="err">的值&#39;</span>
-<span class="n">$dnt</span> <span class="o">=</span> <span class="n">$dnt</span> <span class="o">-</span><span class="n">replace</span> <span class="err">&#39;</span><span class="o">^</span><span class="p">(</span><span class="n">dnt</span><span class="p">)</span><span class="o">?</span><span class="err">\</span><span class="n">s</span><span class="o">*:?</span><span class="err">\</span><span class="n">s</span><span class="o">*</span><span class="s">&quot;?&#39;, &#39;&#39;</span>
-<span class="n">$dnt</span> <span class="o">=</span> <span class="n">$dnt</span> <span class="o">-</span><span class="n">replace</span> <span class="err">&#39;</span><span class="s">&quot;$&#39;, &#39;&#39;</span>
+<span class="nv">$dnt</span> <span class="p">=</span> <span class="nb">Read-Host</span> <span class="n">-Prompt</span> <span class="s1">&#39;请输入 Cookie dnt 的值&#39;</span>
+<span class="nv">$dnt</span> <span class="p">=</span> <span class="nv">$dnt</span> <span class="o">-replace</span> <span class="s1">&#39;^(dnt)?\s*:?\s*&quot;?&#39;</span><span class="p">,</span> <span class="s1">&#39;&#39;</span>
+<span class="nv">$dnt</span> <span class="p">=</span> <span class="nv">$dnt</span> <span class="o">-replace</span> <span class="s1">&#39;&quot;$&#39;</span><span class="p">,</span> <span class="s1">&#39;&#39;</span>
 
-<span class="p">[</span><span class="n">Cookies</span><span class="p">.</span><span class="k">setter</span><span class="p">]</span><span class="o">::</span><span class="n">SetWinINETCookieString</span><span class="p">(</span><span class="s">&quot;http://www.keyfc.net&quot;</span><span class="p">,</span> <span class="s">&quot;dnt&quot;</span><span class="p">,</span> <span class="s">&quot;$dnt;Expires=$str&quot;</span><span class="p">)</span>
+<span class="no">[Cookies.setter]</span><span class="p">::</span><span class="n">SetWinINETCookieString</span><span class="p">(</span><span class="s2">&quot;http://www.keyfc.net&quot;</span><span class="p">,</span> <span class="s2">&quot;dnt&quot;</span><span class="p">,</span> <span class="s2">&quot;$dnt;Expires=$str&quot;</span><span class="p">)</span>
 </code></pre></div>
 
 <p>之后大概会做个 Qt 版的发 KFC 上。</p>
