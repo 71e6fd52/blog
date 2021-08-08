@@ -3,6 +3,7 @@ Date: 2021-08-05 14:19:52
 Author: yahvk
 Category: reverseengineering
 Tags: reverseengineering
+Modified: 2021-08-08 12:12:49
 
 整理硬盘时，在硬盘中翻到了多年前在 [KeyFC](https://www.keyfc.net) 下载的[土豆文](https://www.keyfc.net/bbs/showtopic-25834.aspx)套件，
 随着 Windows 系统的不断更新，土豆文解码器的登录检测已经无法正常工作了。
@@ -20,10 +21,11 @@ Tags: reverseengineering
 
 [KeyFC](https://www.keyfc.net) 是个超级有爱的论坛~
 
-多年前路过 KFC，被神秘的土豆文所吸引。下载完土豆文套件，玩了一会儿，然后尘封在了硬盘的角落里。
-也再没访问过 KFC。
+多年前路过 KFC，神秘的土豆文吸引了我。我下载了土豆文套件，玩了一会儿，但玩过了也就好了，于是土豆文套件便被我尘封在了硬盘的角落里。
+当时也只是路过，甚至都不知道 Key 社是什么，所以玩过土豆文之后，也再没访问过 KFC。
 
-硬盘角落中的土豆文套件终于被我看到，使我重新找到了 KFC。已经看完 CLANNAD 的我再次浏览 KFC ，KFC 的温暖深深的感动了我。
+过了多年，我整理硬盘时看到了硬盘角落中的土豆文套件，我试图找出这是什么，最终重新找到了 KFC。
+已经看完 CLANNAD 的我再次回到 KFC……<span style="font-size:0.6em">然而最吸引我的还是土豆文</span>
 
 ## 土豆文
 
@@ -121,3 +123,5 @@ $dnt = $dnt -replace '"$', ''
 ```
 
 之后大概会做个 Qt 版的发 KFC 上。
+
+EDIT: 已经发了 https://www.keyfc.net/bbs/showtopic-68344.aspx
