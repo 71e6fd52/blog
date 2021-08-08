@@ -3,7 +3,7 @@ Date: 2021-08-05 14:19:52
 Author: yahvk
 Category: reverseengineering
 Tags: reverseengineering
-Modified: 2021-08-08 12:12:49
+Modified: 2021-08-08 21:35:29
 
 整理硬盘时，在硬盘中翻到了多年前在 [KeyFC](https://www.keyfc.net) 下载的[土豆文](https://www.keyfc.net/bbs/showtopic-25834.aspx)套件，
 随着 Windows 系统的不断更新，土豆文解码器的登录检测已经无法正常工作了。
@@ -82,7 +82,7 @@ PEiD 查壳 `PECompact 2.x`，esp 定律后单步跟踪到 `0053C715 jmp eax`，
 ## 完成
 
 土豆文解码器会使用 `InternetGetCookieA` 轮询 `http://www.KeyFC.net` 的 Cookie，从中提取出 `dnt` 的值。
-`dnt` 的值形如 `userid=<userid>&password=<encoded password>&...`，根据我的观察，解码器实际上只提前了其中 userid 的值。
+`dnt` 的值形如 `userid=<userid>&password=<encoded password>&...`，根据我的观察，解码器实际上只提取了其中 userid 的值。
 
 最后我用 powershell 做了一个登录器：
 ```powershell
@@ -124,4 +124,4 @@ $dnt = $dnt -replace '"$', ''
 
 之后大概会做个 Qt 版的发 KFC 上。
 
-EDIT: 已经发了 https://www.keyfc.net/bbs/showtopic-68344.aspx
+EDIT: 已经发了 (https://www.keyfc.net/bbs/showtopic-68344.aspx)[https://www.keyfc.net/bbs/showtopic-68344.aspx]
