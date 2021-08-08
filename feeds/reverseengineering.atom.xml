@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>yahvk's blog - reverseengineering</title><link href="https://blog.yahvk.ml/" rel="alternate"></link><link href="https://blog.yahvk.ml/feeds/reverseengineering.atom.xml" rel="self"></link><id>https://blog.yahvk.ml/</id><updated>2021-08-08T12:12:49+08:00</updated><entry><title>修复土豆文解码器</title><link href="https://blog.yahvk.ml/xiu-fu-tu-dou-wen-jie-ma-qi.html" rel="alternate"></link><published>2021-08-05T14:19:52+08:00</published><updated>2021-08-08T12:12:49+08:00</updated><author><name>yahvk</name></author><id>tag:blog.yahvk.ml,2021-08-05:/xiu-fu-tu-dou-wen-jie-ma-qi.html</id><summary type="html">整理硬盘时，在硬盘中翻到了多年前在 &lt;a href="https://www.keyfc.net"&gt;KeyFC&lt;/a&gt; 下载的&lt;a href="https://www.keyfc.net/bbs/showtopic-25834.aspx"&gt;土豆文&lt;/a&gt;套件，
+<feed xmlns="http://www.w3.org/2005/Atom"><title>yahvk's blog - reverseengineering</title><link href="https://blog.yahvk.ml/" rel="alternate"></link><link href="https://blog.yahvk.ml/feeds/reverseengineering.atom.xml" rel="self"></link><id>https://blog.yahvk.ml/</id><updated>2021-08-08T21:35:29+08:00</updated><entry><title>修复土豆文解码器</title><link href="https://blog.yahvk.ml/xiu-fu-tu-dou-wen-jie-ma-qi.html" rel="alternate"></link><published>2021-08-05T14:19:52+08:00</published><updated>2021-08-08T21:35:29+08:00</updated><author><name>yahvk</name></author><id>tag:blog.yahvk.ml,2021-08-05:/xiu-fu-tu-dou-wen-jie-ma-qi.html</id><summary type="html">整理硬盘时，在硬盘中翻到了多年前在 &lt;a href="https://www.keyfc.net"&gt;KeyFC&lt;/a&gt; 下载的&lt;a href="https://www.keyfc.net/bbs/showtopic-25834.aspx"&gt;土豆文&lt;/a&gt;套件，
 随着 Windows 系统的不断更新，土豆文解码器的登录检测已经无法正常工作了。</summary><content type="html">&lt;p&gt;整理硬盘时，在硬盘中翻到了多年前在 &lt;a href="https://www.keyfc.net"&gt;KeyFC&lt;/a&gt; 下载的&lt;a href="https://www.keyfc.net/bbs/showtopic-25834.aspx"&gt;土豆文&lt;/a&gt;套件，
 随着 Windows 系统的不断更新，土豆文解码器的登录检测已经无法正常工作了。&lt;/p&gt;
 &lt;div&gt;
@@ -55,7 +55,7 @@
 &lt;p&gt;&lt;img alt="OD界面" src="https://blog.yahvk.ml/images/tudou-4.webp"&gt;&lt;/p&gt;
 &lt;h2&gt;完成&lt;/h2&gt;
 &lt;p&gt;土豆文解码器会使用 &lt;code&gt;InternetGetCookieA&lt;/code&gt; 轮询 &lt;code&gt;http://www.KeyFC.net&lt;/code&gt; 的 Cookie，从中提取出 &lt;code&gt;dnt&lt;/code&gt; 的值。
-&lt;code&gt;dnt&lt;/code&gt; 的值形如 &lt;code&gt;userid=&amp;lt;userid&amp;gt;&amp;amp;password=&amp;lt;encoded password&amp;gt;&amp;amp;...&lt;/code&gt;，根据我的观察，解码器实际上只提前了其中 userid 的值。&lt;/p&gt;
+&lt;code&gt;dnt&lt;/code&gt; 的值形如 &lt;code&gt;userid=&amp;lt;userid&amp;gt;&amp;amp;password=&amp;lt;encoded password&amp;gt;&amp;amp;...&lt;/code&gt;，根据我的观察，解码器实际上只提取了其中 userid 的值。&lt;/p&gt;
 &lt;p&gt;最后我用 powershell 做了一个登录器：&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="nv"&gt;$source&lt;/span&gt;&lt;span class="p"&gt;=&lt;/span&gt;&lt;span class="sh"&gt;@&amp;quot;&lt;/span&gt;
 &lt;span class="sh"&gt;using System.Runtime.InteropServices;&lt;/span&gt;
@@ -94,7 +94,7 @@
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
 &lt;p&gt;之后大概会做个 Qt 版的发 KFC 上。&lt;/p&gt;
-&lt;p&gt;EDIT: 已经发了 https://www.keyfc.net/bbs/showtopic-68344.aspx&lt;/p&gt;</content><category term="reverseengineering"></category><category term="reverseengineering"></category></entry><entry><title>破解课后网</title><link href="https://blog.yahvk.ml/po-jie-ke-hou-wang.html" rel="alternate"></link><published>2020-04-17T09:32:01+08:00</published><updated>2020-04-17T09:32:01+08:00</updated><author><name>yahvk</name></author><id>tag:blog.yahvk.ml,2020-04-17:/po-jie-ke-hou-wang.html</id><summary type="html">疫情期间在家上网课，我们学校用的是&lt;a href="https://www.kehou.com/"&gt;课后网&lt;/a&gt;。
+&lt;p&gt;EDIT: 已经发了 (https://www.keyfc.net/bbs/showtopic-68344.aspx)[https://www.keyfc.net/bbs/showtopic-68344.aspx]&lt;/p&gt;</content><category term="reverseengineering"></category><category term="reverseengineering"></category></entry><entry><title>破解课后网</title><link href="https://blog.yahvk.ml/po-jie-ke-hou-wang.html" rel="alternate"></link><published>2020-04-17T09:32:01+08:00</published><updated>2020-04-17T09:32:01+08:00</updated><author><name>yahvk</name></author><id>tag:blog.yahvk.ml,2020-04-17:/po-jie-ke-hou-wang.html</id><summary type="html">疫情期间在家上网课，我们学校用的是&lt;a href="https://www.kehou.com/"&gt;课后网&lt;/a&gt;。
 为了能在网课上摸鱼，我就破解了课后网。</summary><content type="html">&lt;p&gt;疫情期间在家上网课，我们学校用的是&lt;a href="https://www.kehou.com/"&gt;课后网&lt;/a&gt;。
 为了能在网课上摸鱼，我就破解了课后网。&lt;/p&gt;
 &lt;h2&gt;防止摸鱼&lt;/h2&gt;

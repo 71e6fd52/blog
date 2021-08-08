@@ -176,7 +176,7 @@
 <p><img alt="OD界面" src="https://blog.yahvk.ml/images/tudou-4.webp"></p>
 <h2>完成</h2>
 <p>土豆文解码器会使用 <code>InternetGetCookieA</code> 轮询 <code>http://www.KeyFC.net</code> 的 Cookie，从中提取出 <code>dnt</code> 的值。
-<code>dnt</code> 的值形如 <code>userid=&lt;userid&gt;&amp;password=&lt;encoded password&gt;&amp;...</code>，根据我的观察，解码器实际上只提前了其中 userid 的值。</p>
+<code>dnt</code> 的值形如 <code>userid=&lt;userid&gt;&amp;password=&lt;encoded password&gt;&amp;...</code>，根据我的观察，解码器实际上只提取了其中 userid 的值。</p>
 <p>最后我用 powershell 做了一个登录器：</p>
 <div class="highlight"><pre><span></span><code><span class="nv">$source</span><span class="p">=</span><span class="sh">@&quot;</span>
 <span class="sh">using System.Runtime.InteropServices;</span>
@@ -215,7 +215,7 @@
 </code></pre></div>
 
 <p>之后大概会做个 Qt 版的发 KFC 上。</p>
-<p>EDIT: 已经发了 https://www.keyfc.net/bbs/showtopic-68344.aspx</p>
+<p>EDIT: 已经发了 (https://www.keyfc.net/bbs/showtopic-68344.aspx)[https://www.keyfc.net/bbs/showtopic-68344.aspx]</p>
     </div>
 
     <div class="post_list">
@@ -303,15 +303,14 @@
         <div id="disqus_thread"></div>
         <script data-cfasync="false" type="text/javascript">
           var disqus_config = function () {
+            this.page.url = "xiu-fu-tu-dou-wen-jie-ma-qi.html";
             this.page.identifier = "xiu-fu-tu-dou-wen-jie-ma-qi.html";
           };
-          (function () {
-            var dsq = document.createElement('script');
-            dsq.type = 'text/javascript';
-            dsq.async = true;
-            dsq.src = 'https://71e6fd52s-blog.disqus.com/embed.js';
-            (document.getElementsByTagName('head')[0] ||
-              document.getElementsByTagName('body')[0]).appendChild(dsq);
+          (function() { // DON'T EDIT BELOW THIS LINE
+            var d = document, s = d.createElement('script');
+            s.src = 'https://yavhk-blog.disqus.com/embed.js';
+            s.setAttribute('data-timestamp', +new Date());
+            (d.head || d.body).appendChild(s);
           })();
         </script>
       <!-- DISQUS END -->
